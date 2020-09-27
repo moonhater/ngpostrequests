@@ -200,3 +200,147 @@
         }
                     /**
          * Get the path to the public / web directory.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function publicPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->publicPath();
+        }
+                    /**
+         * Get the path to the storage directory.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function storagePath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->storagePath();
+        }
+                    /**
+         * Set the storage directory.
+         *
+         * @param string $path
+         * @return \Illuminate\Foundation\Application 
+         * @static 
+         */ 
+        public static function useStoragePath($path)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->useStoragePath($path);
+        }
+                    /**
+         * Get the path to the resources directory.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function resourcePath($path = '')
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->resourcePath($path);
+        }
+                    /**
+         * Get the path to the environment file directory.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function environmentPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->environmentPath();
+        }
+                    /**
+         * Set the directory for the environment file.
+         *
+         * @param string $path
+         * @return \Illuminate\Foundation\Application 
+         * @static 
+         */ 
+        public static function useEnvironmentPath($path)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->useEnvironmentPath($path);
+        }
+                    /**
+         * Set the environment file to be loaded during bootstrapping.
+         *
+         * @param string $file
+         * @return \Illuminate\Foundation\Application 
+         * @static 
+         */ 
+        public static function loadEnvironmentFrom($file)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->loadEnvironmentFrom($file);
+        }
+                    /**
+         * Get the environment file the application is using.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function environmentFile()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->environmentFile();
+        }
+                    /**
+         * Get the fully qualified path to the environment file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function environmentFilePath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->environmentFilePath();
+        }
+                    /**
+         * Get or check the current application environment.
+         *
+         * @param string|array $environments
+         * @return string|bool 
+         * @static 
+         */ 
+        public static function environment(...$environments)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->environment(...$environments);
+        }
+                    /**
+         * Determine if application is in local environment.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isLocal()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isLocal();
+        }
+                    /**
+         * Determine if application is in production environment.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isProduction()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isProduction();
+        }
+                    /**
+         * Detect the application's current environment.
+         *
+         * @param \Closure $callback
+         * @return string 
+         * @static 
+         */ 
+        public static function detectEnvironment($callback)
+        {
