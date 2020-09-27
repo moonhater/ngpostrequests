@@ -344,3 +344,173 @@
          */ 
         public static function detectEnvironment($callback)
         {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->detectEnvironment($callback);
+        }
+                    /**
+         * Determine if the application is running in the console.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function runningInConsole()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->runningInConsole();
+        }
+                    /**
+         * Determine if the application is running unit tests.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function runningUnitTests()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->runningUnitTests();
+        }
+                    /**
+         * Register all of the configured providers.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function registerConfiguredProviders()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->registerConfiguredProviders();
+        }
+                    /**
+         * Register a service provider with the application.
+         *
+         * @param \Illuminate\Support\ServiceProvider|string $provider
+         * @param bool $force
+         * @return \Illuminate\Support\ServiceProvider 
+         * @static 
+         */ 
+        public static function register($provider, $force = false)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->register($provider, $force);
+        }
+                    /**
+         * Get the registered service provider instance if it exists.
+         *
+         * @param \Illuminate\Support\ServiceProvider|string $provider
+         * @return \Illuminate\Support\ServiceProvider|null 
+         * @static 
+         */ 
+        public static function getProvider($provider)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getProvider($provider);
+        }
+                    /**
+         * Get the registered service provider instances if any exist.
+         *
+         * @param \Illuminate\Support\ServiceProvider|string $provider
+         * @return array 
+         * @static 
+         */ 
+        public static function getProviders($provider)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getProviders($provider);
+        }
+                    /**
+         * Resolve a service provider instance from the class name.
+         *
+         * @param string $provider
+         * @return \Illuminate\Support\ServiceProvider 
+         * @static 
+         */ 
+        public static function resolveProvider($provider)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->resolveProvider($provider);
+        }
+                    /**
+         * Load and boot all of the remaining deferred providers.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function loadDeferredProviders()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->loadDeferredProviders();
+        }
+                    /**
+         * Load the provider for a deferred service.
+         *
+         * @param string $service
+         * @return void 
+         * @static 
+         */ 
+        public static function loadDeferredProvider($service)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->loadDeferredProvider($service);
+        }
+                    /**
+         * Register a deferred provider and service.
+         *
+         * @param string $provider
+         * @param string|null $service
+         * @return void 
+         * @static 
+         */ 
+        public static function registerDeferredProvider($provider, $service = null)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->registerDeferredProvider($provider, $service);
+        }
+                    /**
+         * Resolve the given type from the container.
+         *
+         * @param string $abstract
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */ 
+        public static function make($abstract, $parameters = [])
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->make($abstract, $parameters);
+        }
+                    /**
+         * Determine if the given abstract type has been bound.
+         *
+         * @param string $abstract
+         * @return bool 
+         * @static 
+         */ 
+        public static function bound($abstract)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->bound($abstract);
+        }
+                    /**
+         * Determine if the application has booted.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isBooted()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isBooted();
+        }
+                    /**
+         * Boot the application's service providers.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function boot()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->boot();
+        }
+                    /**
+         * Register a new boot listener.
