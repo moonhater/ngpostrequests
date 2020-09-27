@@ -514,3 +514,164 @@
         }
                     /**
          * Register a new boot listener.
+         *
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function booting($callback)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->booting($callback);
+        }
+                    /**
+         * Register a new "booted" listener.
+         *
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function booted($callback)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->booted($callback);
+        }
+                    /**
+         * {@inheritdoc}
+         *
+         * @static 
+         */ 
+        public static function handle($request, $type = 1, $catch = true)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->handle($request, $type, $catch);
+        }
+                    /**
+         * Determine if middleware has been disabled for the application.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function shouldSkipMiddleware()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->shouldSkipMiddleware();
+        }
+                    /**
+         * Get the path to the cached services.php file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getCachedServicesPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getCachedServicesPath();
+        }
+                    /**
+         * Get the path to the cached packages.php file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getCachedPackagesPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getCachedPackagesPath();
+        }
+                    /**
+         * Determine if the application configuration is cached.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function configurationIsCached()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->configurationIsCached();
+        }
+                    /**
+         * Get the path to the configuration cache file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getCachedConfigPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getCachedConfigPath();
+        }
+                    /**
+         * Determine if the application routes are cached.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function routesAreCached()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->routesAreCached();
+        }
+                    /**
+         * Get the path to the routes cache file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getCachedRoutesPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getCachedRoutesPath();
+        }
+                    /**
+         * Determine if the application events are cached.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function eventsAreCached()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->eventsAreCached();
+        }
+                    /**
+         * Get the path to the events cache file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getCachedEventsPath()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getCachedEventsPath();
+        }
+                    /**
+         * Add new prefix to list of absolute path prefixes.
+         *
+         * @param string $prefix
+         * @return \Illuminate\Foundation\Application 
+         * @static 
+         */ 
+        public static function addAbsoluteCachePathPrefix($prefix)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->addAbsoluteCachePathPrefix($prefix);
+        }
+                    /**
+         * Determine if the application is currently down for maintenance.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isDownForMaintenance()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isDownForMaintenance();
+        }
+                    /**
+         * Throw an HttpException with the given data.
+         *
+         * @param int $code
+         * @param string $message
+         * @param array $headers
+         * @return void 
