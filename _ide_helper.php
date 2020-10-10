@@ -961,3 +961,162 @@
                         $instance->bind($abstract, $concrete, $shared);
         }
                     /**
+         * Determine if the container has a method binding.
+         *
+         * @param string $method
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMethodBinding($method)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->hasMethodBinding($method);
+        }
+                    /**
+         * Bind a callback to resolve with Container::call.
+         *
+         * @param array|string $method
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function bindMethod($method, $callback)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->bindMethod($method, $callback);
+        }
+                    /**
+         * Get the method binding for the given method.
+         *
+         * @param string $method
+         * @param mixed $instance
+         * @return mixed 
+         * @static 
+         */ 
+        public static function callMethodBinding($method, $instance)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->callMethodBinding($method, $instance);
+        }
+                    /**
+         * Add a contextual binding to the container.
+         *
+         * @param string $concrete
+         * @param string $abstract
+         * @param \Closure|string $implementation
+         * @return void 
+         * @static 
+         */ 
+        public static function addContextualBinding($concrete, $abstract, $implementation)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->addContextualBinding($concrete, $abstract, $implementation);
+        }
+                    /**
+         * Register a binding if it hasn't already been registered.
+         *
+         * @param string $abstract
+         * @param \Closure|string|null $concrete
+         * @param bool $shared
+         * @return void 
+         * @static 
+         */ 
+        public static function bindIf($abstract, $concrete = null, $shared = false)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->bindIf($abstract, $concrete, $shared);
+        }
+                    /**
+         * Register a shared binding in the container.
+         *
+         * @param string $abstract
+         * @param \Closure|string|null $concrete
+         * @return void 
+         * @static 
+         */ 
+        public static function singleton($abstract, $concrete = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->singleton($abstract, $concrete);
+        }
+                    /**
+         * Register a shared binding if it hasn't already been registered.
+         *
+         * @param string $abstract
+         * @param \Closure|string|null $concrete
+         * @return void 
+         * @static 
+         */ 
+        public static function singletonIf($abstract, $concrete = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->singletonIf($abstract, $concrete);
+        }
+                    /**
+         * "Extend" an abstract type in the container.
+         *
+         * @param string $abstract
+         * @param \Closure $closure
+         * @return void 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function extend($abstract, $closure)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->extend($abstract, $closure);
+        }
+                    /**
+         * Register an existing instance as shared in the container.
+         *
+         * @param string $abstract
+         * @param mixed $instance
+         * @return mixed 
+         * @static 
+         */ 
+        public static function instance($abstract, $instance)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->instance($abstract, $instance);
+        }
+                    /**
+         * Assign a set of tags to a given binding.
+         *
+         * @param array|string $abstracts
+         * @param array|mixed $tags
+         * @return void 
+         * @static 
+         */ 
+        public static function tag($abstracts, $tags)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->tag($abstracts, $tags);
+        }
+                    /**
+         * Resolve all of the bindings for a given tag.
+         *
+         * @param string $tag
+         * @return \Illuminate\Container\iterable 
+         * @static 
+         */ 
+        public static function tagged($tag)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->tagged($tag);
+        }
+                    /**
+         * Alias a type to a different name.
+         *
+         * @param string $abstract
+         * @param string $alias
+         * @return void 
+         * @throws \LogicException
+         * @static 
+         */ 
+        public static function alias($abstract, $alias)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->alias($abstract, $alias);
+        }
+                    /**
+         * Bind a new callback to an abstract's rebind event.
