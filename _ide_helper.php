@@ -1267,3 +1267,155 @@
          * Get the alias for an abstract if available.
          *
          * @param string $abstract
+         * @return string 
+         * @static 
+         */ 
+        public static function getAlias($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getAlias($abstract);
+        }
+                    /**
+         * Remove all of the extender callbacks for a given type.
+         *
+         * @param string $abstract
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetExtenders($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->forgetExtenders($abstract);
+        }
+                    /**
+         * Remove a resolved instance from the instance cache.
+         *
+         * @param string $abstract
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetInstance($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->forgetInstance($abstract);
+        }
+                    /**
+         * Clear all of the instances from the container.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetInstances()
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->forgetInstances();
+        }
+                    /**
+         * Get the globally available instance of the container.
+         *
+         * @return static 
+         * @static 
+         */ 
+        public static function getInstance()
+        {            //Method inherited from \Illuminate\Container\Container         
+                        return \Illuminate\Foundation\Application::getInstance();
+        }
+                    /**
+         * Set the shared instance of the container.
+         *
+         * @param \Illuminate\Contracts\Container\Container|null $container
+         * @return \Illuminate\Contracts\Container\Container|static 
+         * @static 
+         */ 
+        public static function setInstance($container = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        return \Illuminate\Foundation\Application::setInstance($container);
+        }
+                    /**
+         * Determine if a given offset exists.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function offsetExists($key)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->offsetExists($key);
+        }
+                    /**
+         * Get the value at a given offset.
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */ 
+        public static function offsetGet($key)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->offsetGet($key);
+        }
+                    /**
+         * Set the value at a given offset.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetSet($key, $value)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->offsetSet($key, $value);
+        }
+                    /**
+         * Unset the value at a given offset.
+         *
+         * @param string $key
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetUnset($key)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->offsetUnset($key);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Contracts\Console\Kernel
+     */ 
+        class Artisan {
+                    /**
+         * Run the console application.
+         *
+         * @param \Symfony\Component\Console\Input\InputInterface $input
+         * @param \Symfony\Component\Console\Output\OutputInterface|null $output
+         * @return int 
+         * @static 
+         */ 
+        public static function handle($input, $output = null)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->handle($input, $output);
+        }
+                    /**
+         * Terminate the application.
+         *
+         * @param \Symfony\Component\Console\Input\InputInterface $input
+         * @param int $status
+         * @return void 
+         * @static 
+         */ 
+        public static function terminate($input, $status)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        $instance->terminate($input, $status);
+        }
+                    /**
+         * Register a Closure based command with the application.
+         *
+         * @param string $signature
+         * @param \Closure $callback
