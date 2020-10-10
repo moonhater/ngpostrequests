@@ -675,3 +675,131 @@
          * @param string $message
          * @param array $headers
          * @return void 
+         * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+         * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+         * @static 
+         */ 
+        public static function abort($code, $message = '', $headers = [])
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->abort($code, $message, $headers);
+        }
+                    /**
+         * Register a terminating callback with the application.
+         *
+         * @param callable|string $callback
+         * @return \Illuminate\Foundation\Application 
+         * @static 
+         */ 
+        public static function terminating($callback)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->terminating($callback);
+        }
+                    /**
+         * Terminate the application.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function terminate()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->terminate();
+        }
+                    /**
+         * Get the service providers that have been loaded.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getLoadedProviders()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getLoadedProviders();
+        }
+                    /**
+         * Determine if the given service provider is loaded.
+         *
+         * @param string $provider
+         * @return bool 
+         * @static 
+         */ 
+        public static function providerIsLoaded($provider)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->providerIsLoaded($provider);
+        }
+                    /**
+         * Get the application's deferred services.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDeferredServices()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getDeferredServices();
+        }
+                    /**
+         * Set the application's deferred services.
+         *
+         * @param array $services
+         * @return void 
+         * @static 
+         */ 
+        public static function setDeferredServices($services)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->setDeferredServices($services);
+        }
+                    /**
+         * Add an array of services to the application's deferred services.
+         *
+         * @param array $services
+         * @return void 
+         * @static 
+         */ 
+        public static function addDeferredServices($services)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->addDeferredServices($services);
+        }
+                    /**
+         * Determine if the given service is a deferred service.
+         *
+         * @param string $service
+         * @return bool 
+         * @static 
+         */ 
+        public static function isDeferredService($service)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isDeferredService($service);
+        }
+                    /**
+         * Configure the real-time facade namespace.
+         *
+         * @param string $namespace
+         * @return void 
+         * @static 
+         */ 
+        public static function provideFacades($namespace)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->provideFacades($namespace);
+        }
+                    /**
+         * Get the current application locale.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLocale()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getLocale();
+        }
+                    /**
+         * Get the current application fallback locale.
+         *
