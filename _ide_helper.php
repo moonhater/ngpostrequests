@@ -1120,3 +1120,150 @@
         }
                     /**
          * Bind a new callback to an abstract's rebind event.
+         *
+         * @param string $abstract
+         * @param \Closure $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function rebinding($abstract, $callback)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->rebinding($abstract, $callback);
+        }
+                    /**
+         * Refresh an instance on the given target and method.
+         *
+         * @param string $abstract
+         * @param mixed $target
+         * @param string $method
+         * @return mixed 
+         * @static 
+         */ 
+        public static function refresh($abstract, $target, $method)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->refresh($abstract, $target, $method);
+        }
+                    /**
+         * Wrap the given closure such that its dependencies will be injected when executed.
+         *
+         * @param \Closure $callback
+         * @param array $parameters
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function wrap($callback, $parameters = [])
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->wrap($callback, $parameters);
+        }
+                    /**
+         * Call the given Closure / class@method and inject its dependencies.
+         *
+         * @param callable|string $callback
+         * @param \Illuminate\Container\array<string,  mixed>  $parameters
+         * @param string|null $defaultMethod
+         * @return mixed 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function call($callback, $parameters = [], $defaultMethod = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->call($callback, $parameters, $defaultMethod);
+        }
+                    /**
+         * Get a closure to resolve the given type from the container.
+         *
+         * @param string $abstract
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function factory($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->factory($abstract);
+        }
+                    /**
+         * An alias function name for make().
+         *
+         * @param string $abstract
+         * @param array $parameters
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @static 
+         */ 
+        public static function makeWith($abstract, $parameters = [])
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->makeWith($abstract, $parameters);
+        }
+                    /**
+         * Finds an entry of the container by its identifier and returns it.
+         *
+         * @param string $id Identifier of the entry to look for.
+         * @throws NotFoundExceptionInterface  No entry was found for **this** identifier.
+         * @throws ContainerExceptionInterface Error while retrieving the entry.
+         * @return mixed Entry.
+         * @static 
+         */ 
+        public static function get($id)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->get($id);
+        }
+                    /**
+         * Instantiate a concrete instance of the given type.
+         *
+         * @param \Closure|string $concrete
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @static 
+         */ 
+        public static function build($concrete)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->build($concrete);
+        }
+                    /**
+         * Register a new resolving callback.
+         *
+         * @param \Closure|string $abstract
+         * @param \Closure|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function resolving($abstract, $callback = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->resolving($abstract, $callback);
+        }
+                    /**
+         * Register a new after resolving callback for all types.
+         *
+         * @param \Closure|string $abstract
+         * @param \Closure|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function afterResolving($abstract, $callback = null)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->afterResolving($abstract, $callback);
+        }
+                    /**
+         * Get the container's bindings.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getBindings()
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getBindings();
+        }
+                    /**
+         * Get the alias for an abstract if available.
+         *
+         * @param string $abstract
