@@ -803,3 +803,161 @@
                     /**
          * Get the current application fallback locale.
          *
+         * @return string 
+         * @static 
+         */ 
+        public static function getFallbackLocale()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getFallbackLocale();
+        }
+                    /**
+         * Set the current application locale.
+         *
+         * @param string $locale
+         * @return void 
+         * @static 
+         */ 
+        public static function setLocale($locale)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->setLocale($locale);
+        }
+                    /**
+         * Set the current application fallback locale.
+         *
+         * @param string $fallbackLocale
+         * @return void 
+         * @static 
+         */ 
+        public static function setFallbackLocale($fallbackLocale)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->setFallbackLocale($fallbackLocale);
+        }
+                    /**
+         * Determine if application locale is the given locale.
+         *
+         * @param string $locale
+         * @return bool 
+         * @static 
+         */ 
+        public static function isLocale($locale)
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isLocale($locale);
+        }
+                    /**
+         * Register the core class aliases in the container.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function registerCoreContainerAliases()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->registerCoreContainerAliases();
+        }
+                    /**
+         * Flush the container of all bindings and resolved instances.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flush()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->flush();
+        }
+                    /**
+         * Get the application namespace.
+         *
+         * @return string 
+         * @throws \RuntimeException
+         * @static 
+         */ 
+        public static function getNamespace()
+        {
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->getNamespace();
+        }
+                    /**
+         * Define a contextual binding.
+         *
+         * @param array|string $concrete
+         * @return \Illuminate\Contracts\Container\ContextualBindingBuilder 
+         * @static 
+         */ 
+        public static function when($concrete)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->when($concrete);
+        }
+                    /**
+         * Returns true if the container can return an entry for the given identifier.
+         * 
+         * Returns false otherwise.
+         * 
+         * `has($id)` returning true does not mean that `get($id)` will not throw an exception.
+         * It does however mean that `get($id)` will not throw a `NotFoundExceptionInterface`.
+         *
+         * @param string $id Identifier of the entry to look for.
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($id)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->has($id);
+        }
+                    /**
+         * Determine if the given abstract type has been resolved.
+         *
+         * @param string $abstract
+         * @return bool 
+         * @static 
+         */ 
+        public static function resolved($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->resolved($abstract);
+        }
+                    /**
+         * Determine if a given type is shared.
+         *
+         * @param string $abstract
+         * @return bool 
+         * @static 
+         */ 
+        public static function isShared($abstract)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isShared($abstract);
+        }
+                    /**
+         * Determine if a given string is an alias.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function isAlias($name)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        return $instance->isAlias($name);
+        }
+                    /**
+         * Register a binding with the container.
+         *
+         * @param string $abstract
+         * @param \Closure|string|null $concrete
+         * @param bool $shared
+         * @return void 
+         * @static 
+         */ 
+        public static function bind($abstract, $concrete = null, $shared = false)
+        {            //Method inherited from \Illuminate\Container\Container         
+                        /** @var \Illuminate\Foundation\Application $instance */
+                        $instance->bind($abstract, $concrete, $shared);
+        }
+                    /**
