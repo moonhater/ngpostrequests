@@ -1419,3 +1419,163 @@
          *
          * @param string $signature
          * @param \Closure $callback
+         * @return \Illuminate\Foundation\Console\ClosureCommand 
+         * @static 
+         */ 
+        public static function command($signature, $callback)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->command($signature, $callback);
+        }
+                    /**
+         * Register the given command with the console application.
+         *
+         * @param \Symfony\Component\Console\Command\Command $command
+         * @return void 
+         * @static 
+         */ 
+        public static function registerCommand($command)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        $instance->registerCommand($command);
+        }
+                    /**
+         * Run an Artisan console command by name.
+         *
+         * @param string $command
+         * @param array $parameters
+         * @param \Symfony\Component\Console\Output\OutputInterface|null $outputBuffer
+         * @return int 
+         * @throws \Symfony\Component\Console\Exception\CommandNotFoundException
+         * @static 
+         */ 
+        public static function call($command, $parameters = [], $outputBuffer = null)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->call($command, $parameters, $outputBuffer);
+        }
+                    /**
+         * Queue the given console command.
+         *
+         * @param string $command
+         * @param array $parameters
+         * @return \Illuminate\Foundation\Bus\PendingDispatch 
+         * @static 
+         */ 
+        public static function queue($command, $parameters = [])
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->queue($command, $parameters);
+        }
+                    /**
+         * Get all of the commands registered with the console.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function all()
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->all();
+        }
+                    /**
+         * Get the output for the last run command.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function output()
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        return $instance->output();
+        }
+                    /**
+         * Bootstrap the application for artisan commands.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function bootstrap()
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        $instance->bootstrap();
+        }
+                    /**
+         * Set the Artisan application instance.
+         *
+         * @param \Illuminate\Console\Application $artisan
+         * @return void 
+         * @static 
+         */ 
+        public static function setArtisan($artisan)
+        {            //Method inherited from \Illuminate\Foundation\Console\Kernel         
+                        /** @var \App\Console\Kernel $instance */
+                        $instance->setArtisan($artisan);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Auth\AuthManager
+     * @see \Illuminate\Contracts\Auth\Factory
+     * @see \Illuminate\Contracts\Auth\Guard
+     * @see \Illuminate\Contracts\Auth\StatefulGuard
+     */ 
+        class Auth {
+                    /**
+         * Attempt to get the guard from the local cache.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard 
+         * @static 
+         */ 
+        public static function guard($name = null)
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->guard($name);
+        }
+                    /**
+         * Create a session based authentication guard.
+         *
+         * @param string $name
+         * @param array $config
+         * @return \Illuminate\Auth\SessionGuard 
+         * @static 
+         */ 
+        public static function createSessionDriver($name, $config)
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->createSessionDriver($name, $config);
+        }
+                    /**
+         * Create a token based authentication guard.
+         *
+         * @param string $name
+         * @param array $config
+         * @return \Illuminate\Auth\TokenGuard 
+         * @static 
+         */ 
+        public static function createTokenDriver($name, $config)
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->createTokenDriver($name, $config);
+        }
+                    /**
+         * Get the default authentication driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Auth\AuthManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the default guard driver the factory should serve.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
