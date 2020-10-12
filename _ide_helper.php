@@ -2081,3 +2081,149 @@
                         /** @var \Illuminate\Auth\SessionGuard $instance */
                         $instance->setProvider($provider);
         }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Auth\SessionGuard::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Auth\SessionGuard::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Auth\SessionGuard::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\View\Compilers\BladeCompiler
+     */ 
+        class Blade {
+                    /**
+         * Compile the view at the given path.
+         *
+         * @param string|null $path
+         * @return void 
+         * @static 
+         */ 
+        public static function compile($path = null)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->compile($path);
+        }
+                    /**
+         * Get the path currently being compiled.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getPath()
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->getPath();
+        }
+                    /**
+         * Set the path currently being compiled.
+         *
+         * @param string $path
+         * @return void 
+         * @static 
+         */ 
+        public static function setPath($path)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->setPath($path);
+        }
+                    /**
+         * Compile the given Blade template contents.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function compileString($value)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->compileString($value);
+        }
+                    /**
+         * Strip the parentheses from the given expression.
+         *
+         * @param string $expression
+         * @return string 
+         * @static 
+         */ 
+        public static function stripParentheses($expression)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->stripParentheses($expression);
+        }
+                    /**
+         * Register a custom Blade compiler.
+         *
+         * @param callable $compiler
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($compiler)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->extend($compiler);
+        }
+                    /**
+         * Get the extensions used by the compiler.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getExtensions()
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->getExtensions();
+        }
+                    /**
+         * Register an "if" statement directive.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function if($name, $callback)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->if($name, $callback);
+        }
+                    /**
+         * Check the result of a condition.
+         *
+         * @param string $name
+         * @param array $parameters
+         * @return bool 
+         * @static 
