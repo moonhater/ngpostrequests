@@ -2227,3 +2227,141 @@
          * @param array $parameters
          * @return bool 
          * @static 
+         */ 
+        public static function check($name, ...$parameters)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->check($name, ...$parameters);
+        }
+                    /**
+         * Register a class-based component alias directive.
+         *
+         * @param string $class
+         * @param string|null $alias
+         * @param string $prefix
+         * @return void 
+         * @static 
+         */ 
+        public static function component($class, $alias = null, $prefix = '')
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->component($class, $alias, $prefix);
+        }
+                    /**
+         * Register an array of class-based components.
+         *
+         * @param array $components
+         * @param string $prefix
+         * @return void 
+         * @static 
+         */ 
+        public static function components($components, $prefix = '')
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->components($components, $prefix);
+        }
+                    /**
+         * Get the registered class component aliases.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getClassComponentAliases()
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->getClassComponentAliases();
+        }
+                    /**
+         * Register a component alias directive.
+         *
+         * @param string $path
+         * @param string|null $alias
+         * @return void 
+         * @static 
+         */ 
+        public static function aliasComponent($path, $alias = null)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->aliasComponent($path, $alias);
+        }
+                    /**
+         * Register an include alias directive.
+         *
+         * @param string $path
+         * @param string|null $alias
+         * @return void 
+         * @static 
+         */ 
+        public static function include($path, $alias = null)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->include($path, $alias);
+        }
+                    /**
+         * Register an include alias directive.
+         *
+         * @param string $path
+         * @param string|null $alias
+         * @return void 
+         * @static 
+         */ 
+        public static function aliasInclude($path, $alias = null)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->aliasInclude($path, $alias);
+        }
+                    /**
+         * Register a handler for custom directives.
+         *
+         * @param string $name
+         * @param callable $handler
+         * @return void 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function directive($name, $handler)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->directive($name, $handler);
+        }
+                    /**
+         * Get the list of custom directives.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getCustomDirectives()
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        return $instance->getCustomDirectives();
+        }
+                    /**
+         * Register a new precompiler.
+         *
+         * @param callable $precompiler
+         * @return void 
+         * @static 
+         */ 
+        public static function precompiler($precompiler)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->precompiler($precompiler);
+        }
+                    /**
+         * Set the echo format to be used by the compiler.
+         *
+         * @param string $format
+         * @return void 
+         * @static 
+         */ 
+        public static function setEchoFormat($format)
+        {
+                        /** @var \Illuminate\View\Compilers\BladeCompiler $instance */
+                        $instance->setEchoFormat($format);
+        }
+                    /**
+         * Set the "echo" format to double encode entities.
+         *
+         * @return void 
+         * @static 
+         */ 
