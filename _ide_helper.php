@@ -2532,3 +2532,181 @@
                         /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
                         return $instance->event($event);
         }
+                    /**
+         * Queue the given event for broadcast.
+         *
+         * @param mixed $event
+         * @return void 
+         * @static 
+         */ 
+        public static function queue($event)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        $instance->queue($event);
+        }
+                    /**
+         * Get a driver instance.
+         *
+         * @param string|null $driver
+         * @return mixed 
+         * @static 
+         */ 
+        public static function connection($driver = null)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->connection($driver);
+        }
+                    /**
+         * Get a driver instance.
+         *
+         * @param string|null $name
+         * @return mixed 
+         * @static 
+         */ 
+        public static function driver($name = null)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->driver($name);
+        }
+                    /**
+         * Get the default driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the default driver name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDriver($name)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        $instance->setDefaultDriver($name);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Broadcasting\BroadcastManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {
+                        /** @var \Illuminate\Broadcasting\BroadcastManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Contracts\Bus\Dispatcher
+     */ 
+        class Bus {
+                    /**
+         * Dispatch a command to its appropriate handler.
+         *
+         * @param mixed $command
+         * @return mixed 
+         * @static 
+         */ 
+        public static function dispatch($command)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->dispatch($command);
+        }
+                    /**
+         * Dispatch a command to its appropriate handler in the current process.
+         *
+         * @param mixed $command
+         * @param mixed $handler
+         * @return mixed 
+         * @static 
+         */ 
+        public static function dispatchNow($command, $handler = null)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->dispatchNow($command, $handler);
+        }
+                    /**
+         * Determine if the given command has a handler.
+         *
+         * @param mixed $command
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasCommandHandler($command)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->hasCommandHandler($command);
+        }
+                    /**
+         * Retrieve the handler for a command.
+         *
+         * @param mixed $command
+         * @return bool|mixed 
+         * @static 
+         */ 
+        public static function getCommandHandler($command)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->getCommandHandler($command);
+        }
+                    /**
+         * Dispatch a command to its appropriate handler behind a queue.
+         *
+         * @param mixed $command
+         * @return mixed 
+         * @static 
+         */ 
+        public static function dispatchToQueue($command)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->dispatchToQueue($command);
+        }
+                    /**
+         * Dispatch a command to its appropriate handler after the current process.
+         *
+         * @param mixed $command
+         * @param mixed $handler
+         * @return void 
+         * @static 
+         */ 
+        public static function dispatchAfterResponse($command, $handler = null)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        $instance->dispatchAfterResponse($command, $handler);
+        }
+                    /**
+         * Set the pipes through which commands should be piped before dispatching.
+         *
+         * @param array $pipes
+         * @return \Illuminate\Bus\Dispatcher 
+         * @static 
+         */ 
+        public static function pipeThrough($pipes)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->pipeThrough($pipes);
+        }
+                    /**
+         * Map a command to a handler.
+         *
+         * @param array $map
+         * @return \Illuminate\Bus\Dispatcher 
+         * @static 
+         */ 
+        public static function map($map)
+        {
+                        /** @var \Illuminate\Bus\Dispatcher $instance */
+                        return $instance->map($map);
+        }
