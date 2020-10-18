@@ -3011,3 +3011,151 @@
                         /** @var \Illuminate\Cache\Repository $instance */
                         return $instance->getMultiple($keys, $default);
         }
+                    /**
+         * Retrieve an item from the cache and delete it.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function pull($key, $default = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->pull($key, $default);
+        }
+                    /**
+         * Store an item in the cache.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @param \DateTimeInterface|\DateInterval|int|null $ttl
+         * @return bool 
+         * @static 
+         */ 
+        public static function put($key, $value, $ttl = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->put($key, $value, $ttl);
+        }
+                    /**
+         * Persists data in the cache, uniquely referenced by a key with an optional expiration TTL time.
+         *
+         * @param string $key The key of the item to store.
+         * @param mixed $value The value of the item to store, must be serializable.
+         * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
+         *                                      the driver supports TTL then the library may set a default value
+         *                                      for it or let the driver take care of that.
+         * @return bool True on success and false on failure.
+         * @throws \Psr\SimpleCache\InvalidArgumentException
+         *   MUST be thrown if the $key string is not a legal value.
+         * @static 
+         */ 
+        public static function set($key, $value, $ttl = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->set($key, $value, $ttl);
+        }
+                    /**
+         * Store multiple items in the cache for a given number of seconds.
+         *
+         * @param array $values
+         * @param \DateTimeInterface|\DateInterval|int|null $ttl
+         * @return bool 
+         * @static 
+         */ 
+        public static function putMany($values, $ttl = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->putMany($values, $ttl);
+        }
+                    /**
+         * Persists a set of key => value pairs in the cache, with an optional TTL.
+         *
+         * @param \Psr\SimpleCache\iterable $values A list of key => value pairs for a multiple-set operation.
+         * @param null|int|\DateInterval $ttl Optional. The TTL value of this item. If no value is sent and
+         *                                       the driver supports TTL then the library may set a default value
+         *                                       for it or let the driver take care of that.
+         * @return bool True on success and false on failure.
+         * @throws \Psr\SimpleCache\InvalidArgumentException
+         *   MUST be thrown if $values is neither an array nor a Traversable,
+         *   or if any of the $values are not a legal value.
+         * @static 
+         */ 
+        public static function setMultiple($values, $ttl = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->setMultiple($values, $ttl);
+        }
+                    /**
+         * Store an item in the cache if the key does not exist.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @param \DateTimeInterface|\DateInterval|int|null $ttl
+         * @return bool 
+         * @static 
+         */ 
+        public static function add($key, $value, $ttl = null)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->add($key, $value, $ttl);
+        }
+                    /**
+         * Increment the value of an item in the cache.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return int|bool 
+         * @static 
+         */ 
+        public static function increment($key, $value = 1)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->increment($key, $value);
+        }
+                    /**
+         * Decrement the value of an item in the cache.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return int|bool 
+         * @static 
+         */ 
+        public static function decrement($key, $value = 1)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->decrement($key, $value);
+        }
+                    /**
+         * Store an item in the cache indefinitely.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return bool 
+         * @static 
+         */ 
+        public static function forever($key, $value)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->forever($key, $value);
+        }
+                    /**
+         * Get an item from the cache, or execute the given Closure and store the result.
+         *
+         * @param string $key
+         * @param \DateTimeInterface|\DateInterval|int|null $ttl
+         * @param \Closure $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function remember($key, $ttl, $callback)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->remember($key, $ttl, $callback);
+        }
+                    /**
+         * Get an item from the cache, or execute the given Closure and store the result forever.
+         *
+         * @param string $key
+         * @param \Closure $callback
