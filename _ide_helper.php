@@ -3318,3 +3318,152 @@
          * Retrieve an item from the cache by key.
          *
          * @param string $key
+         * @return mixed 
+         * @static 
+         */ 
+        public static function offsetGet($key)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->offsetGet($key);
+        }
+                    /**
+         * Store an item in the cache for the default time.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetSet($key, $value)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        $instance->offsetSet($key, $value);
+        }
+                    /**
+         * Remove an item from the cache.
+         *
+         * @param string $key
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetUnset($key)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        $instance->offsetUnset($key);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Cache\Repository::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Cache\Repository::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Cache\Repository::hasMacro($name);
+        }
+                    /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->macroCall($method, $parameters);
+        }
+                    /**
+         * Remove all items from the cache.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function flush()
+        {
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->flush();
+        }
+                    /**
+         * Get the Filesystem instance.
+         *
+         * @return \Illuminate\Filesystem\Filesystem 
+         * @static 
+         */ 
+        public static function getFilesystem()
+        {
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->getFilesystem();
+        }
+                    /**
+         * Get the working directory of the cache.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDirectory()
+        {
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->getDirectory();
+        }
+                    /**
+         * Get the cache key prefix.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getPrefix()
+        {
+                        /** @var \Illuminate\Cache\FileStore $instance */
+                        return $instance->getPrefix();
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Config\Repository
+     */ 
+        class Config {
+                    /**
+         * Determine if the given configuration value exists.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($key)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->has($key);
+        }
+                    /**
+         * Get the specified configuration value.
