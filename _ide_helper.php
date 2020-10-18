@@ -3467,3 +3467,157 @@
         }
                     /**
          * Get the specified configuration value.
+         *
+         * @param array|string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($key, $default = null)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->get($key, $default);
+        }
+                    /**
+         * Get many configuration values.
+         *
+         * @param array $keys
+         * @return array 
+         * @static 
+         */ 
+        public static function getMany($keys)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->getMany($keys);
+        }
+                    /**
+         * Set a given configuration value.
+         *
+         * @param array|string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function set($key, $value = null)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        $instance->set($key, $value);
+        }
+                    /**
+         * Prepend a value onto an array configuration value.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function prepend($key, $value)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        $instance->prepend($key, $value);
+        }
+                    /**
+         * Push a value onto an array configuration value.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function push($key, $value)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        $instance->push($key, $value);
+        }
+                    /**
+         * Get all of the configuration items for the application.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function all()
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->all();
+        }
+                    /**
+         * Determine if the given configuration option exists.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function offsetExists($key)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->offsetExists($key);
+        }
+                    /**
+         * Get a configuration option.
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */ 
+        public static function offsetGet($key)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        return $instance->offsetGet($key);
+        }
+                    /**
+         * Set a configuration option.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetSet($key, $value)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        $instance->offsetSet($key, $value);
+        }
+                    /**
+         * Unset a configuration option.
+         *
+         * @param string $key
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetUnset($key)
+        {
+                        /** @var \Illuminate\Config\Repository $instance */
+                        $instance->offsetUnset($key);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Cookie\CookieJar
+     */ 
+        class Cookie {
+                    /**
+         * Create a new cookie instance.
+         *
+         * @param string $name
+         * @param string $value
+         * @param int $minutes
+         * @param string|null $path
+         * @param string|null $domain
+         * @param bool|null $secure
+         * @param bool $httpOnly
+         * @param bool $raw
+         * @param string|null $sameSite
+         * @return \Symfony\Component\HttpFoundation\Cookie 
+         * @static 
+         */ 
+        public static function make($name, $value, $minutes = 0, $path = null, $domain = null, $secure = null, $httpOnly = true, $raw = false, $sameSite = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->make($name, $value, $minutes, $path, $domain, $secure, $httpOnly, $raw, $sameSite);
+        }
+                    /**
+         * Create a cookie that lasts "forever" (five years).
+         *
+         * @param string $name
