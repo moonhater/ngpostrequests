@@ -3159,3 +3159,162 @@
          *
          * @param string $key
          * @param \Closure $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function sear($key, $callback)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->sear($key, $callback);
+        }
+                    /**
+         * Get an item from the cache, or execute the given Closure and store the result forever.
+         *
+         * @param string $key
+         * @param \Closure $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function rememberForever($key, $callback)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->rememberForever($key, $callback);
+        }
+                    /**
+         * Remove an item from the cache.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function forget($key)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->forget($key);
+        }
+                    /**
+         * Delete an item from the cache by its unique key.
+         *
+         * @param string $key The unique cache key of the item to delete.
+         * @return bool True if the item was successfully removed. False if there was an error.
+         * @throws \Psr\SimpleCache\InvalidArgumentException
+         *   MUST be thrown if the $key string is not a legal value.
+         * @static 
+         */ 
+        public static function delete($key)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->delete($key);
+        }
+                    /**
+         * Deletes multiple cache items in a single operation.
+         *
+         * @param \Psr\SimpleCache\iterable $keys A list of string-based keys to be deleted.
+         * @return bool True if the items were successfully removed. False if there was an error.
+         * @throws \Psr\SimpleCache\InvalidArgumentException
+         *   MUST be thrown if $keys is neither an array nor a Traversable,
+         *   or if any of the $keys are not a legal value.
+         * @static 
+         */ 
+        public static function deleteMultiple($keys)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->deleteMultiple($keys);
+        }
+                    /**
+         * Wipes clean the entire cache's keys.
+         *
+         * @return bool True on success and false on failure.
+         * @static 
+         */ 
+        public static function clear()
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->clear();
+        }
+                    /**
+         * Begin executing a new tags operation if the store supports it.
+         *
+         * @param array|mixed $names
+         * @return \Illuminate\Cache\TaggedCache 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function tags($names)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->tags($names);
+        }
+                    /**
+         * Get the default cache time.
+         *
+         * @return int|null 
+         * @static 
+         */ 
+        public static function getDefaultCacheTime()
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->getDefaultCacheTime();
+        }
+                    /**
+         * Set the default cache time in seconds.
+         *
+         * @param int|null $seconds
+         * @return \Illuminate\Cache\Repository 
+         * @static 
+         */ 
+        public static function setDefaultCacheTime($seconds)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->setDefaultCacheTime($seconds);
+        }
+                    /**
+         * Get the cache store implementation.
+         *
+         * @return \Illuminate\Contracts\Cache\Store 
+         * @static 
+         */ 
+        public static function getStore()
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->getStore();
+        }
+                    /**
+         * Get the event dispatcher instance.
+         *
+         * @return \Illuminate\Contracts\Events\Dispatcher 
+         * @static 
+         */ 
+        public static function getEventDispatcher()
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->getEventDispatcher();
+        }
+                    /**
+         * Set the event dispatcher instance.
+         *
+         * @param \Illuminate\Contracts\Events\Dispatcher $events
+         * @return void 
+         * @static 
+         */ 
+        public static function setEventDispatcher($events)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        $instance->setEventDispatcher($events);
+        }
+                    /**
+         * Determine if a cached value exists.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function offsetExists($key)
+        {
+                        /** @var \Illuminate\Cache\Repository $instance */
+                        return $instance->offsetExists($key);
+        }
+                    /**
+         * Retrieve an item from the cache by key.
+         *
+         * @param string $key
