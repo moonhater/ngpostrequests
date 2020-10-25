@@ -3621,3 +3621,150 @@
          * Create a cookie that lasts "forever" (five years).
          *
          * @param string $name
+         * @param string $value
+         * @param string|null $path
+         * @param string|null $domain
+         * @param bool|null $secure
+         * @param bool $httpOnly
+         * @param bool $raw
+         * @param string|null $sameSite
+         * @return \Symfony\Component\HttpFoundation\Cookie 
+         * @static 
+         */ 
+        public static function forever($name, $value, $path = null, $domain = null, $secure = null, $httpOnly = true, $raw = false, $sameSite = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->forever($name, $value, $path, $domain, $secure, $httpOnly, $raw, $sameSite);
+        }
+                    /**
+         * Expire the given cookie.
+         *
+         * @param string $name
+         * @param string|null $path
+         * @param string|null $domain
+         * @return \Symfony\Component\HttpFoundation\Cookie 
+         * @static 
+         */ 
+        public static function forget($name, $path = null, $domain = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->forget($name, $path, $domain);
+        }
+                    /**
+         * Determine if a cookie has been queued.
+         *
+         * @param string $key
+         * @param string|null $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasQueued($key, $path = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->hasQueued($key, $path);
+        }
+                    /**
+         * Get a queued cookie instance.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @param string|null $path
+         * @return \Symfony\Component\HttpFoundation\Cookie|null 
+         * @static 
+         */ 
+        public static function queued($key, $default = null, $path = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->queued($key, $default, $path);
+        }
+                    /**
+         * Queue a cookie to send with the next response.
+         *
+         * @param array $parameters
+         * @return void 
+         * @static 
+         */ 
+        public static function queue(...$parameters)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        $instance->queue(...$parameters);
+        }
+                    /**
+         * Remove a cookie from the queue.
+         *
+         * @param string $name
+         * @param string|null $path
+         * @return void 
+         * @static 
+         */ 
+        public static function unqueue($name, $path = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        $instance->unqueue($name, $path);
+        }
+                    /**
+         * Set the default path and domain for the jar.
+         *
+         * @param string $path
+         * @param string $domain
+         * @param bool $secure
+         * @param string|null $sameSite
+         * @return \Illuminate\Cookie\CookieJar 
+         * @static 
+         */ 
+        public static function setDefaultPathAndDomain($path, $domain, $secure = false, $sameSite = null)
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->setDefaultPathAndDomain($path, $domain, $secure, $sameSite);
+        }
+                    /**
+         * Get the cookies which have been queued for the next request.
+         *
+         * @return \Symfony\Component\HttpFoundation\Cookie[] 
+         * @static 
+         */ 
+        public static function getQueuedCookies()
+        {
+                        /** @var \Illuminate\Cookie\CookieJar $instance */
+                        return $instance->getQueuedCookies();
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Cookie\CookieJar::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Cookie\CookieJar::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Cookie\CookieJar::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
