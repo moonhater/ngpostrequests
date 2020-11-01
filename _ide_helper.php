@@ -4039,3 +4039,162 @@
          * @return void 
          * @static 
          */ 
+        public static function useDefaultSchemaGrammar()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->useDefaultSchemaGrammar();
+        }
+                    /**
+         * Set the query post processor to the default implementation.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function useDefaultPostProcessor()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->useDefaultPostProcessor();
+        }
+                    /**
+         * Begin a fluent query against a database table.
+         *
+         * @param \Closure|\Illuminate\Database\Query\Builder|string $table
+         * @param string|null $as
+         * @return \Illuminate\Database\Query\Builder 
+         * @static 
+         */ 
+        public static function table($table, $as = null)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->table($table, $as);
+        }
+                    /**
+         * Get a new query builder instance.
+         *
+         * @return \Illuminate\Database\Query\Builder 
+         * @static 
+         */ 
+        public static function query()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->query();
+        }
+                    /**
+         * Run a select statement and return a single result.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @param bool $useReadPdo
+         * @return mixed 
+         * @static 
+         */ 
+        public static function selectOne($query, $bindings = [], $useReadPdo = true)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->selectOne($query, $bindings, $useReadPdo);
+        }
+                    /**
+         * Run a select statement against the database.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return array 
+         * @static 
+         */ 
+        public static function selectFromWriteConnection($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->selectFromWriteConnection($query, $bindings);
+        }
+                    /**
+         * Run a select statement against the database.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @param bool $useReadPdo
+         * @return array 
+         * @static 
+         */ 
+        public static function select($query, $bindings = [], $useReadPdo = true)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->select($query, $bindings, $useReadPdo);
+        }
+                    /**
+         * Run a select statement against the database and returns a generator.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @param bool $useReadPdo
+         * @return \Generator 
+         * @static 
+         */ 
+        public static function cursor($query, $bindings = [], $useReadPdo = true)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->cursor($query, $bindings, $useReadPdo);
+        }
+                    /**
+         * Run an insert statement against the database.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return bool 
+         * @static 
+         */ 
+        public static function insert($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->insert($query, $bindings);
+        }
+                    /**
+         * Run an update statement against the database.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return int 
+         * @static 
+         */ 
+        public static function update($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->update($query, $bindings);
+        }
+                    /**
+         * Run a delete statement against the database.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return int 
+         * @static 
+         */ 
+        public static function delete($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->delete($query, $bindings);
+        }
+                    /**
+         * Execute an SQL statement and return the boolean result.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return bool 
+         * @static 
+         */ 
+        public static function statement($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->statement($query, $bindings);
+        }
+                    /**
+         * Run an SQL statement and get the number of rows affected.
+         *
+         * @param string $query
+         * @param array $bindings
+         * @return int 
+         * @static 
+         */ 
+        public static function affectingStatement($query, $bindings = [])
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->affectingStatement($query, $bindings);
