@@ -3901,3 +3901,141 @@
          * @static 
          */ 
         public static function disconnect($name = null)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        $instance->disconnect($name);
+        }
+                    /**
+         * Reconnect to the given database.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Database\Connection 
+         * @static 
+         */ 
+        public static function reconnect($name = null)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->reconnect($name);
+        }
+                    /**
+         * Set the default database connection for the callback execution.
+         *
+         * @param string $name
+         * @param callable $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function usingConnection($name, $callback)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->usingConnection($name, $callback);
+        }
+                    /**
+         * Get the default connection name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultConnection()
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->getDefaultConnection();
+        }
+                    /**
+         * Set the default connection name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultConnection($name)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        $instance->setDefaultConnection($name);
+        }
+                    /**
+         * Get all of the support drivers.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function supportedDrivers()
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->supportedDrivers();
+        }
+                    /**
+         * Get all of the drivers that are actually available.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function availableDrivers()
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->availableDrivers();
+        }
+                    /**
+         * Register an extension connection resolver.
+         *
+         * @param string $name
+         * @param callable $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($name, $resolver)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        $instance->extend($name, $resolver);
+        }
+                    /**
+         * Return all of the created connections.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getConnections()
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        return $instance->getConnections();
+        }
+                    /**
+         * Set the database reconnector callback.
+         *
+         * @param callable $reconnector
+         * @return void 
+         * @static 
+         */ 
+        public static function setReconnector($reconnector)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        $instance->setReconnector($reconnector);
+        }
+                    /**
+         * Get a schema builder instance for the connection.
+         *
+         * @return \Illuminate\Database\Schema\MySqlBuilder 
+         * @static 
+         */ 
+        public static function getSchemaBuilder()
+        {
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->getSchemaBuilder();
+        }
+                    /**
+         * Set the query grammar to the default implementation.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function useDefaultQueryGrammar()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->useDefaultQueryGrammar();
+        }
+                    /**
+         * Set the schema grammar to the default implementation.
+         *
+         * @return void 
+         * @static 
+         */ 
