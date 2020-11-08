@@ -4680,3 +4680,148 @@
          * @param \Closure $callback
          * @return void 
          * @static 
+         */ 
+        public static function resolverFor($driver, $callback)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        \Illuminate\Database\MySqlConnection::resolverFor($driver, $callback);
+        }
+                    /**
+         * Get the connection resolver for the given driver.
+         *
+         * @param string $driver
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getResolver($driver)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        return \Illuminate\Database\MySqlConnection::getResolver($driver);
+        }
+                    /**
+         * Execute a Closure within a transaction.
+         *
+         * @param \Closure $callback
+         * @param int $attempts
+         * @return mixed 
+         * @throws \Throwable
+         * @static 
+         */ 
+        public static function transaction($callback, $attempts = 1)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->transaction($callback, $attempts);
+        }
+                    /**
+         * Start a new database transaction.
+         *
+         * @return void 
+         * @throws \Throwable
+         * @static 
+         */ 
+        public static function beginTransaction()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->beginTransaction();
+        }
+                    /**
+         * Commit the active database transaction.
+         *
+         * @return void 
+         * @throws \Throwable
+         * @static 
+         */ 
+        public static function commit()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->commit();
+        }
+                    /**
+         * Rollback the active database transaction.
+         *
+         * @param int|null $toLevel
+         * @return void 
+         * @throws \Throwable
+         * @static 
+         */ 
+        public static function rollBack($toLevel = null)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->rollBack($toLevel);
+        }
+                    /**
+         * Get the number of active transactions.
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function transactionLevel()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->transactionLevel();
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Events\Dispatcher
+     */ 
+        class Event {
+                    /**
+         * Register an event listener with the dispatcher.
+         *
+         * @param string|array $events
+         * @param \Closure|string $listener
+         * @return void 
+         * @static 
+         */ 
+        public static function listen($events, $listener)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->listen($events, $listener);
+        }
+                    /**
+         * Determine if a given event has listeners.
+         *
+         * @param string $eventName
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasListeners($eventName)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->hasListeners($eventName);
+        }
+                    /**
+         * Determine if the given event has any wildcard listeners.
+         *
+         * @param string $eventName
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasWildcardListeners($eventName)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->hasWildcardListeners($eventName);
+        }
+                    /**
+         * Register an event and payload to be fired later.
+         *
+         * @param string $event
+         * @param array $payload
+         * @return void 
+         * @static 
+         */ 
+        public static function push($event, $payload = [])
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->push($event, $payload);
+        }
+                    /**
+         * Flush a set of pushed events.
+         *
+         * @param string $event
+         * @return void 
+         * @static 
+         */ 
+        public static function flush($event)
+        {
