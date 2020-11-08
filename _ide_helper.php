@@ -4825,3 +4825,157 @@
          */ 
         public static function flush($event)
         {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->flush($event);
+        }
+                    /**
+         * Register an event subscriber with the dispatcher.
+         *
+         * @param object|string $subscriber
+         * @return void 
+         * @static 
+         */ 
+        public static function subscribe($subscriber)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->subscribe($subscriber);
+        }
+                    /**
+         * Fire an event until the first non-null response is returned.
+         *
+         * @param string|object $event
+         * @param mixed $payload
+         * @return array|null 
+         * @static 
+         */ 
+        public static function until($event, $payload = [])
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->until($event, $payload);
+        }
+                    /**
+         * Fire an event and call the listeners.
+         *
+         * @param string|object $event
+         * @param mixed $payload
+         * @param bool $halt
+         * @return array|null 
+         * @static 
+         */ 
+        public static function dispatch($event, $payload = [], $halt = false)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->dispatch($event, $payload, $halt);
+        }
+                    /**
+         * Get all of the listeners for a given event name.
+         *
+         * @param string $eventName
+         * @return array 
+         * @static 
+         */ 
+        public static function getListeners($eventName)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->getListeners($eventName);
+        }
+                    /**
+         * Register an event listener with the dispatcher.
+         *
+         * @param \Closure|string $listener
+         * @param bool $wildcard
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function makeListener($listener, $wildcard = false)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->makeListener($listener, $wildcard);
+        }
+                    /**
+         * Create a class based listener using the IoC container.
+         *
+         * @param string $listener
+         * @param bool $wildcard
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function createClassListener($listener, $wildcard = false)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->createClassListener($listener, $wildcard);
+        }
+                    /**
+         * Remove a set of listeners from the dispatcher.
+         *
+         * @param string $event
+         * @return void 
+         * @static 
+         */ 
+        public static function forget($event)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->forget($event);
+        }
+                    /**
+         * Forget all of the pushed listeners.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function forgetPushed()
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->forgetPushed();
+        }
+                    /**
+         * Set the queue resolver implementation.
+         *
+         * @param callable $resolver
+         * @return \Illuminate\Events\Dispatcher 
+         * @static 
+         */ 
+        public static function setQueueResolver($resolver)
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        return $instance->setQueueResolver($resolver);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Events\Dispatcher::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Events\Dispatcher::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Events\Dispatcher::hasMacro($name);
+        }
+                    /**
+         * Assert if an event was dispatched based on a truth-test callback.
+         *
