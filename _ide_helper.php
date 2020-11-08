@@ -4979,3 +4979,151 @@
                     /**
          * Assert if an event was dispatched based on a truth-test callback.
          *
+         * @param string|\Closure $event
+         * @param callable|int|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertDispatched($event, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        $instance->assertDispatched($event, $callback);
+        }
+                    /**
+         * Assert if an event was dispatched a number of times.
+         *
+         * @param string $event
+         * @param int $times
+         * @return void 
+         * @static 
+         */ 
+        public static function assertDispatchedTimes($event, $times = 1)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        $instance->assertDispatchedTimes($event, $times);
+        }
+                    /**
+         * Determine if an event was dispatched based on a truth-test callback.
+         *
+         * @param string|\Closure $event
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNotDispatched($event, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        $instance->assertNotDispatched($event, $callback);
+        }
+                    /**
+         * Get all of the events matching a truth-test callback.
+         *
+         * @param string $event
+         * @param callable|null $callback
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function dispatched($event, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        return $instance->dispatched($event, $callback);
+        }
+                    /**
+         * Determine if the given event has been dispatched.
+         *
+         * @param string $event
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasDispatched($event)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\EventFake $instance */
+                        return $instance->hasDispatched($event);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Filesystem\Filesystem
+     */ 
+        class File {
+                    /**
+         * Determine if a file or directory exists.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->exists($path);
+        }
+                    /**
+         * Determine if a file or directory is missing.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function missing($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->missing($path);
+        }
+                    /**
+         * Get the contents of a file.
+         *
+         * @param string $path
+         * @param bool $lock
+         * @return string 
+         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+         * @static 
+         */ 
+        public static function get($path, $lock = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->get($path, $lock);
+        }
+                    /**
+         * Get contents of a file with shared access.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function sharedGet($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->sharedGet($path);
+        }
+                    /**
+         * Get the returned value of a file.
+         *
+         * @param string $path
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+         * @static 
+         */ 
+        public static function getRequire($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->getRequire($path);
+        }
+                    /**
+         * Require the given file once.
+         *
+         * @param string $file
+         * @return mixed 
+         * @static 
+         */ 
+        public static function requireOnce($file)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->requireOnce($file);
+        }
+                    /**
+         * Get the MD5 hash of the file at the given path.
+         *
+         * @param string $path
