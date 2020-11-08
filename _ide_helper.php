@@ -4502,3 +4502,181 @@
         {            //Method inherited from \Illuminate\Database\Connection         
                         /** @var \Illuminate\Database\MySqlConnection $instance */
                         return $instance->getPostProcessor();
+        }
+                    /**
+         * Set the query post processor used by the connection.
+         *
+         * @param \Illuminate\Database\Query\Processors\Processor $processor
+         * @return \Illuminate\Database\MySqlConnection 
+         * @static 
+         */ 
+        public static function setPostProcessor($processor)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->setPostProcessor($processor);
+        }
+                    /**
+         * Get the event dispatcher used by the connection.
+         *
+         * @return \Illuminate\Contracts\Events\Dispatcher 
+         * @static 
+         */ 
+        public static function getEventDispatcher()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->getEventDispatcher();
+        }
+                    /**
+         * Set the event dispatcher instance on the connection.
+         *
+         * @param \Illuminate\Contracts\Events\Dispatcher $events
+         * @return \Illuminate\Database\MySqlConnection 
+         * @static 
+         */ 
+        public static function setEventDispatcher($events)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->setEventDispatcher($events);
+        }
+                    /**
+         * Unset the event dispatcher for this connection.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function unsetEventDispatcher()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->unsetEventDispatcher();
+        }
+                    /**
+         * Determine if the connection is in a "dry run".
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function pretending()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->pretending();
+        }
+                    /**
+         * Get the connection query log.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getQueryLog()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->getQueryLog();
+        }
+                    /**
+         * Clear the query log.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushQueryLog()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->flushQueryLog();
+        }
+                    /**
+         * Enable the query log on the connection.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function enableQueryLog()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->enableQueryLog();
+        }
+                    /**
+         * Disable the query log on the connection.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function disableQueryLog()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->disableQueryLog();
+        }
+                    /**
+         * Determine whether we're logging queries.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function logging()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->logging();
+        }
+                    /**
+         * Get the name of the connected database.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDatabaseName()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->getDatabaseName();
+        }
+                    /**
+         * Set the name of the connected database.
+         *
+         * @param string $database
+         * @return \Illuminate\Database\MySqlConnection 
+         * @static 
+         */ 
+        public static function setDatabaseName($database)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->setDatabaseName($database);
+        }
+                    /**
+         * Get the table prefix for the connection.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getTablePrefix()
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->getTablePrefix();
+        }
+                    /**
+         * Set the table prefix in use by the connection.
+         *
+         * @param string $prefix
+         * @return \Illuminate\Database\MySqlConnection 
+         * @static 
+         */ 
+        public static function setTablePrefix($prefix)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->setTablePrefix($prefix);
+        }
+                    /**
+         * Set the table prefix and return the grammar.
+         *
+         * @param \Illuminate\Database\Grammar $grammar
+         * @return \Illuminate\Database\Grammar 
+         * @static 
+         */ 
+        public static function withTablePrefix($grammar)
+        {            //Method inherited from \Illuminate\Database\Connection         
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        return $instance->withTablePrefix($grammar);
+        }
+                    /**
+         * Register a connection resolver.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return void 
+         * @static 
