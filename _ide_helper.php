@@ -5127,3 +5127,162 @@
          * Get the MD5 hash of the file at the given path.
          *
          * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function hash($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->hash($path);
+        }
+                    /**
+         * Write the contents of a file.
+         *
+         * @param string $path
+         * @param string $contents
+         * @param bool $lock
+         * @return int|bool 
+         * @static 
+         */ 
+        public static function put($path, $contents, $lock = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->put($path, $contents, $lock);
+        }
+                    /**
+         * Write the contents of a file, replacing it atomically if it already exists.
+         *
+         * @param string $path
+         * @param string $content
+         * @return void 
+         * @static 
+         */ 
+        public static function replace($path, $content)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        $instance->replace($path, $content);
+        }
+                    /**
+         * Prepend to a file.
+         *
+         * @param string $path
+         * @param string $data
+         * @return int 
+         * @static 
+         */ 
+        public static function prepend($path, $data)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->prepend($path, $data);
+        }
+                    /**
+         * Append to a file.
+         *
+         * @param string $path
+         * @param string $data
+         * @return int 
+         * @static 
+         */ 
+        public static function append($path, $data)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->append($path, $data);
+        }
+                    /**
+         * Get or set UNIX mode of a file or directory.
+         *
+         * @param string $path
+         * @param int|null $mode
+         * @return mixed 
+         * @static 
+         */ 
+        public static function chmod($path, $mode = null)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->chmod($path, $mode);
+        }
+                    /**
+         * Delete the file at a given path.
+         *
+         * @param string|array $paths
+         * @return bool 
+         * @static 
+         */ 
+        public static function delete($paths)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->delete($paths);
+        }
+                    /**
+         * Move a file to a new location.
+         *
+         * @param string $path
+         * @param string $target
+         * @return bool 
+         * @static 
+         */ 
+        public static function move($path, $target)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->move($path, $target);
+        }
+                    /**
+         * Copy a file to a new location.
+         *
+         * @param string $path
+         * @param string $target
+         * @return bool 
+         * @static 
+         */ 
+        public static function copy($path, $target)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->copy($path, $target);
+        }
+                    /**
+         * Create a symlink to the target file or directory. On Windows, a hard link is created if the target is a file.
+         *
+         * @param string $target
+         * @param string $link
+         * @return void 
+         * @static 
+         */ 
+        public static function link($target, $link)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        $instance->link($target, $link);
+        }
+                    /**
+         * Extract the file name from a file path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function name($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->name($path);
+        }
+                    /**
+         * Extract the trailing name component from a file path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function basename($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->basename($path);
+        }
+                    /**
+         * Extract the parent directory from a file path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function dirname($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
