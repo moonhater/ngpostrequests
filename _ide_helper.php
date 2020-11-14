@@ -5286,3 +5286,131 @@
         public static function dirname($path)
         {
                         /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->dirname($path);
+        }
+                    /**
+         * Extract the file extension from a file path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function extension($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->extension($path);
+        }
+                    /**
+         * Guess the file extension from the mime-type of a given file.
+         *
+         * @param string $path
+         * @return string|null 
+         * @static 
+         */ 
+        public static function guessExtension($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->guessExtension($path);
+        }
+                    /**
+         * Get the file type of a given file.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function type($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->type($path);
+        }
+                    /**
+         * Get the mime-type of a given file.
+         *
+         * @param string $path
+         * @return string|false 
+         * @static 
+         */ 
+        public static function mimeType($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->mimeType($path);
+        }
+                    /**
+         * Get the file size of a given file.
+         *
+         * @param string $path
+         * @return int 
+         * @static 
+         */ 
+        public static function size($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->size($path);
+        }
+                    /**
+         * Get the file's last modification time.
+         *
+         * @param string $path
+         * @return int 
+         * @static 
+         */ 
+        public static function lastModified($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->lastModified($path);
+        }
+                    /**
+         * Determine if the given path is a directory.
+         *
+         * @param string $directory
+         * @return bool 
+         * @static 
+         */ 
+        public static function isDirectory($directory)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->isDirectory($directory);
+        }
+                    /**
+         * Determine if the given path is readable.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function isReadable($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->isReadable($path);
+        }
+                    /**
+         * Determine if the given path is writable.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function isWritable($path)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->isWritable($path);
+        }
+                    /**
+         * Determine if the given path is a file.
+         *
+         * @param string $file
+         * @return bool 
+         * @static 
+         */ 
+        public static function isFile($file)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->isFile($file);
+        }
+                    /**
+         * Find path names matching a given pattern.
+         *
+         * @param string $pattern
+         * @param int $flags
+         * @return array 
