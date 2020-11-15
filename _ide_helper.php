@@ -5414,3 +5414,153 @@
          * @param string $pattern
          * @param int $flags
          * @return array 
+         * @static 
+         */ 
+        public static function glob($pattern, $flags = 0)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->glob($pattern, $flags);
+        }
+                    /**
+         * Get an array of all files in a directory.
+         *
+         * @param string $directory
+         * @param bool $hidden
+         * @return \Symfony\Component\Finder\SplFileInfo[] 
+         * @static 
+         */ 
+        public static function files($directory, $hidden = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->files($directory, $hidden);
+        }
+                    /**
+         * Get all of the files from the given directory (recursive).
+         *
+         * @param string $directory
+         * @param bool $hidden
+         * @return \Symfony\Component\Finder\SplFileInfo[] 
+         * @static 
+         */ 
+        public static function allFiles($directory, $hidden = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->allFiles($directory, $hidden);
+        }
+                    /**
+         * Get all of the directories within a given directory.
+         *
+         * @param string $directory
+         * @return array 
+         * @static 
+         */ 
+        public static function directories($directory)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->directories($directory);
+        }
+                    /**
+         * Ensure a directory exists.
+         *
+         * @param string $path
+         * @param int $mode
+         * @param bool $recursive
+         * @return void 
+         * @static 
+         */ 
+        public static function ensureDirectoryExists($path, $mode = 493, $recursive = true)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        $instance->ensureDirectoryExists($path, $mode, $recursive);
+        }
+                    /**
+         * Create a directory.
+         *
+         * @param string $path
+         * @param int $mode
+         * @param bool $recursive
+         * @param bool $force
+         * @return bool 
+         * @static 
+         */ 
+        public static function makeDirectory($path, $mode = 493, $recursive = false, $force = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->makeDirectory($path, $mode, $recursive, $force);
+        }
+                    /**
+         * Move a directory.
+         *
+         * @param string $from
+         * @param string $to
+         * @param bool $overwrite
+         * @return bool 
+         * @static 
+         */ 
+        public static function moveDirectory($from, $to, $overwrite = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->moveDirectory($from, $to, $overwrite);
+        }
+                    /**
+         * Copy a directory from one location to another.
+         *
+         * @param string $directory
+         * @param string $destination
+         * @param int|null $options
+         * @return bool 
+         * @static 
+         */ 
+        public static function copyDirectory($directory, $destination, $options = null)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->copyDirectory($directory, $destination, $options);
+        }
+                    /**
+         * Recursively delete a directory.
+         * 
+         * The directory itself may be optionally preserved.
+         *
+         * @param string $directory
+         * @param bool $preserve
+         * @return bool 
+         * @static 
+         */ 
+        public static function deleteDirectory($directory, $preserve = false)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->deleteDirectory($directory, $preserve);
+        }
+                    /**
+         * Remove all of the directories within a given directory.
+         *
+         * @param string $directory
+         * @return bool 
+         * @static 
+         */ 
+        public static function deleteDirectories($directory)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->deleteDirectories($directory);
+        }
+                    /**
+         * Empty the specified directory of all files and folders.
+         *
+         * @param string $directory
+         * @return bool 
+         * @static 
+         */ 
+        public static function cleanDirectory($directory)
+        {
+                        /** @var \Illuminate\Filesystem\Filesystem $instance */
+                        return $instance->cleanDirectory($directory);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
