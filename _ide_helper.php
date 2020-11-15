@@ -5564,3 +5564,156 @@
          * @static 
          */ 
         public static function macro($name, $macro)
+        {
+                        \Illuminate\Filesystem\Filesystem::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Filesystem\Filesystem::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Filesystem\Filesystem::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Contracts\Auth\Access\Gate
+     */ 
+        class Gate {
+                    /**
+         * Determine if a given ability has been defined.
+         *
+         * @param string|array $ability
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($ability)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->has($ability);
+        }
+                    /**
+         * Define a new ability.
+         *
+         * @param string $ability
+         * @param callable|string $callback
+         * @return \Illuminate\Auth\Access\Gate 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function define($ability, $callback)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->define($ability, $callback);
+        }
+                    /**
+         * Define abilities for a resource.
+         *
+         * @param string $name
+         * @param string $class
+         * @param array|null $abilities
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function resource($name, $class, $abilities = null)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->resource($name, $class, $abilities);
+        }
+                    /**
+         * Define a policy class for a given class type.
+         *
+         * @param string $class
+         * @param string $policy
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function policy($class, $policy)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->policy($class, $policy);
+        }
+                    /**
+         * Register a callback to run before all Gate checks.
+         *
+         * @param callable $callback
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function before($callback)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->before($callback);
+        }
+                    /**
+         * Register a callback to run after all Gate checks.
+         *
+         * @param callable $callback
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function after($callback)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->after($callback);
+        }
+                    /**
+         * Determine if the given ability should be granted for the current user.
+         *
+         * @param string $ability
+         * @param array|mixed $arguments
+         * @return bool 
+         * @static 
+         */ 
+        public static function allows($ability, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->allows($ability, $arguments);
+        }
+                    /**
+         * Determine if the given ability should be denied for the current user.
+         *
+         * @param string $ability
+         * @param array|mixed $arguments
+         * @return bool 
+         * @static 
+         */ 
+        public static function denies($ability, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->denies($ability, $arguments);
+        }
+                    /**
+         * Determine if all of the given abilities should be granted for the current user.
+         *
+         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param array|mixed $arguments
+         * @return bool 
+         * @static 
+         */ 
+        public static function check($abilities, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->check($abilities, $arguments);
+        }
+                    /**
+         * Determine if any one of the given abilities should be granted for the current user.
