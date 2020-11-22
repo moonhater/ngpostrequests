@@ -5717,3 +5717,161 @@
         }
                     /**
          * Determine if any one of the given abilities should be granted for the current user.
+         *
+         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param array|mixed $arguments
+         * @return bool 
+         * @static 
+         */ 
+        public static function any($abilities, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->any($abilities, $arguments);
+        }
+                    /**
+         * Determine if all of the given abilities should be denied for the current user.
+         *
+         * @param \Illuminate\Auth\Access\iterable|string $abilities
+         * @param array|mixed $arguments
+         * @return bool 
+         * @static 
+         */ 
+        public static function none($abilities, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->none($abilities, $arguments);
+        }
+                    /**
+         * Determine if the given ability should be granted for the current user.
+         *
+         * @param string $ability
+         * @param array|mixed $arguments
+         * @return \Illuminate\Auth\Access\Response 
+         * @throws \Illuminate\Auth\Access\AuthorizationException
+         * @static 
+         */ 
+        public static function authorize($ability, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->authorize($ability, $arguments);
+        }
+                    /**
+         * Inspect the user for the given ability.
+         *
+         * @param string $ability
+         * @param array|mixed $arguments
+         * @return \Illuminate\Auth\Access\Response 
+         * @static 
+         */ 
+        public static function inspect($ability, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->inspect($ability, $arguments);
+        }
+                    /**
+         * Get the raw result from the authorization callback.
+         *
+         * @param string $ability
+         * @param array|mixed $arguments
+         * @return mixed 
+         * @throws \Illuminate\Auth\Access\AuthorizationException
+         * @static 
+         */ 
+        public static function raw($ability, $arguments = [])
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->raw($ability, $arguments);
+        }
+                    /**
+         * Get a policy instance for a given class.
+         *
+         * @param object|string $class
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getPolicyFor($class)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->getPolicyFor($class);
+        }
+                    /**
+         * Specify a callback to be used to guess policy names.
+         *
+         * @param callable $callback
+         * @return \Illuminate\Auth\Access\Gate 
+         * @static 
+         */ 
+        public static function guessPolicyNamesUsing($callback)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->guessPolicyNamesUsing($callback);
+        }
+                    /**
+         * Build a policy class instance of the given type.
+         *
+         * @param object|string $class
+         * @return mixed 
+         * @throws \Illuminate\Contracts\Container\BindingResolutionException
+         * @static 
+         */ 
+        public static function resolvePolicy($class)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->resolvePolicy($class);
+        }
+                    /**
+         * Get a gate instance for the given user.
+         *
+         * @param \Illuminate\Contracts\Auth\Authenticatable|mixed $user
+         * @return static 
+         * @static 
+         */ 
+        public static function forUser($user)
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->forUser($user);
+        }
+                    /**
+         * Get all of the defined abilities.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function abilities()
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->abilities();
+        }
+                    /**
+         * Get all of the defined policies.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function policies()
+        {
+                        /** @var \Illuminate\Auth\Access\Gate $instance */
+                        return $instance->policies();
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Hashing\HashManager
+     */ 
+        class Hash {
+                    /**
+         * Create an instance of the Bcrypt hash Driver.
+         *
+         * @return \Illuminate\Hashing\BcryptHasher 
+         * @static 
+         */ 
+        public static function createBcryptDriver()
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->createBcryptDriver();
+        }
+                    /**
+         * Create an instance of the Argon2i hash Driver.
+         *
