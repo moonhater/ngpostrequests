@@ -6029,3 +6029,132 @@
      * @method static \Illuminate\Http\Client\Response send(string $method, string $url, array $options = [])
      * @see \Illuminate\Http\Client\Factory
      */ 
+        class Http {
+                    /**
+         * Create a new response instance for use during stubbing.
+         *
+         * @param array|string $body
+         * @param int $status
+         * @param array $headers
+         * @return \GuzzleHttp\Promise\PromiseInterface 
+         * @static 
+         */ 
+        public static function response($body = null, $status = 200, $headers = [])
+        {
+                        return \Illuminate\Http\Client\Factory::response($body, $status, $headers);
+        }
+                    /**
+         * Get an invokable object that returns a sequence of responses in order for use during stubbing.
+         *
+         * @param array $responses
+         * @return \Illuminate\Http\Client\ResponseSequence 
+         * @static 
+         */ 
+        public static function sequence($responses = [])
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->sequence($responses);
+        }
+                    /**
+         * Register a stub callable that will intercept requests and be able to return stub responses.
+         *
+         * @param callable|array $callback
+         * @return \Illuminate\Http\Client\Factory 
+         * @static 
+         */ 
+        public static function fake($callback = null)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->fake($callback);
+        }
+                    /**
+         * Register a response sequence for the given URL pattern.
+         *
+         * @param string $url
+         * @return \Illuminate\Http\Client\ResponseSequence 
+         * @static 
+         */ 
+        public static function fakeSequence($url = '*')
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->fakeSequence($url);
+        }
+                    /**
+         * Stub the given URL using the given callback.
+         *
+         * @param string $url
+         * @param \Illuminate\Http\Client\Response|\GuzzleHttp\Promise\PromiseInterface|callable $callback
+         * @return \Illuminate\Http\Client\Factory 
+         * @static 
+         */ 
+        public static function stubUrl($url, $callback)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->stubUrl($url, $callback);
+        }
+                    /**
+         * Record a request response pair.
+         *
+         * @param \Illuminate\Http\Client\Request $request
+         * @param \Illuminate\Http\Client\Response $response
+         * @return void 
+         * @static 
+         */ 
+        public static function recordRequestResponsePair($request, $response)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->recordRequestResponsePair($request, $response);
+        }
+                    /**
+         * Assert that a request / response pair was recorded matching a given truth test.
+         *
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSent($callback)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertSent($callback);
+        }
+                    /**
+         * Assert that a request / response pair was not recorded matching a given truth test.
+         *
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNotSent($callback)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertNotSent($callback);
+        }
+                    /**
+         * Assert that no request / response pair was recorded.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNothingSent()
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertNothingSent();
+        }
+                    /**
+         * Assert how many requests have been recorded.
+         *
+         * @param int $count
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSentCount($count)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertSentCount($count);
+        }
+                    /**
+         * Assert that every created response sequence is empty.
+         *
+         * @return void 
+         * @static 
+         */ 
