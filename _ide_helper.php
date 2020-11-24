@@ -5875,3 +5875,157 @@
                     /**
          * Create an instance of the Argon2i hash Driver.
          *
+         * @return \Illuminate\Hashing\ArgonHasher 
+         * @static 
+         */ 
+        public static function createArgonDriver()
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->createArgonDriver();
+        }
+                    /**
+         * Create an instance of the Argon2id hash Driver.
+         *
+         * @return \Illuminate\Hashing\Argon2IdHasher 
+         * @static 
+         */ 
+        public static function createArgon2idDriver()
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->createArgon2idDriver();
+        }
+                    /**
+         * Get information about the given hashed value.
+         *
+         * @param string $hashedValue
+         * @return array 
+         * @static 
+         */ 
+        public static function info($hashedValue)
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->info($hashedValue);
+        }
+                    /**
+         * Hash the given value.
+         *
+         * @param string $value
+         * @param array $options
+         * @return string 
+         * @static 
+         */ 
+        public static function make($value, $options = [])
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->make($value, $options);
+        }
+                    /**
+         * Check the given plain value against a hash.
+         *
+         * @param string $value
+         * @param string $hashedValue
+         * @param array $options
+         * @return bool 
+         * @static 
+         */ 
+        public static function check($value, $hashedValue, $options = [])
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->check($value, $hashedValue, $options);
+        }
+                    /**
+         * Check if the given hash has been hashed using the given options.
+         *
+         * @param string $hashedValue
+         * @param array $options
+         * @return bool 
+         * @static 
+         */ 
+        public static function needsRehash($hashedValue, $options = [])
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->needsRehash($hashedValue, $options);
+        }
+                    /**
+         * Get the default driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Get a driver instance.
+         *
+         * @param string|null $driver
+         * @return mixed 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->driver($driver);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Hashing\HashManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get all of the created "drivers".
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Hashing\HashManager $instance */
+                        return $instance->getDrivers();
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @method static \Illuminate\Http\Client\PendingRequest accept(string $contentType)
+     * @method static \Illuminate\Http\Client\PendingRequest acceptJson()
+     * @method static \Illuminate\Http\Client\PendingRequest asForm()
+     * @method static \Illuminate\Http\Client\PendingRequest asJson()
+     * @method static \Illuminate\Http\Client\PendingRequest asMultipart()
+     * @method static \Illuminate\Http\Client\PendingRequest attach(string $name, string $contents, string|null $filename = null, array $headers = [])
+     * @method static \Illuminate\Http\Client\PendingRequest baseUrl(string $url)
+     * @method static \Illuminate\Http\Client\PendingRequest beforeSending(callable $callback)
+     * @method static \Illuminate\Http\Client\PendingRequest bodyFormat(string $format)
+     * @method static \Illuminate\Http\Client\PendingRequest contentType(string $contentType)
+     * @method static \Illuminate\Http\Client\PendingRequest retry(int $times, int $sleep = 0)
+     * @method static \Illuminate\Http\Client\PendingRequest stub(callable $callback)
+     * @method static \Illuminate\Http\Client\PendingRequest timeout(int $seconds)
+     * @method static \Illuminate\Http\Client\PendingRequest withBasicAuth(string $username, string $password)
+     * @method static \Illuminate\Http\Client\PendingRequest withCookies(array $cookies, string $domain)
+     * @method static \Illuminate\Http\Client\PendingRequest withDigestAuth(string $username, string $password)
+     * @method static \Illuminate\Http\Client\PendingRequest withHeaders(array $headers)
+     * @method static \Illuminate\Http\Client\PendingRequest withOptions(array $options)
+     * @method static \Illuminate\Http\Client\PendingRequest withToken(string $token, string $type = 'Bearer')
+     * @method static \Illuminate\Http\Client\PendingRequest withoutRedirecting()
+     * @method static \Illuminate\Http\Client\PendingRequest withoutVerifying()
+     * @method static \Illuminate\Http\Client\Response delete(string $url, array $data = [])
+     * @method static \Illuminate\Http\Client\Response get(string $url, array $query = [])
+     * @method static \Illuminate\Http\Client\Response head(string $url, array $query = [])
+     * @method static \Illuminate\Http\Client\Response patch(string $url, array $data = [])
+     * @method static \Illuminate\Http\Client\Response post(string $url, array $data = [])
+     * @method static \Illuminate\Http\Client\Response put(string $url, array $data = [])
+     * @method static \Illuminate\Http\Client\Response send(string $method, string $url, array $options = [])
+     * @see \Illuminate\Http\Client\Factory
+     */ 
