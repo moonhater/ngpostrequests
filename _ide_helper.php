@@ -6158,3 +6158,145 @@
          * @return void 
          * @static 
          */ 
+        public static function assertSequencesAreEmpty()
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertSequencesAreEmpty();
+        }
+                    /**
+         * Get a collection of the request / response pairs matching the given truth test.
+         *
+         * @param callable $callback
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function recorded($callback)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->recorded($callback);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Http\Client\Factory::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Http\Client\Factory::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Http\Client\Factory::hasMacro($name);
+        }
+                    /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        return $instance->macroCall($method, $parameters);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Translation\Translator
+     */ 
+        class Lang {
+                    /**
+         * Determine if a translation exists for a given locale.
+         *
+         * @param string $key
+         * @param string|null $locale
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasForLocale($key, $locale = null)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->hasForLocale($key, $locale);
+        }
+                    /**
+         * Determine if a translation exists.
+         *
+         * @param string $key
+         * @param string|null $locale
+         * @param bool $fallback
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($key, $locale = null, $fallback = true)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->has($key, $locale, $fallback);
+        }
+                    /**
+         * Get the translation for the given key.
+         *
+         * @param string $key
+         * @param array $replace
+         * @param string|null $locale
+         * @param bool $fallback
+         * @return string|array 
+         * @static 
+         */ 
+        public static function get($key, $replace = [], $locale = null, $fallback = true)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->get($key, $replace, $locale, $fallback);
+        }
+                    /**
+         * Get a translation according to an integer value.
+         *
+         * @param string $key
+         * @param \Countable|int|array $number
+         * @param array $replace
+         * @param string|null $locale
+         * @return string 
+         * @static 
+         */ 
+        public static function choice($key, $number, $replace = [], $locale = null)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->choice($key, $number, $replace, $locale);
+        }
+                    /**
+         * Add translation lines to the given locale.
+         *
+         * @param array $lines
+         * @param string $locale
+         * @param string $namespace
+         * @return void 
+         * @static 
+         */ 
+        public static function addLines($lines, $locale, $namespace = '*')
