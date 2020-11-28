@@ -6464,3 +6464,139 @@
          * @param string $key
          * @param array $parsed
          * @return void 
+         * @static 
+         */ 
+        public static function setParsedKey($key, $parsed)
+        {            //Method inherited from \Illuminate\Support\NamespacedItemResolver         
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->setParsedKey($key, $parsed);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Translation\Translator::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Translation\Translator::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Translation\Translator::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Log\Logger
+     */ 
+        class Log {
+                    /**
+         * Create a new, on-demand aggregate logger instance.
+         *
+         * @param array $channels
+         * @param string|null $channel
+         * @return \Psr\Log\LoggerInterface 
+         * @static 
+         */ 
+        public static function stack($channels, $channel = null)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->stack($channels, $channel);
+        }
+                    /**
+         * Get a log channel instance.
+         *
+         * @param string|null $channel
+         * @return \Psr\Log\LoggerInterface 
+         * @static 
+         */ 
+        public static function channel($channel = null)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->channel($channel);
+        }
+                    /**
+         * Get a log driver instance.
+         *
+         * @param string|null $driver
+         * @return \Psr\Log\LoggerInterface 
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->driver($driver);
+        }
+                    /**
+         * 
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getChannels()
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->getChannels();
+        }
+                    /**
+         * Get the default log driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the default log driver name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDriver($name)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        $instance->setDefaultDriver($name);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Log\LogManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
