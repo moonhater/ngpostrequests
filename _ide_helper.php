@@ -6300,3 +6300,167 @@
          * @static 
          */ 
         public static function addLines($lines, $locale, $namespace = '*')
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->addLines($lines, $locale, $namespace);
+        }
+                    /**
+         * Load the specified language group.
+         *
+         * @param string $namespace
+         * @param string $group
+         * @param string $locale
+         * @return void 
+         * @static 
+         */ 
+        public static function load($namespace, $group, $locale)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->load($namespace, $group, $locale);
+        }
+                    /**
+         * Add a new namespace to the loader.
+         *
+         * @param string $namespace
+         * @param string $hint
+         * @return void 
+         * @static 
+         */ 
+        public static function addNamespace($namespace, $hint)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->addNamespace($namespace, $hint);
+        }
+                    /**
+         * Add a new JSON path to the loader.
+         *
+         * @param string $path
+         * @return void 
+         * @static 
+         */ 
+        public static function addJsonPath($path)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->addJsonPath($path);
+        }
+                    /**
+         * Parse a key into namespace, group, and item.
+         *
+         * @param string $key
+         * @return array 
+         * @static 
+         */ 
+        public static function parseKey($key)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->parseKey($key);
+        }
+                    /**
+         * Get the message selector instance.
+         *
+         * @return \Illuminate\Translation\MessageSelector 
+         * @static 
+         */ 
+        public static function getSelector()
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->getSelector();
+        }
+                    /**
+         * Set the message selector instance.
+         *
+         * @param \Illuminate\Translation\MessageSelector $selector
+         * @return void 
+         * @static 
+         */ 
+        public static function setSelector($selector)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->setSelector($selector);
+        }
+                    /**
+         * Get the language line loader implementation.
+         *
+         * @return \Illuminate\Contracts\Translation\Loader 
+         * @static 
+         */ 
+        public static function getLoader()
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->getLoader();
+        }
+                    /**
+         * Get the default locale being used.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function locale()
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->locale();
+        }
+                    /**
+         * Get the default locale being used.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLocale()
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->getLocale();
+        }
+                    /**
+         * Set the default locale.
+         *
+         * @param string $locale
+         * @return void 
+         * @static 
+         */ 
+        public static function setLocale($locale)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->setLocale($locale);
+        }
+                    /**
+         * Get the fallback locale being used.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getFallback()
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        return $instance->getFallback();
+        }
+                    /**
+         * Set the fallback locale being used.
+         *
+         * @param string $fallback
+         * @return void 
+         * @static 
+         */ 
+        public static function setFallback($fallback)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->setFallback($fallback);
+        }
+                    /**
+         * Set the loaded translation groups.
+         *
+         * @param array $loaded
+         * @return void 
+         * @static 
+         */ 
+        public static function setLoaded($loaded)
+        {
+                        /** @var \Illuminate\Translation\Translator $instance */
+                        $instance->setLoaded($loaded);
+        }
+                    /**
+         * Set the parsed value of a key.
+         *
+         * @param string $key
+         * @param array $parsed
+         * @return void 
