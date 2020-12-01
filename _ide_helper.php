@@ -6762,3 +6762,139 @@
                         return $instance->mailer($name);
         }
                     /**
+         * Get a mailer driver instance.
+         *
+         * @param string|null $driver
+         * @return \Illuminate\Mail\Mailer 
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->driver($driver);
+        }
+                    /**
+         * Create a new transport instance.
+         *
+         * @param array $config
+         * @return \Swift_Transport 
+         * @static 
+         */ 
+        public static function createTransport($config)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->createTransport($config);
+        }
+                    /**
+         * Get the default mail driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the default mail driver name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDriver($name)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        $instance->setDefaultDriver($name);
+        }
+                    /**
+         * Register a custom transport creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Mail\MailManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {
+                        /** @var \Illuminate\Mail\MailManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Assert if a mailable was sent based on a truth-test callback.
+         *
+         * @param string|\Closure $mailable
+         * @param callable|int|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSent($mailable, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertSent($mailable, $callback);
+        }
+                    /**
+         * Determine if a mailable was not sent based on a truth-test callback.
+         *
+         * @param string $mailable
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNotSent($mailable, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertNotSent($mailable, $callback);
+        }
+                    /**
+         * Assert that no mailables were sent.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNothingSent()
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertNothingSent();
+        }
+                    /**
+         * Assert if a mailable was queued based on a truth-test callback.
+         *
+         * @param string|\Closure $mailable
+         * @param callable|int|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertQueued($mailable, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertQueued($mailable, $callback);
+        }
+                    /**
+         * Determine if a mailable was not queued based on a truth-test callback.
+         *
+         * @param string $mailable
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNotQueued($mailable, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertNotQueued($mailable, $callback);
+        }
+                    /**
+         * Assert that no mailables were queued.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNothingQueued()
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\MailFake $instance */
+                        $instance->assertNothingQueued();
+        }
+                    /**
+         * Get all of the mailables matching a truth-test callback.
+         *
