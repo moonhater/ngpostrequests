@@ -7051,3 +7051,163 @@
          * @static 
          */ 
         public static function send($notifiables, $notification)
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        $instance->send($notifiables, $notification);
+        }
+                    /**
+         * Send the given notification immediately.
+         *
+         * @param \Illuminate\Support\Collection|array|mixed $notifiables
+         * @param mixed $notification
+         * @param array|null $channels
+         * @return void 
+         * @static 
+         */ 
+        public static function sendNow($notifiables, $notification, $channels = null)
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        $instance->sendNow($notifiables, $notification, $channels);
+        }
+                    /**
+         * Get a channel instance.
+         *
+         * @param string|null $name
+         * @return mixed 
+         * @static 
+         */ 
+        public static function channel($name = null)
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->channel($name);
+        }
+                    /**
+         * Get the default channel driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Get the default channel driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function deliversVia()
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->deliversVia();
+        }
+                    /**
+         * Set the default channel driver name.
+         *
+         * @param string $channel
+         * @return void 
+         * @static 
+         */ 
+        public static function deliverVia($channel)
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        $instance->deliverVia($channel);
+        }
+                    /**
+         * Set the locale of notifications.
+         *
+         * @param string $locale
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function locale($locale)
+        {
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->locale($locale);
+        }
+                    /**
+         * Get a driver instance.
+         *
+         * @param string|null $driver
+         * @return mixed 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->driver($driver);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Notifications\ChannelManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get all of the created "drivers".
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Notifications\ChannelManager $instance */
+                        return $instance->getDrivers();
+        }
+                    /**
+         * Assert if a notification was sent based on a truth-test callback.
+         *
+         * @param mixed $notifiable
+         * @param string|\Closure $notification
+         * @param callable|null $callback
+         * @return void 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function assertSentTo($notifiable, $notification, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        $instance->assertSentTo($notifiable, $notification, $callback);
+        }
+                    /**
+         * Assert if a notification was sent a number of times.
+         *
+         * @param mixed $notifiable
+         * @param string $notification
+         * @param int $times
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSentToTimes($notifiable, $notification, $times = 1)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        $instance->assertSentToTimes($notifiable, $notification, $times);
+        }
+                    /**
+         * Determine if a notification was sent based on a truth-test callback.
+         *
+         * @param mixed $notifiable
+         * @param string|\Closure $notification
+         * @param callable|null $callback
+         * @return void 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function assertNotSentTo($notifiable, $notification, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\NotificationFake $instance */
+                        $instance->assertNotSentTo($notifiable, $notification, $callback);
+        }
+                    /**
+         * Assert that no notifications were sent.
+         *
