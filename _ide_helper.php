@@ -7352,3 +7352,158 @@
      *
      * @see \Illuminate\Queue\QueueManager
      * @see \Illuminate\Queue\Queue
+     */ 
+        class Queue {
+                    /**
+         * Register an event listener for the before job event.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function before($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->before($callback);
+        }
+                    /**
+         * Register an event listener for the after job event.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function after($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->after($callback);
+        }
+                    /**
+         * Register an event listener for the exception occurred job event.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function exceptionOccurred($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->exceptionOccurred($callback);
+        }
+                    /**
+         * Register an event listener for the daemon queue loop.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function looping($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->looping($callback);
+        }
+                    /**
+         * Register an event listener for the failed job event.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function failing($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->failing($callback);
+        }
+                    /**
+         * Register an event listener for the daemon queue stopping.
+         *
+         * @param mixed $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function stopping($callback)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->stopping($callback);
+        }
+                    /**
+         * Determine if the driver is connected.
+         *
+         * @param string|null $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function connected($name = null)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->connected($name);
+        }
+                    /**
+         * Resolve a queue connection instance.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Contracts\Queue\Queue 
+         * @static 
+         */ 
+        public static function connection($name = null)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->connection($name);
+        }
+                    /**
+         * Add a queue connection resolver.
+         *
+         * @param string $driver
+         * @param \Closure $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($driver, $resolver)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->extend($driver, $resolver);
+        }
+                    /**
+         * Add a queue connection resolver.
+         *
+         * @param string $driver
+         * @param \Closure $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function addConnector($driver, $resolver)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->addConnector($driver, $resolver);
+        }
+                    /**
+         * Get the name of the default queue connection.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the name of the default queue connection.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDriver($name)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        $instance->setDefaultDriver($name);
+        }
+                    /**
+         * Get the full name for the given connection.
+         *
+         * @param string|null $connection
+         * @return string 
+         * @static 
+         */ 
+        public static function getName($connection = null)
