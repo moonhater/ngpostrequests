@@ -7507,3 +7507,152 @@
          * @static 
          */ 
         public static function getName($connection = null)
+        {
+                        /** @var \Illuminate\Queue\QueueManager $instance */
+                        return $instance->getName($connection);
+        }
+                    /**
+         * Assert if a job was pushed based on a truth-test callback.
+         *
+         * @param string|\Closure $job
+         * @param callable|int|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertPushed($job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertPushed($job, $callback);
+        }
+                    /**
+         * Assert if a job was pushed based on a truth-test callback.
+         *
+         * @param string $queue
+         * @param string|\Closure $job
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertPushedOn($queue, $job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertPushedOn($queue, $job, $callback);
+        }
+                    /**
+         * Assert if a job was pushed with chained jobs based on a truth-test callback.
+         *
+         * @param string $job
+         * @param array $expectedChain
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertPushedWithChain($job, $expectedChain = [], $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertPushedWithChain($job, $expectedChain, $callback);
+        }
+                    /**
+         * Assert if a job was pushed with an empty chain based on a truth-test callback.
+         *
+         * @param string $job
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertPushedWithoutChain($job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertPushedWithoutChain($job, $callback);
+        }
+                    /**
+         * Determine if a job was pushed based on a truth-test callback.
+         *
+         * @param string|\Closure $job
+         * @param callable|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNotPushed($job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertNotPushed($job, $callback);
+        }
+                    /**
+         * Assert that no jobs were pushed.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function assertNothingPushed()
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        $instance->assertNothingPushed();
+        }
+                    /**
+         * Get all of the jobs matching a truth-test callback.
+         *
+         * @param string $job
+         * @param callable|null $callback
+         * @return \Illuminate\Support\Collection 
+         * @static 
+         */ 
+        public static function pushed($job, $callback = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->pushed($job, $callback);
+        }
+                    /**
+         * Determine if there are any stored jobs for a given class.
+         *
+         * @param string $job
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasPushed($job)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->hasPushed($job);
+        }
+                    /**
+         * Get the size of the queue.
+         *
+         * @param string|null $queue
+         * @return int 
+         * @static 
+         */ 
+        public static function size($queue = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->size($queue);
+        }
+                    /**
+         * Push a new job onto the queue.
+         *
+         * @param string $job
+         * @param mixed $data
+         * @param string|null $queue
+         * @return mixed 
+         * @static 
+         */ 
+        public static function push($job, $data = '', $queue = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->push($job, $data, $queue);
+        }
+                    /**
+         * Push a raw payload onto the queue.
+         *
+         * @param string $payload
+         * @param string|null $queue
+         * @param array $options
+         * @return mixed 
+         * @static 
+         */ 
+        public static function pushRaw($payload, $queue = null, $options = [])
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->pushRaw($payload, $queue, $options);
+        }
+                    /**
+         * Push a new job onto the queue after a delay.
