@@ -7656,3 +7656,151 @@
         }
                     /**
          * Push a new job onto the queue after a delay.
+         *
+         * @param \DateTimeInterface|\DateInterval|int $delay
+         * @param string $job
+         * @param mixed $data
+         * @param string|null $queue
+         * @return mixed 
+         * @static 
+         */ 
+        public static function later($delay, $job, $data = '', $queue = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->later($delay, $job, $data, $queue);
+        }
+                    /**
+         * Push a new job onto the queue.
+         *
+         * @param string $queue
+         * @param string $job
+         * @param mixed $data
+         * @return mixed 
+         * @static 
+         */ 
+        public static function pushOn($queue, $job, $data = '')
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->pushOn($queue, $job, $data);
+        }
+                    /**
+         * Push a new job onto the queue after a delay.
+         *
+         * @param string $queue
+         * @param \DateTimeInterface|\DateInterval|int $delay
+         * @param string $job
+         * @param mixed $data
+         * @return mixed 
+         * @static 
+         */ 
+        public static function laterOn($queue, $delay, $job, $data = '')
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->laterOn($queue, $delay, $job, $data);
+        }
+                    /**
+         * Pop the next job off of the queue.
+         *
+         * @param string|null $queue
+         * @return \Illuminate\Contracts\Queue\Job|null 
+         * @static 
+         */ 
+        public static function pop($queue = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->pop($queue);
+        }
+                    /**
+         * Push an array of jobs onto the queue.
+         *
+         * @param array $jobs
+         * @param mixed $data
+         * @param string|null $queue
+         * @return mixed 
+         * @static 
+         */ 
+        public static function bulk($jobs, $data = '', $queue = null)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->bulk($jobs, $data, $queue);
+        }
+                    /**
+         * Get the jobs that have been pushed.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function pushedJobs()
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->pushedJobs();
+        }
+                    /**
+         * Get the connection name for the queue.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getConnectionName()
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->getConnectionName();
+        }
+                    /**
+         * Set the connection name for the queue.
+         *
+         * @param string $name
+         * @return \Illuminate\Support\Testing\Fakes\QueueFake 
+         * @static 
+         */ 
+        public static function setConnectionName($name)
+        {
+                        /** @var \Illuminate\Support\Testing\Fakes\QueueFake $instance */
+                        return $instance->setConnectionName($name);
+        }
+                    /**
+         * Get the retry delay for an object-based queue handler.
+         *
+         * @param mixed $job
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getJobRetryDelay($job)
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        return $instance->getJobRetryDelay($job);
+        }
+                    /**
+         * Get the expiration timestamp for an object-based queue handler.
+         *
+         * @param mixed $job
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getJobExpiration($job)
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        return $instance->getJobExpiration($job);
+        }
+                    /**
+         * Register a callback to be executed when creating job payloads.
+         *
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function createPayloadUsing($callback)
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
+        }
+                    /**
+         * Set the IoC container instance.
+         *
+         * @param \Illuminate\Container\Container $container
+         * @return void 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {            //Method inherited from \Illuminate\Queue\Queue         
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
+                        $instance->setContainer($container);
