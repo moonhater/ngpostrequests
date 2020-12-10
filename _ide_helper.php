@@ -7804,3 +7804,149 @@
         {            //Method inherited from \Illuminate\Queue\Queue         
                         /** @var \Illuminate\Queue\SyncQueue $instance */
                         $instance->setContainer($container);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Routing\Redirector
+     */ 
+        class Redirect {
+                    /**
+         * Create a new redirect response to the "home" route.
+         *
+         * @param int $status
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function home($status = 302)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->home($status);
+        }
+                    /**
+         * Create a new redirect response to the previous location.
+         *
+         * @param int $status
+         * @param array $headers
+         * @param mixed $fallback
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function back($status = 302, $headers = [], $fallback = false)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->back($status, $headers, $fallback);
+        }
+                    /**
+         * Create a new redirect response to the current URI.
+         *
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function refresh($status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->refresh($status, $headers);
+        }
+                    /**
+         * Create a new redirect response, while putting the current URL in the session.
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function guest($path, $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->guest($path, $status, $headers, $secure);
+        }
+                    /**
+         * Create a new redirect response to the previously intended location.
+         *
+         * @param string $default
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function intended($default = '/', $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->intended($default, $status, $headers, $secure);
+        }
+                    /**
+         * Set the intended url.
+         *
+         * @param string $url
+         * @return void 
+         * @static 
+         */ 
+        public static function setIntendedUrl($url)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        $instance->setIntendedUrl($url);
+        }
+                    /**
+         * Create a new redirect response to the given path.
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function to($path, $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->to($path, $status, $headers, $secure);
+        }
+                    /**
+         * Create a new redirect response to an external URL (no validation).
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function away($path, $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->away($path, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to the given HTTPS path.
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function secure($path, $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->secure($path, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to a named route.
+         *
+         * @param string $route
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function route($route, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
