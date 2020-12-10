@@ -7950,3 +7950,168 @@
         public static function route($route, $parameters = [], $status = 302, $headers = [])
         {
                         /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->route($route, $parameters, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to a signed named route.
+         *
+         * @param string $route
+         * @param mixed $parameters
+         * @param \DateTimeInterface|\DateInterval|int|null $expiration
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function signedRoute($route, $parameters = [], $expiration = null, $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->signedRoute($route, $parameters, $expiration, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to a signed named route.
+         *
+         * @param string $route
+         * @param \DateTimeInterface|\DateInterval|int|null $expiration
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function temporarySignedRoute($route, $expiration, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->temporarySignedRoute($route, $expiration, $parameters, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to a controller action.
+         *
+         * @param string|array $action
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function action($action, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->action($action, $parameters, $status, $headers);
+        }
+                    /**
+         * Get the URL generator instance.
+         *
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function getUrlGenerator()
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->getUrlGenerator();
+        }
+                    /**
+         * Set the active session store.
+         *
+         * @param \Illuminate\Session\Store $session
+         * @return void 
+         * @static 
+         */ 
+        public static function setSession($session)
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        $instance->setSession($session);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Routing\Redirector::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Routing\Redirector::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Routing\Redirector::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @method static mixed filterFiles(mixed $files)
+     * @see \Illuminate\Http\Request
+     */ 
+        class Request {
+                    /**
+         * Create a new Illuminate HTTP request from server variables.
+         *
+         * @return static 
+         * @static 
+         */ 
+        public static function capture()
+        {
+                        return \Illuminate\Http\Request::capture();
+        }
+                    /**
+         * Return the Request instance.
+         *
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function instance()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->instance();
+        }
+                    /**
+         * Get the request method.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function method()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->method();
+        }
+                    /**
+         * Get the root URL for the application.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function root()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->root();
+        }
+                    /**
+         * Get the URL (no query string) for the request.
+         *
+         * @return string 
+         * @static 
