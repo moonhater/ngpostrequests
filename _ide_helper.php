@@ -8263,3 +8263,138 @@
          * Determine if the request is over HTTPS.
          *
          * @return bool 
+         * @static 
+         */ 
+        public static function secure()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->secure();
+        }
+                    /**
+         * Get the client IP address.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function ip()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->ip();
+        }
+                    /**
+         * Get the client IP addresses.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function ips()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->ips();
+        }
+                    /**
+         * Get the client user agent.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function userAgent()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->userAgent();
+        }
+                    /**
+         * Merge new input into the current request's input array.
+         *
+         * @param array $input
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function merge($input)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->merge($input);
+        }
+                    /**
+         * Replace the input for the current request.
+         *
+         * @param array $input
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function replace($input)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->replace($input);
+        }
+                    /**
+         * This method belongs to Symfony HttpFoundation and is not usually needed when using Laravel.
+         * 
+         * Instead, you may use the "input" method.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($key, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->get($key, $default);
+        }
+                    /**
+         * Get the JSON payload for the request.
+         *
+         * @param string|null $key
+         * @param mixed $default
+         * @return \Symfony\Component\HttpFoundation\ParameterBag|mixed 
+         * @static 
+         */ 
+        public static function json($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->json($key, $default);
+        }
+                    /**
+         * Create a new request instance from the given Laravel request.
+         *
+         * @param \Illuminate\Http\Request $from
+         * @param \Illuminate\Http\Request|null $to
+         * @return static 
+         * @static 
+         */ 
+        public static function createFrom($from, $to = null)
+        {
+                        return \Illuminate\Http\Request::createFrom($from, $to);
+        }
+                    /**
+         * Create an Illuminate request from a Symfony instance.
+         *
+         * @param \Symfony\Component\HttpFoundation\Request $request
+         * @return static 
+         * @static 
+         */ 
+        public static function createFromBase($request)
+        {
+                        return \Illuminate\Http\Request::createFromBase($request);
+        }
+                    /**
+         * Clones a request and overrides some of its parameters.
+         *
+         * @param array $query The GET parameters
+         * @param array $request The POST parameters
+         * @param array $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
+         * @param array $cookies The COOKIE parameters
+         * @param array $files The FILES parameters
+         * @param array $server The SERVER parameters
+         * @return static 
+         * @static 
+         */ 
+        public static function duplicate($query = null, $request = null, $attributes = null, $cookies = null, $files = null, $server = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->duplicate($query, $request, $attributes, $cookies, $files, $server);
+        }
+                    /**
+         * Get the session associated with the request.
+         *
