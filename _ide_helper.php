@@ -8115,3 +8115,151 @@
          *
          * @return string 
          * @static 
+         */ 
+        public static function url()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->url();
+        }
+                    /**
+         * Get the full URL for the request.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function fullUrl()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->fullUrl();
+        }
+                    /**
+         * Get the full URL for the request with the added query string parameters.
+         *
+         * @param array $query
+         * @return string 
+         * @static 
+         */ 
+        public static function fullUrlWithQuery($query)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->fullUrlWithQuery($query);
+        }
+                    /**
+         * Get the current path info for the request.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function path()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->path();
+        }
+                    /**
+         * Get the current decoded path info for the request.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function decodedPath()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->decodedPath();
+        }
+                    /**
+         * Get a segment from the URI (1 based index).
+         *
+         * @param int $index
+         * @param string|null $default
+         * @return string|null 
+         * @static 
+         */ 
+        public static function segment($index, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->segment($index, $default);
+        }
+                    /**
+         * Get all of the segments for the request path.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function segments()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->segments();
+        }
+                    /**
+         * Determine if the current request URI matches a pattern.
+         *
+         * @param mixed $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function is(...$patterns)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->is(...$patterns);
+        }
+                    /**
+         * Determine if the route name matches a given pattern.
+         *
+         * @param mixed $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function routeIs(...$patterns)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->routeIs(...$patterns);
+        }
+                    /**
+         * Determine if the current request URL and query string matches a pattern.
+         *
+         * @param mixed $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function fullUrlIs(...$patterns)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->fullUrlIs(...$patterns);
+        }
+                    /**
+         * Determine if the request is the result of an AJAX call.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function ajax()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->ajax();
+        }
+                    /**
+         * Determine if the request is the result of an PJAX call.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function pjax()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->pjax();
+        }
+                    /**
+         * Determine if the request is the result of an prefetch call.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function prefetch()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->prefetch();
+        }
+                    /**
+         * Determine if the request is over HTTPS.
+         *
+         * @return bool 
