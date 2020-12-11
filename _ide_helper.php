@@ -8398,3 +8398,153 @@
                     /**
          * Get the session associated with the request.
          *
+         * @return \Illuminate\Session\Store 
+         * @throws \RuntimeException
+         * @static 
+         */ 
+        public static function session()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->session();
+        }
+                    /**
+         * Get the session associated with the request.
+         *
+         * @return \Illuminate\Session\Store|null 
+         * @static 
+         */ 
+        public static function getSession()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getSession();
+        }
+                    /**
+         * Set the session instance on the request.
+         *
+         * @param \Illuminate\Contracts\Session\Session $session
+         * @return void 
+         * @static 
+         */ 
+        public static function setLaravelSession($session)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->setLaravelSession($session);
+        }
+                    /**
+         * Get the user making the request.
+         *
+         * @param string|null $guard
+         * @return mixed 
+         * @static 
+         */ 
+        public static function user($guard = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->user($guard);
+        }
+                    /**
+         * Get the route handling the request.
+         *
+         * @param string|null $param
+         * @param mixed $default
+         * @return \Illuminate\Routing\Route|object|string|null 
+         * @static 
+         */ 
+        public static function route($param = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->route($param, $default);
+        }
+                    /**
+         * Get a unique fingerprint for the request / route / IP address.
+         *
+         * @return string 
+         * @throws \RuntimeException
+         * @static 
+         */ 
+        public static function fingerprint()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->fingerprint();
+        }
+                    /**
+         * Set the JSON payload for the request.
+         *
+         * @param \Symfony\Component\HttpFoundation\ParameterBag $json
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function setJson($json)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setJson($json);
+        }
+                    /**
+         * Get the user resolver callback.
+         *
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function getUserResolver()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getUserResolver();
+        }
+                    /**
+         * Set the user resolver callback.
+         *
+         * @param \Closure $callback
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function setUserResolver($callback)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setUserResolver($callback);
+        }
+                    /**
+         * Get the route resolver callback.
+         *
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function getRouteResolver()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getRouteResolver();
+        }
+                    /**
+         * Set the route resolver callback.
+         *
+         * @param \Closure $callback
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function setRouteResolver($callback)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setRouteResolver($callback);
+        }
+                    /**
+         * Get all of the input and files for the request.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function toArray()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->toArray();
+        }
+                    /**
+         * Determine if the given offset exists.
+         *
+         * @param string $offset
+         * @return bool 
+         * @static 
+         */ 
+        public static function offsetExists($offset)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->offsetExists($offset);
+        }
