@@ -8548,3 +8548,140 @@
                         /** @var \Illuminate\Http\Request $instance */
                         return $instance->offsetExists($offset);
         }
+                    /**
+         * Get the value at the given offset.
+         *
+         * @param string $offset
+         * @return mixed 
+         * @static 
+         */ 
+        public static function offsetGet($offset)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->offsetGet($offset);
+        }
+                    /**
+         * Set the value at the given offset.
+         *
+         * @param string $offset
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetSet($offset, $value)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->offsetSet($offset, $value);
+        }
+                    /**
+         * Remove the value at the given offset.
+         *
+         * @param string $offset
+         * @return void 
+         * @static 
+         */ 
+        public static function offsetUnset($offset)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->offsetUnset($offset);
+        }
+                    /**
+         * Sets the parameters for this request.
+         * 
+         * This method also re-initializes all properties.
+         *
+         * @param array $query The GET parameters
+         * @param array $request The POST parameters
+         * @param array $attributes The request attributes (parameters parsed from the PATH_INFO, ...)
+         * @param array $cookies The COOKIE parameters
+         * @param array $files The FILES parameters
+         * @param array $server The SERVER parameters
+         * @param string|resource|null $content The raw body data
+         * @static 
+         */ 
+        public static function initialize($query = [], $request = [], $attributes = [], $cookies = [], $files = [], $server = [], $content = null)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->initialize($query, $request, $attributes, $cookies, $files, $server, $content);
+        }
+                    /**
+         * Creates a new request with values from PHP's super globals.
+         *
+         * @return static 
+         * @static 
+         */ 
+        public static function createFromGlobals()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::createFromGlobals();
+        }
+                    /**
+         * Creates a Request based on a given URI and configuration.
+         * 
+         * The information contained in the URI always take precedence
+         * over the other information (server and parameters).
+         *
+         * @param string $uri The URI
+         * @param string $method The HTTP method
+         * @param array $parameters The query (GET) or request (POST) parameters
+         * @param array $cookies The request cookies ($_COOKIE)
+         * @param array $files The request files ($_FILES)
+         * @param array $server The server parameters ($_SERVER)
+         * @param string|resource|null $content The raw body data
+         * @return static 
+         * @static 
+         */ 
+        public static function create($uri, $method = 'GET', $parameters = [], $cookies = [], $files = [], $server = [], $content = null)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::create($uri, $method, $parameters, $cookies, $files, $server, $content);
+        }
+                    /**
+         * Sets a callable able to create a Request instance.
+         * 
+         * This is mainly useful when you need to override the Request class
+         * to keep BC with an existing system. It should not be used for any
+         * other purpose.
+         *
+         * @static 
+         */ 
+        public static function setFactory($callable)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::setFactory($callable);
+        }
+                    /**
+         * Overrides the PHP global variables according to this request instance.
+         * 
+         * It overrides $_GET, $_POST, $_REQUEST, $_SERVER, $_COOKIE.
+         * $_FILES is never overridden, see rfc1867
+         *
+         * @static 
+         */ 
+        public static function overrideGlobals()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->overrideGlobals();
+        }
+                    /**
+         * Sets a list of trusted proxies.
+         * 
+         * You should only list the reverse proxies that you manage directly.
+         *
+         * @param array $proxies A list of trusted proxies, the string 'REMOTE_ADDR' will be replaced with $_SERVER['REMOTE_ADDR']
+         * @param int $trustedHeaderSet A bit field of Request::HEADER_*, to set which headers to trust from your proxies
+         * @throws \InvalidArgumentException When $trustedHeaderSet is invalid
+         * @static 
+         */ 
+        public static function setTrustedProxies($proxies, $trustedHeaderSet)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::setTrustedProxies($proxies, $trustedHeaderSet);
+        }
+                    /**
+         * Gets the list of trusted proxies.
+         *
+         * @return array An array of trusted proxies
+         * @static 
+         */ 
+        public static function getTrustedProxies()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::getTrustedProxies();
+        }
+                    /**
