@@ -8685,3 +8685,148 @@
                         return \Illuminate\Http\Request::getTrustedProxies();
         }
                     /**
+         * Gets the set of trusted headers from trusted proxies.
+         *
+         * @return int A bit field of Request::HEADER_* that defines which headers are trusted from your proxies
+         * @static 
+         */ 
+        public static function getTrustedHeaderSet()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::getTrustedHeaderSet();
+        }
+                    /**
+         * Sets a list of trusted host patterns.
+         * 
+         * You should only list the hosts you manage using regexs.
+         *
+         * @param array $hostPatterns A list of trusted host patterns
+         * @static 
+         */ 
+        public static function setTrustedHosts($hostPatterns)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::setTrustedHosts($hostPatterns);
+        }
+                    /**
+         * Gets the list of trusted host patterns.
+         *
+         * @return array An array of trusted host patterns
+         * @static 
+         */ 
+        public static function getTrustedHosts()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::getTrustedHosts();
+        }
+                    /**
+         * Normalizes a query string.
+         * 
+         * It builds a normalized query string, where keys/value pairs are alphabetized,
+         * have consistent escaping and unneeded delimiters are removed.
+         *
+         * @return string A normalized query string for the Request
+         * @static 
+         */ 
+        public static function normalizeQueryString($qs)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::normalizeQueryString($qs);
+        }
+                    /**
+         * Enables support for the _method request parameter to determine the intended HTTP method.
+         * 
+         * Be warned that enabling this feature might lead to CSRF issues in your code.
+         * Check that you are using CSRF tokens when required.
+         * If the HTTP method parameter override is enabled, an html-form with method "POST" can be altered
+         * and used to send a "PUT" or "DELETE" request via the _method request parameter.
+         * If these methods are not protected against CSRF, this presents a possible vulnerability.
+         * 
+         * The HTTP method can only be overridden when the real HTTP method is POST.
+         *
+         * @static 
+         */ 
+        public static function enableHttpMethodParameterOverride()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::enableHttpMethodParameterOverride();
+        }
+                    /**
+         * Checks whether support for the _method request parameter is enabled.
+         *
+         * @return bool True when the _method request parameter is enabled, false otherwise
+         * @static 
+         */ 
+        public static function getHttpMethodParameterOverride()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::getHttpMethodParameterOverride();
+        }
+                    /**
+         * Whether the request contains a Session which was started in one of the
+         * previous requests.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasPreviousSession()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->hasPreviousSession();
+        }
+                    /**
+         * Whether the request contains a Session object.
+         * 
+         * This method does not give any information about the state of the session object,
+         * like whether the session is started or not. It is just a way to check if this Request
+         * is associated with a Session instance.
+         *
+         * @return bool true when the Request contains a Session object, false otherwise
+         * @static 
+         */ 
+        public static function hasSession()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->hasSession();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setSession($session)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setSession($session);
+        }
+                    /**
+         * 
+         *
+         * @internal 
+         * @static 
+         */ 
+        public static function setSessionFactory($factory)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setSessionFactory($factory);
+        }
+                    /**
+         * Returns the client IP addresses.
+         * 
+         * In the returned array the most trusted IP address is first, and the
+         * least trusted one last. The "real" client IP address is the last one,
+         * but this is also the least trusted one. Trusted proxies are stripped.
+         * 
+         * Use this method carefully; you should use getClientIp() instead.
+         *
+         * @return array The client IP addresses
+         * @see getClientIp()
+         * @static 
+         */ 
+        public static function getClientIps()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getClientIps();
+        }
+                    /**
+         * Returns the client IP address.
+         * 
+         * This method can read the client IP address from the "X-Forwarded-For" header
+         * when trusted proxies were set via "setTrustedProxies()". The "X-Forwarded-For"
+         * header value is a comma+space separated list of IP addresses, the left-most
+         * being the original client, and each successive proxy that passed the request
+         * adding the IP address where it received the request from.
