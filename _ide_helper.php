@@ -8830,3 +8830,155 @@
          * header value is a comma+space separated list of IP addresses, the left-most
          * being the original client, and each successive proxy that passed the request
          * adding the IP address where it received the request from.
+         * 
+         * If your reverse proxy uses a different header name than "X-Forwarded-For",
+         * ("Client-Ip" for instance), configure it via the $trustedHeaderSet
+         * argument of the Request::setTrustedProxies() method instead.
+         *
+         * @return string|null The client IP address
+         * @see getClientIps()
+         * @see https://wikipedia.org/wiki/X-Forwarded-For
+         * @static 
+         */ 
+        public static function getClientIp()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getClientIp();
+        }
+                    /**
+         * Returns current script name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getScriptName()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getScriptName();
+        }
+                    /**
+         * Returns the path being requested relative to the executed script.
+         * 
+         * The path info always starts with a /.
+         * 
+         * Suppose this request is instantiated from /mysite on localhost:
+         * 
+         *  * http://localhost/mysite              returns an empty string
+         *  * http://localhost/mysite/about        returns '/about'
+         *  * http://localhost/mysite/enco%20ded   returns '/enco%20ded'
+         *  * http://localhost/mysite/about?var=1  returns '/about'
+         *
+         * @return string The raw path (i.e. not urldecoded)
+         * @static 
+         */ 
+        public static function getPathInfo()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getPathInfo();
+        }
+                    /**
+         * Returns the root path from which this request is executed.
+         * 
+         * Suppose that an index.php file instantiates this request object:
+         * 
+         *  * http://localhost/index.php         returns an empty string
+         *  * http://localhost/index.php/page    returns an empty string
+         *  * http://localhost/web/index.php     returns '/web'
+         *  * http://localhost/we%20b/index.php  returns '/we%20b'
+         *
+         * @return string The raw path (i.e. not urldecoded)
+         * @static 
+         */ 
+        public static function getBasePath()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getBasePath();
+        }
+                    /**
+         * Returns the root URL from which this request is executed.
+         * 
+         * The base URL never ends with a /.
+         * 
+         * This is similar to getBasePath(), except that it also includes the
+         * script filename (e.g. index.php) if one exists.
+         *
+         * @return string The raw URL (i.e. not urldecoded)
+         * @static 
+         */ 
+        public static function getBaseUrl()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getBaseUrl();
+        }
+                    /**
+         * Gets the request's scheme.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getScheme()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getScheme();
+        }
+                    /**
+         * Returns the port on which the request is made.
+         * 
+         * This method can read the client port from the "X-Forwarded-Port" header
+         * when trusted proxies were set via "setTrustedProxies()".
+         * 
+         * The "X-Forwarded-Port" header must contain the client port.
+         *
+         * @return int|string can be a string if fetched from the server bag
+         * @static 
+         */ 
+        public static function getPort()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getPort();
+        }
+                    /**
+         * Returns the user.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function getUser()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getUser();
+        }
+                    /**
+         * Returns the password.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function getPassword()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getPassword();
+        }
+                    /**
+         * Gets the user info.
+         *
+         * @return string A user name and, optionally, scheme-specific information about how to gain authorization to access the server
+         * @static 
+         */ 
+        public static function getUserInfo()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getUserInfo();
+        }
+                    /**
+         * Returns the HTTP host being requested.
+         * 
+         * The port name will be appended to the host if it's non-standard.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getHttpHost()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getHttpHost();
