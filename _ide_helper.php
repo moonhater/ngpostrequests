@@ -9142,3 +9142,149 @@
         public static function getRealMethod()
         {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
                         /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getRealMethod();
+        }
+                    /**
+         * Gets the mime type associated with the format.
+         *
+         * @return string|null The associated mime type (null if not found)
+         * @static 
+         */ 
+        public static function getMimeType($format)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getMimeType($format);
+        }
+                    /**
+         * Gets the mime types associated with the format.
+         *
+         * @return array The associated mime types
+         * @static 
+         */ 
+        public static function getMimeTypes($format)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        return \Illuminate\Http\Request::getMimeTypes($format);
+        }
+                    /**
+         * Gets the format associated with the mime type.
+         *
+         * @return string|null The format (null if not found)
+         * @static 
+         */ 
+        public static function getFormat($mimeType)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getFormat($mimeType);
+        }
+                    /**
+         * Associates a format with mime types.
+         *
+         * @param string|array $mimeTypes The associated mime types (the preferred one must be the first as it will be used as the content type)
+         * @static 
+         */ 
+        public static function setFormat($format, $mimeTypes)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setFormat($format, $mimeTypes);
+        }
+                    /**
+         * Gets the request format.
+         * 
+         * Here is the process to determine the format:
+         * 
+         *  * format defined by the user (with setRequestFormat())
+         *  * _format request attribute
+         *  * $default
+         *
+         * @see getPreferredFormat
+         * @return string|null The request format
+         * @static 
+         */ 
+        public static function getRequestFormat($default = 'html')
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getRequestFormat($default);
+        }
+                    /**
+         * Sets the request format.
+         *
+         * @static 
+         */ 
+        public static function setRequestFormat($format)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setRequestFormat($format);
+        }
+                    /**
+         * Gets the format associated with the request.
+         *
+         * @return string|null The format (null if no content type is present)
+         * @static 
+         */ 
+        public static function getContentType()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getContentType();
+        }
+                    /**
+         * Sets the default locale.
+         *
+         * @static 
+         */ 
+        public static function setDefaultLocale($locale)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setDefaultLocale($locale);
+        }
+                    /**
+         * Get the default locale.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultLocale()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getDefaultLocale();
+        }
+                    /**
+         * Sets the locale.
+         *
+         * @static 
+         */ 
+        public static function setLocale($locale)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->setLocale($locale);
+        }
+                    /**
+         * Get the locale.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLocale()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getLocale();
+        }
+                    /**
+         * Checks if the request method is of specified type.
+         *
+         * @param string $method Uppercase request method (GET, POST etc)
+         * @return bool 
+         * @static 
+         */ 
+        public static function isMethod($method)
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->isMethod($method);
+        }
+                    /**
+         * Checks whether or not the method is safe.
+         *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.1
+         * @return bool 
+         * @static 
+         */ 
+        public static function isMethodSafe()
