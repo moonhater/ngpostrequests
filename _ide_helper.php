@@ -9422,3 +9422,133 @@
          * @return array List of encodings in preferable order
          * @static 
          */ 
+        public static function getEncodings()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getEncodings();
+        }
+                    /**
+         * Gets a list of content types acceptable by the client browser.
+         *
+         * @return array List of content types in preferable order
+         * @static 
+         */ 
+        public static function getAcceptableContentTypes()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->getAcceptableContentTypes();
+        }
+                    /**
+         * Returns true if the request is a XMLHttpRequest.
+         * 
+         * It works if your JavaScript library sets an X-Requested-With HTTP header.
+         * It is known to work with common JavaScript frameworks:
+         *
+         * @see https://wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
+         * @return bool true if the request is an XMLHttpRequest, false otherwise
+         * @static 
+         */ 
+        public static function isXmlHttpRequest()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->isXmlHttpRequest();
+        }
+                    /**
+         * Checks whether the client browser prefers safe content or not according to RFC8674.
+         *
+         * @see https://tools.ietf.org/html/rfc8674
+         * @static 
+         */ 
+        public static function preferSafeContent()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->preferSafeContent();
+        }
+                    /**
+         * Indicates whether this request originated from a trusted proxy.
+         * 
+         * This can be useful to determine whether or not to trust the
+         * contents of a proxy-specific header.
+         *
+         * @return bool true if the request came from a trusted proxy, false otherwise
+         * @static 
+         */ 
+        public static function isFromTrustedProxy()
+        {            //Method inherited from \Symfony\Component\HttpFoundation\Request         
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->isFromTrustedProxy();
+        }
+                    /**
+         * Determine if the given content types match.
+         *
+         * @param string $actual
+         * @param string $type
+         * @return bool 
+         * @static 
+         */ 
+        public static function matchesType($actual, $type)
+        {
+                        return \Illuminate\Http\Request::matchesType($actual, $type);
+        }
+                    /**
+         * Determine if the request is sending JSON.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isJson()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->isJson();
+        }
+                    /**
+         * Determine if the current request probably expects a JSON response.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function expectsJson()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->expectsJson();
+        }
+                    /**
+         * Determine if the current request is asking for JSON.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function wantsJson()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->wantsJson();
+        }
+                    /**
+         * Determines whether the current requests accepts a given content type.
+         *
+         * @param string|array $contentTypes
+         * @return bool 
+         * @static 
+         */ 
+        public static function accepts($contentTypes)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->accepts($contentTypes);
+        }
+                    /**
+         * Return the most suitable content type from the given array based on content negotiation.
+         *
+         * @param string|array $contentTypes
+         * @return string|null 
+         * @static 
+         */ 
+        public static function prefers($contentTypes)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->prefers($contentTypes);
+        }
+                    /**
+         * Determine if the current request accepts any content type.
+         *
+         * @return bool 
+         * @static 
