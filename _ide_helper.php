@@ -9552,3 +9552,148 @@
          *
          * @return bool 
          * @static 
+         */ 
+        public static function acceptsAnyContentType()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->acceptsAnyContentType();
+        }
+                    /**
+         * Determines whether a request accepts JSON.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function acceptsJson()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->acceptsJson();
+        }
+                    /**
+         * Determines whether a request accepts HTML.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function acceptsHtml()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->acceptsHtml();
+        }
+                    /**
+         * Get the data format expected in the response.
+         *
+         * @param string $default
+         * @return string 
+         * @static 
+         */ 
+        public static function format($default = 'html')
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->format($default);
+        }
+                    /**
+         * Retrieve an old input item.
+         *
+         * @param string|null $key
+         * @param string|array|null $default
+         * @return string|array 
+         * @static 
+         */ 
+        public static function old($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->old($key, $default);
+        }
+                    /**
+         * Flash the input for the current request to the session.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flash()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->flash();
+        }
+                    /**
+         * Flash only some of the input to the session.
+         *
+         * @param array|mixed $keys
+         * @return void 
+         * @static 
+         */ 
+        public static function flashOnly($keys)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->flashOnly($keys);
+        }
+                    /**
+         * Flash only some of the input to the session.
+         *
+         * @param array|mixed $keys
+         * @return void 
+         * @static 
+         */ 
+        public static function flashExcept($keys)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->flashExcept($keys);
+        }
+                    /**
+         * Flush all of the old input from the session.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flush()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        $instance->flush();
+        }
+                    /**
+         * Retrieve a server variable from the request.
+         *
+         * @param string|null $key
+         * @param string|array|null $default
+         * @return string|array|null 
+         * @static 
+         */ 
+        public static function server($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->server($key, $default);
+        }
+                    /**
+         * Determine if a header is set on the request.
+         *
+         * @param string $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasHeader($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->hasHeader($key);
+        }
+                    /**
+         * Retrieve a header from the request.
+         *
+         * @param string|null $key
+         * @param string|array|null $default
+         * @return string|array|null 
+         * @static 
+         */ 
+        public static function header($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->header($key, $default);
+        }
+                    /**
+         * Get the bearer token from the request headers.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function bearerToken()
+        {
