@@ -9697,3 +9697,158 @@
          */ 
         public static function bearerToken()
         {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->bearerToken();
+        }
+                    /**
+         * Determine if the request contains a given input item key.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->exists($key);
+        }
+                    /**
+         * Determine if the request contains a given input item key.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->has($key);
+        }
+                    /**
+         * Determine if the request contains any of the given inputs.
+         *
+         * @param string|array $keys
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasAny($keys)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->hasAny($keys);
+        }
+                    /**
+         * Determine if the request contains a non-empty value for an input item.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function filled($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->filled($key);
+        }
+                    /**
+         * Determine if the request contains an empty value for an input item.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function isNotFilled($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->isNotFilled($key);
+        }
+                    /**
+         * Determine if the request contains a non-empty value for any of the given inputs.
+         *
+         * @param string|array $keys
+         * @return bool 
+         * @static 
+         */ 
+        public static function anyFilled($keys)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->anyFilled($keys);
+        }
+                    /**
+         * Determine if the request is missing a given input item key.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function missing($key)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->missing($key);
+        }
+                    /**
+         * Get the keys for all of the input and files.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function keys()
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->keys();
+        }
+                    /**
+         * Get all of the input and files for the request.
+         *
+         * @param array|mixed|null $keys
+         * @return array 
+         * @static 
+         */ 
+        public static function all($keys = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->all($keys);
+        }
+                    /**
+         * Retrieve an input item from the request.
+         *
+         * @param string|null $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function input($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->input($key, $default);
+        }
+                    /**
+         * Retrieve input as a boolean value.
+         * 
+         * Returns true when value is "1", "true", "on", and "yes". Otherwise, returns false.
+         *
+         * @param string|null $key
+         * @param bool $default
+         * @return bool 
+         * @static 
+         */ 
+        public static function boolean($key = null, $default = false)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->boolean($key, $default);
+        }
+                    /**
+         * Get a subset containing the provided keys with values from the input data.
+         *
+         * @param array|mixed $keys
+         * @return array 
+         * @static 
+         */ 
+        public static function only($keys)
+        {
+                        /** @var \Illuminate\Http\Request $instance */
+                        return $instance->only($keys);
+        }
+                    /**
+         * Get all of the input except for a specified array of items.
+         *
+         * @param array|mixed $keys
+         * @return array 
