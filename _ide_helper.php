@@ -10146,3 +10146,155 @@
         {
                         /** @var \Illuminate\Routing\ResponseFactory $instance */
                         return $instance->file($file, $headers);
+        }
+                    /**
+         * Create a new redirect response to the given path.
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function redirectTo($path, $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->redirectTo($path, $status, $headers, $secure);
+        }
+                    /**
+         * Create a new redirect response to a named route.
+         *
+         * @param string $route
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function redirectToRoute($route, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->redirectToRoute($route, $parameters, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response to a controller action.
+         *
+         * @param string $action
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function redirectToAction($action, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->redirectToAction($action, $parameters, $status, $headers);
+        }
+                    /**
+         * Create a new redirect response, while putting the current URL in the session.
+         *
+         * @param string $path
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function redirectGuest($path, $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->redirectGuest($path, $status, $headers, $secure);
+        }
+                    /**
+         * Create a new redirect response to the previously intended location.
+         *
+         * @param string $default
+         * @param int $status
+         * @param array $headers
+         * @param bool|null $secure
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function redirectToIntended($default = '/', $status = 302, $headers = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->redirectToIntended($default, $status, $headers, $secure);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Routing\ResponseFactory::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Routing\ResponseFactory::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Routing\ResponseFactory::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @method static \Illuminate\Routing\RouteRegistrar as(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar domain(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
+     * @method static \Illuminate\Routing\RouteRegistrar name(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar namespace(string $value)
+     * @method static \Illuminate\Routing\RouteRegistrar prefix(string  $prefix)
+     * @method static \Illuminate\Routing\RouteRegistrar where(array  $where)
+     * @see \Illuminate\Routing\Router
+     */ 
+        class Route {
+                    /**
+         * Register a new GET route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function get($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->get($uri, $action);
+        }
+                    /**
+         * Register a new POST route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function post($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->post($uri, $action);
