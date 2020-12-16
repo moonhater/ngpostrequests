@@ -10002,3 +10002,147 @@
         }
                     /**
          * 
+         *
+         * @static 
+         */ 
+        public static function hasValidSignature($absolute = true)
+        {
+                        return \Illuminate\Http\Request::hasValidSignature($absolute);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Contracts\Routing\ResponseFactory
+     */ 
+        class Response {
+                    /**
+         * Create a new response instance.
+         *
+         * @param string $content
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\Response 
+         * @static 
+         */ 
+        public static function make($content = '', $status = 200, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->make($content, $status, $headers);
+        }
+                    /**
+         * Create a new "no content" response.
+         *
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\Response 
+         * @static 
+         */ 
+        public static function noContent($status = 204, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->noContent($status, $headers);
+        }
+                    /**
+         * Create a new response for a given view.
+         *
+         * @param string|array $view
+         * @param array $data
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\Response 
+         * @static 
+         */ 
+        public static function view($view, $data = [], $status = 200, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->view($view, $data, $status, $headers);
+        }
+                    /**
+         * Create a new JSON response instance.
+         *
+         * @param mixed $data
+         * @param int $status
+         * @param array $headers
+         * @param int $options
+         * @return \Illuminate\Http\JsonResponse 
+         * @static 
+         */ 
+        public static function json($data = [], $status = 200, $headers = [], $options = 0)
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->json($data, $status, $headers, $options);
+        }
+                    /**
+         * Create a new JSONP response instance.
+         *
+         * @param string $callback
+         * @param mixed $data
+         * @param int $status
+         * @param array $headers
+         * @param int $options
+         * @return \Illuminate\Http\JsonResponse 
+         * @static 
+         */ 
+        public static function jsonp($callback, $data = [], $status = 200, $headers = [], $options = 0)
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->jsonp($callback, $data, $status, $headers, $options);
+        }
+                    /**
+         * Create a new streamed response instance.
+         *
+         * @param \Closure $callback
+         * @param int $status
+         * @param array $headers
+         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
+         * @static 
+         */ 
+        public static function stream($callback, $status = 200, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->stream($callback, $status, $headers);
+        }
+                    /**
+         * Create a new streamed response instance as a file download.
+         *
+         * @param \Closure $callback
+         * @param string|null $name
+         * @param array $headers
+         * @param string|null $disposition
+         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
+         * @static 
+         */ 
+        public static function streamDownload($callback, $name = null, $headers = [], $disposition = 'attachment')
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->streamDownload($callback, $name, $headers, $disposition);
+        }
+                    /**
+         * Create a new file download response.
+         *
+         * @param \SplFileInfo|string $file
+         * @param string|null $name
+         * @param array $headers
+         * @param string|null $disposition
+         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
+         * @static 
+         */ 
+        public static function download($file, $name = null, $headers = [], $disposition = 'attachment')
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->download($file, $name, $headers, $disposition);
+        }
+                    /**
+         * Return the raw contents of a binary file.
+         *
+         * @param \SplFileInfo|string $file
+         * @param array $headers
+         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
+         * @static 
+         */ 
+        public static function file($file, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\ResponseFactory $instance */
+                        return $instance->file($file, $headers);
