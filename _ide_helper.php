@@ -10298,3 +10298,168 @@
         {
                         /** @var \Illuminate\Routing\Router $instance */
                         return $instance->post($uri, $action);
+        }
+                    /**
+         * Register a new PUT route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function put($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->put($uri, $action);
+        }
+                    /**
+         * Register a new PATCH route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function patch($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->patch($uri, $action);
+        }
+                    /**
+         * Register a new DELETE route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function delete($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->delete($uri, $action);
+        }
+                    /**
+         * Register a new OPTIONS route with the router.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function options($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->options($uri, $action);
+        }
+                    /**
+         * Register a new route responding to all verbs.
+         *
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function any($uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->any($uri, $action);
+        }
+                    /**
+         * Register a new Fallback route with the router.
+         *
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function fallback($action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->fallback($action);
+        }
+                    /**
+         * Create a redirect from one URI to another.
+         *
+         * @param string $uri
+         * @param string $destination
+         * @param int $status
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function redirect($uri, $destination, $status = 302)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->redirect($uri, $destination, $status);
+        }
+                    /**
+         * Create a permanent redirect from one URI to another.
+         *
+         * @param string $uri
+         * @param string $destination
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function permanentRedirect($uri, $destination)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->permanentRedirect($uri, $destination);
+        }
+                    /**
+         * Register a new route that returns a view.
+         *
+         * @param string $uri
+         * @param string $view
+         * @param array $data
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function view($uri, $view, $data = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->view($uri, $view, $data);
+        }
+                    /**
+         * Register a new route with the given verbs.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function match($methods, $uri, $action = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->match($methods, $uri, $action);
+        }
+                    /**
+         * Register an array of resource controllers.
+         *
+         * @param array $resources
+         * @param array $options
+         * @return void 
+         * @static 
+         */ 
+        public static function resources($resources, $options = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->resources($resources, $options);
+        }
+                    /**
+         * Route a resource to a controller.
+         *
+         * @param string $name
+         * @param string $controller
+         * @param array $options
+         * @return \Illuminate\Routing\PendingResourceRegistration 
+         * @static 
+         */ 
+        public static function resource($name, $controller, $options = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->resource($name, $controller, $options);
+        }
+                    /**
+         * Register an array of API resource controllers.
+         *
+         * @param array $resources
+         * @param array $options
