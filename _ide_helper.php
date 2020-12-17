@@ -10463,3 +10463,152 @@
          *
          * @param array $resources
          * @param array $options
+         * @return void 
+         * @static 
+         */ 
+        public static function apiResources($resources, $options = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->apiResources($resources, $options);
+        }
+                    /**
+         * Route an API resource to a controller.
+         *
+         * @param string $name
+         * @param string $controller
+         * @param array $options
+         * @return \Illuminate\Routing\PendingResourceRegistration 
+         * @static 
+         */ 
+        public static function apiResource($name, $controller, $options = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->apiResource($name, $controller, $options);
+        }
+                    /**
+         * Create a route group with shared attributes.
+         *
+         * @param array $attributes
+         * @param \Closure|string $routes
+         * @return void 
+         * @static 
+         */ 
+        public static function group($attributes, $routes)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->group($attributes, $routes);
+        }
+                    /**
+         * Merge the given array with the last group stack.
+         *
+         * @param array $new
+         * @param bool $prependExistingPrefix
+         * @return array 
+         * @static 
+         */ 
+        public static function mergeWithLastGroup($new, $prependExistingPrefix = true)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->mergeWithLastGroup($new, $prependExistingPrefix);
+        }
+                    /**
+         * Get the prefix from the last group on the stack.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLastGroupPrefix()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getLastGroupPrefix();
+        }
+                    /**
+         * Add a route to the underlying route collection.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function addRoute($methods, $uri, $action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->addRoute($methods, $uri, $action);
+        }
+                    /**
+         * Create a new Route object.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param mixed $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function newRoute($methods, $uri, $action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->newRoute($methods, $uri, $action);
+        }
+                    /**
+         * Return the response returned by the given route.
+         *
+         * @param string $name
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */ 
+        public static function respondWithRoute($name)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->respondWithRoute($name);
+        }
+                    /**
+         * Dispatch the request to the application.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */ 
+        public static function dispatch($request)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->dispatch($request);
+        }
+                    /**
+         * Dispatch the request to a route and return the response.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */ 
+        public static function dispatchToRoute($request)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->dispatchToRoute($request);
+        }
+                    /**
+         * Gather the middleware for the given route with resolved class names.
+         *
+         * @param \Illuminate\Routing\Route $route
+         * @return array 
+         * @static 
+         */ 
+        public static function gatherRouteMiddleware($route)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->gatherRouteMiddleware($route);
+        }
+                    /**
+         * Create a response instance from the given value.
+         *
+         * @param \Symfony\Component\HttpFoundation\Request $request
+         * @param mixed $response
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */ 
+        public static function prepareResponse($request, $response)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->prepareResponse($request, $response);
+        }
+                    /**
