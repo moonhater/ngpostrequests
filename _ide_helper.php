@@ -10612,3 +10612,160 @@
                         return $instance->prepareResponse($request, $response);
         }
                     /**
+         * Static version of prepareResponse.
+         *
+         * @param \Symfony\Component\HttpFoundation\Request $request
+         * @param mixed $response
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */ 
+        public static function toResponse($request, $response)
+        {
+                        return \Illuminate\Routing\Router::toResponse($request, $response);
+        }
+                    /**
+         * Substitute the route bindings onto the route.
+         *
+         * @param \Illuminate\Routing\Route $route
+         * @return \Illuminate\Routing\Route 
+         * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+         * @static 
+         */ 
+        public static function substituteBindings($route)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->substituteBindings($route);
+        }
+                    /**
+         * Substitute the implicit Eloquent model bindings for the route.
+         *
+         * @param \Illuminate\Routing\Route $route
+         * @return void 
+         * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+         * @static 
+         */ 
+        public static function substituteImplicitBindings($route)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->substituteImplicitBindings($route);
+        }
+                    /**
+         * Register a route matched event listener.
+         *
+         * @param string|callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function matched($callback)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->matched($callback);
+        }
+                    /**
+         * Get all of the defined middleware short-hand names.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getMiddleware()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getMiddleware();
+        }
+                    /**
+         * Register a short-hand name for a middleware.
+         *
+         * @param string $name
+         * @param string $class
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function aliasMiddleware($name, $class)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->aliasMiddleware($name, $class);
+        }
+                    /**
+         * Check if a middlewareGroup with the given name exists.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMiddlewareGroup($name)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->hasMiddlewareGroup($name);
+        }
+                    /**
+         * Get all of the defined middleware groups.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getMiddlewareGroups()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getMiddlewareGroups();
+        }
+                    /**
+         * Register a group of middleware.
+         *
+         * @param string $name
+         * @param array $middleware
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function middlewareGroup($name, $middleware)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->middlewareGroup($name, $middleware);
+        }
+                    /**
+         * Add a middleware to the beginning of a middleware group.
+         * 
+         * If the middleware is already in the group, it will not be added again.
+         *
+         * @param string $group
+         * @param string $middleware
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function prependMiddlewareToGroup($group, $middleware)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->prependMiddlewareToGroup($group, $middleware);
+        }
+                    /**
+         * Add a middleware to the end of a middleware group.
+         * 
+         * If the middleware is already in the group, it will not be added again.
+         *
+         * @param string $group
+         * @param string $middleware
+         * @return \Illuminate\Routing\Router 
+         * @static 
+         */ 
+        public static function pushMiddlewareToGroup($group, $middleware)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->pushMiddlewareToGroup($group, $middleware);
+        }
+                    /**
+         * Add a new route parameter binder.
+         *
+         * @param string $key
+         * @param string|callable $binder
+         * @return void 
+         * @static 
+         */ 
+        public static function bind($key, $binder)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->bind($key, $binder);
+        }
+                    /**
+         * Register a model binder for a wildcard.
+         *
+         * @param string $key
+         * @param string $class
