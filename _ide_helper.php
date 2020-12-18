@@ -10769,3 +10769,163 @@
          *
          * @param string $key
          * @param string $class
+         * @param \Closure|null $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function model($key, $class, $callback = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->model($key, $class, $callback);
+        }
+                    /**
+         * Get the binding callback for a given binding.
+         *
+         * @param string $key
+         * @return \Closure|null 
+         * @static 
+         */ 
+        public static function getBindingCallback($key)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getBindingCallback($key);
+        }
+                    /**
+         * Get the global "where" patterns.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getPatterns()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getPatterns();
+        }
+                    /**
+         * Set a global where pattern on all routes.
+         *
+         * @param string $key
+         * @param string $pattern
+         * @return void 
+         * @static 
+         */ 
+        public static function pattern($key, $pattern)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->pattern($key, $pattern);
+        }
+                    /**
+         * Set a group of global where patterns on all routes.
+         *
+         * @param array $patterns
+         * @return void 
+         * @static 
+         */ 
+        public static function patterns($patterns)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->patterns($patterns);
+        }
+                    /**
+         * Determine if the router currently has a group stack.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasGroupStack()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->hasGroupStack();
+        }
+                    /**
+         * Get the current group stack for the router.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getGroupStack()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getGroupStack();
+        }
+                    /**
+         * Get a route parameter for the current route.
+         *
+         * @param string $key
+         * @param string|null $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function input($key, $default = null)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->input($key, $default);
+        }
+                    /**
+         * Get the request currently being dispatched.
+         *
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function getCurrentRequest()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getCurrentRequest();
+        }
+                    /**
+         * Get the currently dispatched route instance.
+         *
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function getCurrentRoute()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getCurrentRoute();
+        }
+                    /**
+         * Get the currently dispatched route instance.
+         *
+         * @return \Illuminate\Routing\Route|null 
+         * @static 
+         */ 
+        public static function current()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->current();
+        }
+                    /**
+         * Check if a route with the given name exists.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($name)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->has($name);
+        }
+                    /**
+         * Get the current route name.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function currentRouteName()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->currentRouteName();
+        }
+                    /**
+         * Alias for the "currentRouteNamed" method.
+         *
+         * @param mixed $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function is(...$patterns)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->is(...$patterns);
+        }
