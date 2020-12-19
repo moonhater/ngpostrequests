@@ -10929,3 +10929,150 @@
                         /** @var \Illuminate\Routing\Router $instance */
                         return $instance->is(...$patterns);
         }
+                    /**
+         * Determine if the current route matches a pattern.
+         *
+         * @param mixed $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function currentRouteNamed(...$patterns)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->currentRouteNamed(...$patterns);
+        }
+                    /**
+         * Get the current route action.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function currentRouteAction()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->currentRouteAction();
+        }
+                    /**
+         * Alias for the "currentRouteUses" method.
+         *
+         * @param array $patterns
+         * @return bool 
+         * @static 
+         */ 
+        public static function uses(...$patterns)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->uses(...$patterns);
+        }
+                    /**
+         * Determine if the current route action matches a given action.
+         *
+         * @param string $action
+         * @return bool 
+         * @static 
+         */ 
+        public static function currentRouteUses($action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->currentRouteUses($action);
+        }
+                    /**
+         * Set the unmapped global resource parameters to singular.
+         *
+         * @param bool $singular
+         * @return void 
+         * @static 
+         */ 
+        public static function singularResourceParameters($singular = true)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->singularResourceParameters($singular);
+        }
+                    /**
+         * Set the global resource parameter mapping.
+         *
+         * @param array $parameters
+         * @return void 
+         * @static 
+         */ 
+        public static function resourceParameters($parameters = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->resourceParameters($parameters);
+        }
+                    /**
+         * Get or set the verbs used in the resource URIs.
+         *
+         * @param array $verbs
+         * @return array|null 
+         * @static 
+         */ 
+        public static function resourceVerbs($verbs = [])
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->resourceVerbs($verbs);
+        }
+                    /**
+         * Get the underlying route collection.
+         *
+         * @return \Illuminate\Routing\RouteCollectionInterface 
+         * @static 
+         */ 
+        public static function getRoutes()
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->getRoutes();
+        }
+                    /**
+         * Set the route collection instance.
+         *
+         * @param \Illuminate\Routing\RouteCollection $routes
+         * @return void 
+         * @static 
+         */ 
+        public static function setRoutes($routes)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->setRoutes($routes);
+        }
+                    /**
+         * Set the compiled route collection instance.
+         *
+         * @param array $routes
+         * @return void 
+         * @static 
+         */ 
+        public static function setCompiledRoutes($routes)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        $instance->setCompiledRoutes($routes);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Routing\Router::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Routing\Router::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
