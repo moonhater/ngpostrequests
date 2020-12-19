@@ -11076,3 +11076,152 @@
          * Checks if macro is registered.
          *
          * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Routing\Router::hasMacro($name);
+        }
+                    /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->macroCall($method, $parameters);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Database\Schema\Builder
+     */ 
+        class Schema {
+                    /**
+         * Determine if the given table exists.
+         *
+         * @param string $table
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasTable($table)
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->hasTable($table);
+        }
+                    /**
+         * Get the column listing for a given table.
+         *
+         * @param string $table
+         * @return array 
+         * @static 
+         */ 
+        public static function getColumnListing($table)
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->getColumnListing($table);
+        }
+                    /**
+         * Drop all tables from the database.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function dropAllTables()
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->dropAllTables();
+        }
+                    /**
+         * Drop all views from the database.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function dropAllViews()
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->dropAllViews();
+        }
+                    /**
+         * Get all of the table names for the database.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getAllTables()
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->getAllTables();
+        }
+                    /**
+         * Get all of the view names for the database.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getAllViews()
+        {
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->getAllViews();
+        }
+                    /**
+         * Set the default string length for migrations.
+         *
+         * @param int $length
+         * @return void 
+         * @static 
+         */ 
+        public static function defaultStringLength($length)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        \Illuminate\Database\Schema\MySqlBuilder::defaultStringLength($length);
+        }
+                    /**
+         * Determine if the given table has a given column.
+         *
+         * @param string $table
+         * @param string $column
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasColumn($table, $column)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->hasColumn($table, $column);
+        }
+                    /**
+         * Determine if the given table has given columns.
+         *
+         * @param string $table
+         * @param array $columns
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasColumns($table, $columns)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->hasColumns($table, $columns);
+        }
+                    /**
+         * Get the data type for the given column name.
+         *
+         * @param string $table
+         * @param string $column
+         * @return string 
+         * @static 
+         */ 
+        public static function getColumnType($table, $column)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->getColumnType($table, $column);
+        }
+                    /**
+         * Modify a table on the schema.
