@@ -11225,3 +11225,136 @@
         }
                     /**
          * Modify a table on the schema.
+         *
+         * @param string $table
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function table($table, $callback)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->table($table, $callback);
+        }
+                    /**
+         * Create a new table on the schema.
+         *
+         * @param string $table
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function create($table, $callback)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->create($table, $callback);
+        }
+                    /**
+         * Drop a table from the schema.
+         *
+         * @param string $table
+         * @return void 
+         * @static 
+         */ 
+        public static function drop($table)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->drop($table);
+        }
+                    /**
+         * Drop a table from the schema if it exists.
+         *
+         * @param string $table
+         * @return void 
+         * @static 
+         */ 
+        public static function dropIfExists($table)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->dropIfExists($table);
+        }
+                    /**
+         * Drop all types from the database.
+         *
+         * @return void 
+         * @throws \LogicException
+         * @static 
+         */ 
+        public static function dropAllTypes()
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->dropAllTypes();
+        }
+                    /**
+         * Rename a table on the schema.
+         *
+         * @param string $from
+         * @param string $to
+         * @return void 
+         * @static 
+         */ 
+        public static function rename($from, $to)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->rename($from, $to);
+        }
+                    /**
+         * Enable foreign key constraints.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function enableForeignKeyConstraints()
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->enableForeignKeyConstraints();
+        }
+                    /**
+         * Disable foreign key constraints.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function disableForeignKeyConstraints()
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->disableForeignKeyConstraints();
+        }
+                    /**
+         * Register a custom Doctrine mapping type.
+         *
+         * @param string $class
+         * @param string $name
+         * @param string $type
+         * @return void 
+         * @throws \Doctrine\DBAL\DBALException
+         * @throws \RuntimeException
+         * @static 
+         */ 
+        public static function registerCustomDoctrineType($class, $name, $type)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->registerCustomDoctrineType($class, $name, $type);
+        }
+                    /**
+         * Get the database connection instance.
+         *
+         * @return \Illuminate\Database\Connection 
+         * @static 
+         */ 
+        public static function getConnection()
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->getConnection();
+        }
+                    /**
+         * Set the database connection instance.
+         *
+         * @param \Illuminate\Database\Connection $connection
+         * @return \Illuminate\Database\Schema\MySqlBuilder 
+         * @static 
+         */ 
+        public static function setConnection($connection)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        return $instance->setConnection($connection);
