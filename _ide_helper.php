@@ -11664,3 +11664,164 @@
          * @static 
          */ 
         public static function increment($key, $amount = 1)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->increment($key, $amount);
+        }
+                    /**
+         * Decrement the value of an item in the session.
+         *
+         * @param string $key
+         * @param int $amount
+         * @return int 
+         * @static 
+         */ 
+        public static function decrement($key, $amount = 1)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->decrement($key, $amount);
+        }
+                    /**
+         * Flash a key / value pair to the session.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function flash($key, $value = true)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->flash($key, $value);
+        }
+                    /**
+         * Flash a key / value pair to the session for immediate use.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function now($key, $value)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->now($key, $value);
+        }
+                    /**
+         * Reflash all of the session flash data.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function reflash()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->reflash();
+        }
+                    /**
+         * Reflash a subset of the current flash data.
+         *
+         * @param array|mixed $keys
+         * @return void 
+         * @static 
+         */ 
+        public static function keep($keys = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->keep($keys);
+        }
+                    /**
+         * Flash an input array to the session.
+         *
+         * @param array $value
+         * @return void 
+         * @static 
+         */ 
+        public static function flashInput($value)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->flashInput($value);
+        }
+                    /**
+         * Remove an item from the session, returning its value.
+         *
+         * @param string $key
+         * @return mixed 
+         * @static 
+         */ 
+        public static function remove($key)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->remove($key);
+        }
+                    /**
+         * Remove one or many items from the session.
+         *
+         * @param string|array $keys
+         * @return void 
+         * @static 
+         */ 
+        public static function forget($keys)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->forget($keys);
+        }
+                    /**
+         * Remove all of the items from the session.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flush()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->flush();
+        }
+                    /**
+         * Flush the session data and regenerate the ID.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function invalidate()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->invalidate();
+        }
+                    /**
+         * Generate a new session identifier.
+         *
+         * @param bool $destroy
+         * @return bool 
+         * @static 
+         */ 
+        public static function regenerate($destroy = false)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->regenerate($destroy);
+        }
+                    /**
+         * Generate a new session ID for the session.
+         *
+         * @param bool $destroy
+         * @return bool 
+         * @static 
+         */ 
+        public static function migrate($destroy = false)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->migrate($destroy);
+        }
+                    /**
+         * Determine if the session has been started.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function isStarted()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->isStarted();
+        }
+                    /**
+         * Get the name of the session.
