@@ -11501,3 +11501,166 @@
          * @return void 
          * @static 
          */ 
+        public static function ageFlashData()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->ageFlashData();
+        }
+                    /**
+         * Get all of the session data.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function all()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->all();
+        }
+                    /**
+         * Get a subset of the session data.
+         *
+         * @param array $keys
+         * @return array 
+         * @static 
+         */ 
+        public static function only($keys)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->only($keys);
+        }
+                    /**
+         * Checks if a key exists.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($key)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->exists($key);
+        }
+                    /**
+         * Checks if a key is present and not null.
+         *
+         * @param string|array $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function has($key)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->has($key);
+        }
+                    /**
+         * Get an item from the session.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($key, $default = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->get($key, $default);
+        }
+                    /**
+         * Get the value of a given key and then forget it.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function pull($key, $default = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->pull($key, $default);
+        }
+                    /**
+         * Determine if the session contains old input.
+         *
+         * @param string|null $key
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasOldInput($key = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->hasOldInput($key);
+        }
+                    /**
+         * Get the requested item from the flashed input array.
+         *
+         * @param string|null $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getOldInput($key = null, $default = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->getOldInput($key, $default);
+        }
+                    /**
+         * Replace the given session attributes entirely.
+         *
+         * @param array $attributes
+         * @return void 
+         * @static 
+         */ 
+        public static function replace($attributes)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->replace($attributes);
+        }
+                    /**
+         * Put a key / value pair or array of key / value pairs in the session.
+         *
+         * @param string|array $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function put($key, $value = null)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->put($key, $value);
+        }
+                    /**
+         * Get an item from the session, or store the default value.
+         *
+         * @param string $key
+         * @param \Closure $callback
+         * @return mixed 
+         * @static 
+         */ 
+        public static function remember($key, $callback)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->remember($key, $callback);
+        }
+                    /**
+         * Push a value onto a session array.
+         *
+         * @param string $key
+         * @param mixed $value
+         * @return void 
+         * @static 
+         */ 
+        public static function push($key, $value)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->push($key, $value);
+        }
+                    /**
+         * Increment the value of an item in the session.
+         *
+         * @param string $key
+         * @param int $amount
+         * @return mixed 
+         * @static 
+         */ 
+        public static function increment($key, $amount = 1)
