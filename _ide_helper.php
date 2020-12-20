@@ -11358,3 +11358,146 @@
         {            //Method inherited from \Illuminate\Database\Schema\Builder         
                         /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
                         return $instance->setConnection($connection);
+        }
+                    /**
+         * Set the Schema Blueprint resolver callback.
+         *
+         * @param \Closure $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function blueprintResolver($resolver)
+        {            //Method inherited from \Illuminate\Database\Schema\Builder         
+                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        $instance->blueprintResolver($resolver);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Session\SessionManager
+     * @see \Illuminate\Session\Store
+     */ 
+        class Session {
+                    /**
+         * Determine if requests for the same session should wait for each to finish before executing.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function shouldBlock()
+        {
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->shouldBlock();
+        }
+                    /**
+         * Get the name of the cache store / driver that should be used to acquire session locks.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function blockDriver()
+        {
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->blockDriver();
+        }
+                    /**
+         * Get the session configuration.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getSessionConfig()
+        {
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->getSessionConfig();
+        }
+                    /**
+         * Get the default session driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Set the default session driver name.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDriver($name)
+        {
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        $instance->setDefaultDriver($name);
+        }
+                    /**
+         * Get a driver instance.
+         *
+         * @param string|null $driver
+         * @return mixed 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function driver($driver = null)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->driver($driver);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Session\SessionManager 
+         * @static 
+         */ 
+        public static function extend($driver, $callback)
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Get all of the created "drivers".
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDrivers()
+        {            //Method inherited from \Illuminate\Support\Manager         
+                        /** @var \Illuminate\Session\SessionManager $instance */
+                        return $instance->getDrivers();
+        }
+                    /**
+         * Start the session, reading the data from a handler.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function start()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->start();
+        }
+                    /**
+         * Save the session data to storage.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function save()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->save();
+        }
+                    /**
+         * Age the flash data for the session.
+         *
+         * @return void 
+         * @static 
+         */ 
