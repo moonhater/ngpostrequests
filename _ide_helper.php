@@ -12118,3 +12118,165 @@
          * @return \Illuminate\Filesystem\FilesystemManager 
          * @static 
          */ 
+        public static function extend($driver, $callback)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->extend($driver, $callback);
+        }
+                    /**
+         * Assert that the given file exists.
+         *
+         * @param string|array $path
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function assertExists($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->assertExists($path);
+        }
+                    /**
+         * Assert that the given file does not exist.
+         *
+         * @param string|array $path
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function assertMissing($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->assertMissing($path);
+        }
+                    /**
+         * Determine if a file exists.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->exists($path);
+        }
+                    /**
+         * Determine if a file or directory is missing.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function missing($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->missing($path);
+        }
+                    /**
+         * Get the full path for the file at the given "short" path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function path($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->path($path);
+        }
+                    /**
+         * Get the contents of a file.
+         *
+         * @param string $path
+         * @return string 
+         * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+         * @static 
+         */ 
+        public static function get($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->get($path);
+        }
+                    /**
+         * Create a streamed response for a given file.
+         *
+         * @param string $path
+         * @param string|null $name
+         * @param array|null $headers
+         * @param string|null $disposition
+         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
+         * @static 
+         */ 
+        public static function response($path, $name = null, $headers = [], $disposition = 'inline')
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->response($path, $name, $headers, $disposition);
+        }
+                    /**
+         * Create a streamed download response for a given file.
+         *
+         * @param string $path
+         * @param string|null $name
+         * @param array|null $headers
+         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
+         * @static 
+         */ 
+        public static function download($path, $name = null, $headers = [])
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->download($path, $name, $headers);
+        }
+                    /**
+         * Write the contents of a file.
+         *
+         * @param string $path
+         * @param string|resource $contents
+         * @param mixed $options
+         * @return bool 
+         * @static 
+         */ 
+        public static function put($path, $contents, $options = [])
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->put($path, $contents, $options);
+        }
+                    /**
+         * Store the uploaded file on the disk.
+         *
+         * @param string $path
+         * @param \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file
+         * @param mixed $options
+         * @return string|false 
+         * @static 
+         */ 
+        public static function putFile($path, $file, $options = [])
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->putFile($path, $file, $options);
+        }
+                    /**
+         * Store the uploaded file on the disk with a given name.
+         *
+         * @param string $path
+         * @param \Illuminate\Http\File|\Illuminate\Http\UploadedFile|string $file
+         * @param string $name
+         * @param mixed $options
+         * @return string|false 
+         * @static 
+         */ 
+        public static function putFileAs($path, $file, $name, $options = [])
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->putFileAs($path, $file, $name, $options);
+        }
+                    /**
+         * Get the visibility for the given path.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function getVisibility($path)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
+                        return $instance->getVisibility($path);
+        }
