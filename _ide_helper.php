@@ -11825,3 +11825,136 @@
         }
                     /**
          * Get the name of the session.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getName()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->getName();
+        }
+                    /**
+         * Set the name of the session.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function setName($name)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->setName($name);
+        }
+                    /**
+         * Get the current session ID.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getId()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->getId();
+        }
+                    /**
+         * Set the session ID.
+         *
+         * @param string $id
+         * @return void 
+         * @static 
+         */ 
+        public static function setId($id)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->setId($id);
+        }
+                    /**
+         * Determine if this is a valid session ID.
+         *
+         * @param string $id
+         * @return bool 
+         * @static 
+         */ 
+        public static function isValidId($id)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->isValidId($id);
+        }
+                    /**
+         * Set the existence of the session on the handler if applicable.
+         *
+         * @param bool $value
+         * @return void 
+         * @static 
+         */ 
+        public static function setExists($value)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->setExists($value);
+        }
+                    /**
+         * Get the CSRF token value.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function token()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->token();
+        }
+                    /**
+         * Regenerate the CSRF token value.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function regenerateToken()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->regenerateToken();
+        }
+                    /**
+         * Get the previous URL from the session.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function previousUrl()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->previousUrl();
+        }
+                    /**
+         * Set the "previous" URL in the session.
+         *
+         * @param string $url
+         * @return void 
+         * @static 
+         */ 
+        public static function setPreviousUrl($url)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->setPreviousUrl($url);
+        }
+                    /**
+         * Get the underlying session handler implementation.
+         *
+         * @return \SessionHandlerInterface 
+         * @static 
+         */ 
+        public static function getHandler()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        return $instance->getHandler();
+        }
+                    /**
+         * Determine if the session handler needs a request.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function handlerNeedsRequest()
+        {
+                        /** @var \Illuminate\Session\Store $instance */
