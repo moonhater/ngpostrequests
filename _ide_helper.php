@@ -11958,3 +11958,163 @@
         public static function handlerNeedsRequest()
         {
                         /** @var \Illuminate\Session\Store $instance */
+                        return $instance->handlerNeedsRequest();
+        }
+                    /**
+         * Set the request on the handler instance.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return void 
+         * @static 
+         */ 
+        public static function setRequestOnHandler($request)
+        {
+                        /** @var \Illuminate\Session\Store $instance */
+                        $instance->setRequestOnHandler($request);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Filesystem\FilesystemManager
+     */ 
+        class Storage {
+                    /**
+         * Get a filesystem instance.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function drive($name = null)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->drive($name);
+        }
+                    /**
+         * Get a filesystem instance.
+         *
+         * @param string|null $name
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function disk($name = null)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->disk($name);
+        }
+                    /**
+         * Get a default cloud filesystem instance.
+         *
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function cloud()
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->cloud();
+        }
+                    /**
+         * Create an instance of the local driver.
+         *
+         * @param array $config
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function createLocalDriver($config)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->createLocalDriver($config);
+        }
+                    /**
+         * Create an instance of the ftp driver.
+         *
+         * @param array $config
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function createFtpDriver($config)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->createFtpDriver($config);
+        }
+                    /**
+         * Create an instance of the sftp driver.
+         *
+         * @param array $config
+         * @return \Illuminate\Filesystem\FilesystemAdapter 
+         * @static 
+         */ 
+        public static function createSftpDriver($config)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->createSftpDriver($config);
+        }
+                    /**
+         * Create an instance of the Amazon S3 driver.
+         *
+         * @param array $config
+         * @return \Illuminate\Contracts\Filesystem\Cloud 
+         * @static 
+         */ 
+        public static function createS3Driver($config)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->createS3Driver($config);
+        }
+                    /**
+         * Set the given disk instance.
+         *
+         * @param string $name
+         * @param mixed $disk
+         * @return \Illuminate\Filesystem\FilesystemManager 
+         * @static 
+         */ 
+        public static function set($name, $disk)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->set($name, $disk);
+        }
+                    /**
+         * Get the default driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultDriver()
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->getDefaultDriver();
+        }
+                    /**
+         * Get the default cloud driver name.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDefaultCloudDriver()
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->getDefaultCloudDriver();
+        }
+                    /**
+         * Unset the given disk instances.
+         *
+         * @param array|string $disk
+         * @return \Illuminate\Filesystem\FilesystemManager 
+         * @static 
+         */ 
+        public static function forgetDisk($disk)
+        {
+                        /** @var \Illuminate\Filesystem\FilesystemManager $instance */
+                        return $instance->forgetDisk($disk);
+        }
+                    /**
+         * Register a custom driver creator Closure.
+         *
+         * @param string $driver
+         * @param \Closure $callback
+         * @return \Illuminate\Filesystem\FilesystemManager 
+         * @static 
+         */ 
