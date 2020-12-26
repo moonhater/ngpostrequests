@@ -12594,3 +12594,170 @@
         {
                         /** @var \Illuminate\Routing\UrlGenerator $instance */
                         return $instance->current();
+        }
+                    /**
+         * Get the URL for the previous request.
+         *
+         * @param mixed $fallback
+         * @return string 
+         * @static 
+         */ 
+        public static function previous($fallback = false)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->previous($fallback);
+        }
+                    /**
+         * Generate an absolute URL to the given path.
+         *
+         * @param string $path
+         * @param mixed $extra
+         * @param bool|null $secure
+         * @return string 
+         * @static 
+         */ 
+        public static function to($path, $extra = [], $secure = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->to($path, $extra, $secure);
+        }
+                    /**
+         * Generate a secure, absolute URL to the given path.
+         *
+         * @param string $path
+         * @param array $parameters
+         * @return string 
+         * @static 
+         */ 
+        public static function secure($path, $parameters = [])
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->secure($path, $parameters);
+        }
+                    /**
+         * Generate the URL to an application asset.
+         *
+         * @param string $path
+         * @param bool|null $secure
+         * @return string 
+         * @static 
+         */ 
+        public static function asset($path, $secure = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->asset($path, $secure);
+        }
+                    /**
+         * Generate the URL to a secure asset.
+         *
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function secureAsset($path)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->secureAsset($path);
+        }
+                    /**
+         * Generate the URL to an asset from a custom root domain such as CDN, etc.
+         *
+         * @param string $root
+         * @param string $path
+         * @param bool|null $secure
+         * @return string 
+         * @static 
+         */ 
+        public static function assetFrom($root, $path, $secure = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->assetFrom($root, $path, $secure);
+        }
+                    /**
+         * Get the default scheme for a raw URL.
+         *
+         * @param bool|null $secure
+         * @return string 
+         * @static 
+         */ 
+        public static function formatScheme($secure = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->formatScheme($secure);
+        }
+                    /**
+         * Create a signed route URL for a named route.
+         *
+         * @param string $name
+         * @param array $parameters
+         * @param \DateTimeInterface|\DateInterval|int|null $expiration
+         * @param bool $absolute
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function signedRoute($name, $parameters = [], $expiration = null, $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->signedRoute($name, $parameters, $expiration, $absolute);
+        }
+                    /**
+         * Create a temporary signed route URL for a named route.
+         *
+         * @param string $name
+         * @param \DateTimeInterface|\DateInterval|int $expiration
+         * @param array $parameters
+         * @param bool $absolute
+         * @return string 
+         * @static 
+         */ 
+        public static function temporarySignedRoute($name, $expiration, $parameters = [], $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->temporarySignedRoute($name, $expiration, $parameters, $absolute);
+        }
+                    /**
+         * Determine if the given request has a valid signature.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @param bool $absolute
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasValidSignature($request, $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->hasValidSignature($request, $absolute);
+        }
+                    /**
+         * Determine if the signature from the given request matches the URL.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @param bool $absolute
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasCorrectSignature($request, $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->hasCorrectSignature($request, $absolute);
+        }
+                    /**
+         * Determine if the expires timestamp from the given request is not from the past.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return bool 
+         * @static 
+         */ 
+        public static function signatureHasNotExpired($request)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->signatureHasNotExpired($request);
+        }
+                    /**
+         * Get the URL to a named route.
+         *
+         * @param string $name
+         * @param mixed $parameters
+         * @param bool $absolute
+         * @return string 
