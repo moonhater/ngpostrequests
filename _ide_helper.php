@@ -12761,3 +12761,157 @@
          * @param mixed $parameters
          * @param bool $absolute
          * @return string 
+         * @throws \Symfony\Component\Routing\Exception\RouteNotFoundException
+         * @static 
+         */ 
+        public static function route($name, $parameters = [], $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->route($name, $parameters, $absolute);
+        }
+                    /**
+         * Get the URL for a given route instance.
+         *
+         * @param \Illuminate\Routing\Route $route
+         * @param mixed $parameters
+         * @param bool $absolute
+         * @return string 
+         * @throws \Illuminate\Routing\Exceptions\UrlGenerationException
+         * @static 
+         */ 
+        public static function toRoute($route, $parameters, $absolute)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->toRoute($route, $parameters, $absolute);
+        }
+                    /**
+         * Get the URL to a controller action.
+         *
+         * @param string|array $action
+         * @param mixed $parameters
+         * @param bool $absolute
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function action($action, $parameters = [], $absolute = true)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->action($action, $parameters, $absolute);
+        }
+                    /**
+         * Format the array of URL parameters.
+         *
+         * @param mixed|array $parameters
+         * @return array 
+         * @static 
+         */ 
+        public static function formatParameters($parameters)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->formatParameters($parameters);
+        }
+                    /**
+         * Get the base URL for the request.
+         *
+         * @param string $scheme
+         * @param string|null $root
+         * @return string 
+         * @static 
+         */ 
+        public static function formatRoot($scheme, $root = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->formatRoot($scheme, $root);
+        }
+                    /**
+         * Format the given URL segments into a single URL.
+         *
+         * @param string $root
+         * @param string $path
+         * @param \Illuminate\Routing\Route|null $route
+         * @return string 
+         * @static 
+         */ 
+        public static function format($root, $path, $route = null)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->format($root, $path, $route);
+        }
+                    /**
+         * Determine if the given path is a valid URL.
+         *
+         * @param string $path
+         * @return bool 
+         * @static 
+         */ 
+        public static function isValidUrl($path)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->isValidUrl($path);
+        }
+                    /**
+         * Set the default named parameters used by the URL generator.
+         *
+         * @param array $defaults
+         * @return void 
+         * @static 
+         */ 
+        public static function defaults($defaults)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        $instance->defaults($defaults);
+        }
+                    /**
+         * Get the default named parameters used by the URL generator.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getDefaultParameters()
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->getDefaultParameters();
+        }
+                    /**
+         * Force the scheme for URLs.
+         *
+         * @param string $scheme
+         * @return void 
+         * @static 
+         */ 
+        public static function forceScheme($scheme)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        $instance->forceScheme($scheme);
+        }
+                    /**
+         * Set the forced root URL.
+         *
+         * @param string $root
+         * @return void 
+         * @static 
+         */ 
+        public static function forceRootUrl($root)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        $instance->forceRootUrl($root);
+        }
+                    /**
+         * Set a callback to be used to format the host of generated URLs.
+         *
+         * @param \Closure $callback
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function formatHostUsing($callback)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->formatHostUsing($callback);
+        }
+                    /**
+         * Set a callback to be used to format the path of generated URLs.
+         *
+         * @param \Closure $callback
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
