@@ -12915,3 +12915,162 @@
          * @param \Closure $callback
          * @return \Illuminate\Routing\UrlGenerator 
          * @static 
+         */ 
+        public static function formatPathUsing($callback)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->formatPathUsing($callback);
+        }
+                    /**
+         * Get the path formatter being used by the URL generator.
+         *
+         * @return \Closure 
+         * @static 
+         */ 
+        public static function pathFormatter()
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->pathFormatter();
+        }
+                    /**
+         * Get the request instance.
+         *
+         * @return \Illuminate\Http\Request 
+         * @static 
+         */ 
+        public static function getRequest()
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->getRequest();
+        }
+                    /**
+         * Set the current request instance.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @return void 
+         * @static 
+         */ 
+        public static function setRequest($request)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        $instance->setRequest($request);
+        }
+                    /**
+         * Set the route collection.
+         *
+         * @param \Illuminate\Routing\RouteCollectionInterface $routes
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function setRoutes($routes)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->setRoutes($routes);
+        }
+                    /**
+         * Set the session resolver for the generator.
+         *
+         * @param callable $sessionResolver
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function setSessionResolver($sessionResolver)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->setSessionResolver($sessionResolver);
+        }
+                    /**
+         * Set the encryption key resolver.
+         *
+         * @param callable $keyResolver
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function setKeyResolver($keyResolver)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->setKeyResolver($keyResolver);
+        }
+                    /**
+         * Set the root controller namespace.
+         *
+         * @param string $rootNamespace
+         * @return \Illuminate\Routing\UrlGenerator 
+         * @static 
+         */ 
+        public static function setRootControllerNamespace($rootNamespace)
+        {
+                        /** @var \Illuminate\Routing\UrlGenerator $instance */
+                        return $instance->setRootControllerNamespace($rootNamespace);
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\Routing\UrlGenerator::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\Routing\UrlGenerator::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\Routing\UrlGenerator::hasMacro($name);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\Validation\Factory
+     */ 
+        class Validator {
+                    /**
+         * Create a new Validator instance.
+         *
+         * @param array $data
+         * @param array $rules
+         * @param array $messages
+         * @param array $customAttributes
+         * @return \Illuminate\Validation\Validator 
+         * @static 
+         */ 
+        public static function make($data, $rules, $messages = [], $customAttributes = [])
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->make($data, $rules, $messages, $customAttributes);
+        }
+                    /**
+         * Validate the given data against the provided rules.
+         *
+         * @param array $data
+         * @param array $rules
+         * @param array $messages
+         * @param array $customAttributes
+         * @return array 
+         * @throws \Illuminate\Validation\ValidationException
+         * @static 
+         */ 
+        public static function validate($data, $rules, $messages = [], $customAttributes = [])
