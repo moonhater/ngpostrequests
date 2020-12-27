@@ -13074,3 +13074,180 @@
          * @static 
          */ 
         public static function validate($data, $rules, $messages = [], $customAttributes = [])
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->validate($data, $rules, $messages, $customAttributes);
+        }
+                    /**
+         * Register a custom validator extension.
+         *
+         * @param string $rule
+         * @param \Closure|string $extension
+         * @param string|null $message
+         * @return void 
+         * @static 
+         */ 
+        public static function extend($rule, $extension, $message = null)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->extend($rule, $extension, $message);
+        }
+                    /**
+         * Register a custom implicit validator extension.
+         *
+         * @param string $rule
+         * @param \Closure|string $extension
+         * @param string|null $message
+         * @return void 
+         * @static 
+         */ 
+        public static function extendImplicit($rule, $extension, $message = null)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->extendImplicit($rule, $extension, $message);
+        }
+                    /**
+         * Register a custom dependent validator extension.
+         *
+         * @param string $rule
+         * @param \Closure|string $extension
+         * @param string|null $message
+         * @return void 
+         * @static 
+         */ 
+        public static function extendDependent($rule, $extension, $message = null)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->extendDependent($rule, $extension, $message);
+        }
+                    /**
+         * Register a custom validator message replacer.
+         *
+         * @param string $rule
+         * @param \Closure|string $replacer
+         * @return void 
+         * @static 
+         */ 
+        public static function replacer($rule, $replacer)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->replacer($rule, $replacer);
+        }
+                    /**
+         * Set the Validator instance resolver.
+         *
+         * @param \Closure $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function resolver($resolver)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->resolver($resolver);
+        }
+                    /**
+         * Get the Translator implementation.
+         *
+         * @return \Illuminate\Contracts\Translation\Translator 
+         * @static 
+         */ 
+        public static function getTranslator()
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->getTranslator();
+        }
+                    /**
+         * Get the Presence Verifier implementation.
+         *
+         * @return \Illuminate\Validation\PresenceVerifierInterface 
+         * @static 
+         */ 
+        public static function getPresenceVerifier()
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        return $instance->getPresenceVerifier();
+        }
+                    /**
+         * Set the Presence Verifier implementation.
+         *
+         * @param \Illuminate\Validation\PresenceVerifierInterface $presenceVerifier
+         * @return void 
+         * @static 
+         */ 
+        public static function setPresenceVerifier($presenceVerifier)
+        {
+                        /** @var \Illuminate\Validation\Factory $instance */
+                        $instance->setPresenceVerifier($presenceVerifier);
+        }
+         
+    }
+            /**
+     * 
+     *
+     * @see \Illuminate\View\Factory
+     */ 
+        class View {
+                    /**
+         * Get the evaluated view contents for the given view.
+         *
+         * @param string $path
+         * @param \Illuminate\Contracts\Support\Arrayable|array $data
+         * @param array $mergeData
+         * @return \Illuminate\Contracts\View\View 
+         * @static 
+         */ 
+        public static function file($path, $data = [], $mergeData = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->file($path, $data, $mergeData);
+        }
+                    /**
+         * Get the evaluated view contents for the given view.
+         *
+         * @param string $view
+         * @param \Illuminate\Contracts\Support\Arrayable|array $data
+         * @param array $mergeData
+         * @return \Illuminate\Contracts\View\View 
+         * @static 
+         */ 
+        public static function make($view, $data = [], $mergeData = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->make($view, $data, $mergeData);
+        }
+                    /**
+         * Get the first view that actually exists from the given list.
+         *
+         * @param array $views
+         * @param \Illuminate\Contracts\Support\Arrayable|array $data
+         * @param array $mergeData
+         * @return \Illuminate\Contracts\View\View 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function first($views, $data = [], $mergeData = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->first($views, $data, $mergeData);
+        }
+                    /**
+         * Get the rendered content of the view based on a given condition.
+         *
+         * @param bool $condition
+         * @param string $view
+         * @param \Illuminate\Contracts\Support\Arrayable|array $data
+         * @param array $mergeData
+         * @return string 
+         * @static 
+         */ 
+        public static function renderWhen($condition, $view, $data = [], $mergeData = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->renderWhen($condition, $view, $data, $mergeData);
+        }
+                    /**
+         * Get the rendered contents of a partial from a loop.
+         *
+         * @param string $view
+         * @param array $data
+         * @param string $iterator
