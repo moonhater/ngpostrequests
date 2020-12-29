@@ -13400,3 +13400,170 @@
          * @param string|array $hints
          * @return \Illuminate\View\Factory 
          * @static 
+         */ 
+        public static function replaceNamespace($namespace, $hints)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->replaceNamespace($namespace, $hints);
+        }
+                    /**
+         * Register a valid view extension and its engine.
+         *
+         * @param string $extension
+         * @param string $engine
+         * @param \Closure|null $resolver
+         * @return void 
+         * @static 
+         */ 
+        public static function addExtension($extension, $engine, $resolver = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->addExtension($extension, $engine, $resolver);
+        }
+                    /**
+         * Flush all of the factory state like sections and stacks.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushState()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->flushState();
+        }
+                    /**
+         * Flush all of the section contents if done rendering.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushStateIfDoneRendering()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->flushStateIfDoneRendering();
+        }
+                    /**
+         * Get the extension to engine bindings.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getExtensions()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getExtensions();
+        }
+                    /**
+         * Get the engine resolver instance.
+         *
+         * @return \Illuminate\View\Engines\EngineResolver 
+         * @static 
+         */ 
+        public static function getEngineResolver()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getEngineResolver();
+        }
+                    /**
+         * Get the view finder instance.
+         *
+         * @return \Illuminate\View\ViewFinderInterface 
+         * @static 
+         */ 
+        public static function getFinder()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getFinder();
+        }
+                    /**
+         * Set the view finder instance.
+         *
+         * @param \Illuminate\View\ViewFinderInterface $finder
+         * @return void 
+         * @static 
+         */ 
+        public static function setFinder($finder)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->setFinder($finder);
+        }
+                    /**
+         * Flush the cache of views located by the finder.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushFinderCache()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->flushFinderCache();
+        }
+                    /**
+         * Get the event dispatcher instance.
+         *
+         * @return \Illuminate\Contracts\Events\Dispatcher 
+         * @static 
+         */ 
+        public static function getDispatcher()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getDispatcher();
+        }
+                    /**
+         * Set the event dispatcher instance.
+         *
+         * @param \Illuminate\Contracts\Events\Dispatcher $events
+         * @return void 
+         * @static 
+         */ 
+        public static function setDispatcher($events)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->setDispatcher($events);
+        }
+                    /**
+         * Get the IoC container instance.
+         *
+         * @return \Illuminate\Contracts\Container\Container 
+         * @static 
+         */ 
+        public static function getContainer()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getContainer();
+        }
+                    /**
+         * Set the IoC container instance.
+         *
+         * @param \Illuminate\Contracts\Container\Container $container
+         * @return void 
+         * @static 
+         */ 
+        public static function setContainer($container)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->setContainer($container);
+        }
+                    /**
+         * Get an item from the shared data.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function shared($key, $default = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->shared($key, $default);
+        }
+                    /**
+         * Get all of the shared data for the environment.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getShared()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getShared();
