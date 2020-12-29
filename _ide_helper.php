@@ -13251,3 +13251,152 @@
          * @param string $view
          * @param array $data
          * @param string $iterator
+         * @param string $empty
+         * @return string 
+         * @static 
+         */ 
+        public static function renderEach($view, $data, $iterator, $empty = 'raw|')
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->renderEach($view, $data, $iterator, $empty);
+        }
+                    /**
+         * Determine if a given view exists.
+         *
+         * @param string $view
+         * @return bool 
+         * @static 
+         */ 
+        public static function exists($view)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->exists($view);
+        }
+                    /**
+         * Get the appropriate view engine for the given path.
+         *
+         * @param string $path
+         * @return \Illuminate\Contracts\View\Engine 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function getEngineFromPath($path)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getEngineFromPath($path);
+        }
+                    /**
+         * Add a piece of shared data to the environment.
+         *
+         * @param array|string $key
+         * @param mixed|null $value
+         * @return mixed 
+         * @static 
+         */ 
+        public static function share($key, $value = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->share($key, $value);
+        }
+                    /**
+         * Increment the rendering counter.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function incrementRender()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->incrementRender();
+        }
+                    /**
+         * Decrement the rendering counter.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function decrementRender()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->decrementRender();
+        }
+                    /**
+         * Check if there are no active render operations.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function doneRendering()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->doneRendering();
+        }
+                    /**
+         * Determine if the given once token has been rendered.
+         *
+         * @param string $id
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasRenderedOnce($id)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->hasRenderedOnce($id);
+        }
+                    /**
+         * Mark the given once token as having been rendered.
+         *
+         * @param string $id
+         * @return void 
+         * @static 
+         */ 
+        public static function markAsRenderedOnce($id)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->markAsRenderedOnce($id);
+        }
+                    /**
+         * Add a location to the array of view locations.
+         *
+         * @param string $location
+         * @return void 
+         * @static 
+         */ 
+        public static function addLocation($location)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->addLocation($location);
+        }
+                    /**
+         * Add a new namespace to the loader.
+         *
+         * @param string $namespace
+         * @param string|array $hints
+         * @return \Illuminate\View\Factory 
+         * @static 
+         */ 
+        public static function addNamespace($namespace, $hints)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->addNamespace($namespace, $hints);
+        }
+                    /**
+         * Prepend a new namespace to the loader.
+         *
+         * @param string $namespace
+         * @param string|array $hints
+         * @return \Illuminate\View\Factory 
+         * @static 
+         */ 
+        public static function prependNamespace($namespace, $hints)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->prependNamespace($namespace, $hints);
+        }
+                    /**
+         * Replace the namespace hints for the given namespace.
+         *
+         * @param string $namespace
+         * @param string|array $hints
+         * @return \Illuminate\View\Factory 
+         * @static 
