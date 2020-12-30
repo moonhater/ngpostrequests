@@ -13567,3 +13567,146 @@
         {
                         /** @var \Illuminate\View\Factory $instance */
                         return $instance->getShared();
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Illuminate\View\Factory::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Illuminate\View\Factory::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Illuminate\View\Factory::hasMacro($name);
+        }
+                    /**
+         * Start a component rendering process.
+         *
+         * @param \Illuminate\View\View|\Closure|string $view
+         * @param array $data
+         * @return void 
+         * @static 
+         */ 
+        public static function startComponent($view, $data = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startComponent($view, $data);
+        }
+                    /**
+         * Get the first view that actually exists from the given list, and start a component.
+         *
+         * @param array $names
+         * @param array $data
+         * @return void 
+         * @static 
+         */ 
+        public static function startComponentFirst($names, $data = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startComponentFirst($names, $data);
+        }
+                    /**
+         * Render the current component.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function renderComponent()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->renderComponent();
+        }
+                    /**
+         * Start the slot rendering process.
+         *
+         * @param string $name
+         * @param string|null $content
+         * @return void 
+         * @static 
+         */ 
+        public static function slot($name, $content = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->slot($name, $content);
+        }
+                    /**
+         * Save the slot content for rendering.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function endSlot()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->endSlot();
+        }
+                    /**
+         * Register a view creator event.
+         *
+         * @param array|string $views
+         * @param \Closure|string $callback
+         * @return array 
+         * @static 
+         */ 
+        public static function creator($views, $callback)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->creator($views, $callback);
+        }
+                    /**
+         * Register multiple view composers via an array.
+         *
+         * @param array $composers
+         * @return array 
+         * @static 
+         */ 
+        public static function composers($composers)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->composers($composers);
+        }
+                    /**
+         * Register a view composer event.
+         *
+         * @param array|string $views
+         * @param \Closure|string $callback
+         * @return array 
+         * @static 
+         */ 
+        public static function composer($views, $callback)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->composer($views, $callback);
+        }
+                    /**
+         * Call the composer for a given view.
+         *
+         * @param \Illuminate\Contracts\View\View $view
+         * @return void 
+         * @static 
+         */ 
