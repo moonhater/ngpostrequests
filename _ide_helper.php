@@ -13710,3 +13710,173 @@
          * @return void 
          * @static 
          */ 
+        public static function callComposer($view)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->callComposer($view);
+        }
+                    /**
+         * Call the creator for a given view.
+         *
+         * @param \Illuminate\Contracts\View\View $view
+         * @return void 
+         * @static 
+         */ 
+        public static function callCreator($view)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->callCreator($view);
+        }
+                    /**
+         * Start injecting content into a section.
+         *
+         * @param string $section
+         * @param string|null $content
+         * @return void 
+         * @static 
+         */ 
+        public static function startSection($section, $content = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startSection($section, $content);
+        }
+                    /**
+         * Inject inline content into a section.
+         *
+         * @param string $section
+         * @param string $content
+         * @return void 
+         * @static 
+         */ 
+        public static function inject($section, $content)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->inject($section, $content);
+        }
+                    /**
+         * Stop injecting content into a section and return its contents.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function yieldSection()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->yieldSection();
+        }
+                    /**
+         * Stop injecting content into a section.
+         *
+         * @param bool $overwrite
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function stopSection($overwrite = false)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->stopSection($overwrite);
+        }
+                    /**
+         * Stop injecting content into a section and append it.
+         *
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function appendSection()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->appendSection();
+        }
+                    /**
+         * Get the string contents of a section.
+         *
+         * @param string $section
+         * @param string $default
+         * @return string 
+         * @static 
+         */ 
+        public static function yieldContent($section, $default = '')
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->yieldContent($section, $default);
+        }
+                    /**
+         * Get the parent placeholder for the current request.
+         *
+         * @param string $section
+         * @return string 
+         * @static 
+         */ 
+        public static function parentPlaceholder($section = '')
+        {
+                        return \Illuminate\View\Factory::parentPlaceholder($section);
+        }
+                    /**
+         * Check if section exists.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasSection($name)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->hasSection($name);
+        }
+                    /**
+         * Check if section does not exist.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function sectionMissing($name)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->sectionMissing($name);
+        }
+                    /**
+         * Get the contents of a section.
+         *
+         * @param string $name
+         * @param string|null $default
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getSection($name, $default = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getSection($name, $default);
+        }
+                    /**
+         * Get the entire array of sections.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getSections()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getSections();
+        }
+                    /**
+         * Flush all of the sections.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushSections()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->flushSections();
+        }
+                    /**
+         * Add new loop to the stack.
+         *
+         * @param \Countable|array $data
+         * @return void 
+         * @static 
+         */ 
+        public static function addLoop($data)
