@@ -14028,3 +14028,162 @@
          
     }
      
+}
+
+    namespace Illuminate\Support { 
+            /**
+     * 
+     *
+     */ 
+        class Arr {
+         
+    }
+            /**
+     * 
+     *
+     */ 
+        class Str {
+         
+    }
+     
+}
+
+        namespace Facade\Ignition\Facades { 
+            /**
+     * Class Flare.
+     *
+     * @see \Facade\FlareClient\Flare
+     */ 
+        class Flare {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function register($apiKey, $apiSecret = null, $contextDetector = null, $container = null)
+        {
+                        return \Facade\FlareClient\Flare::register($apiKey, $apiSecret, $contextDetector, $container);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getMiddleware()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->getMiddleware();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerFlareHandlers()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->registerFlareHandlers();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerExceptionHandler()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->registerExceptionHandler();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerErrorHandler()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->registerErrorHandler();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function registerMiddleware($callable)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->registerMiddleware($callable);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getMiddlewares()
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->getMiddlewares();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function glow($name, $messageLevel = 'info', $metaData = [])
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->glow($name, $messageLevel, $metaData);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function handleException($throwable)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->handleException($throwable);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function handleError($code, $message, $file = '', $line = 0)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->handleError($code, $message, $file, $line);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function applicationPath($applicationPath)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->applicationPath($applicationPath);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function report($throwable, $callback = null)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->report($throwable, $callback);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function reportMessage($message, $logLevel, $callback = null)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->reportMessage($message, $logLevel, $callback);
+        }
+                    /**
+         * 
+         *
