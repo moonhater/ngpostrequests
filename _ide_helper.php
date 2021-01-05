@@ -13880,3 +13880,151 @@
          * @static 
          */ 
         public static function addLoop($data)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->addLoop($data);
+        }
+                    /**
+         * Increment the top loop's indices.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function incrementLoopIndices()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->incrementLoopIndices();
+        }
+                    /**
+         * Pop a loop from the top of the loop stack.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function popLoop()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->popLoop();
+        }
+                    /**
+         * Get an instance of the last loop in the stack.
+         *
+         * @return \stdClass|null 
+         * @static 
+         */ 
+        public static function getLastLoop()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getLastLoop();
+        }
+                    /**
+         * Get the entire loop stack.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getLoopStack()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getLoopStack();
+        }
+                    /**
+         * Start injecting content into a push section.
+         *
+         * @param string $section
+         * @param string $content
+         * @return void 
+         * @static 
+         */ 
+        public static function startPush($section, $content = '')
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startPush($section, $content);
+        }
+                    /**
+         * Stop injecting content into a push section.
+         *
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function stopPush()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->stopPush();
+        }
+                    /**
+         * Start prepending content into a push section.
+         *
+         * @param string $section
+         * @param string $content
+         * @return void 
+         * @static 
+         */ 
+        public static function startPrepend($section, $content = '')
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startPrepend($section, $content);
+        }
+                    /**
+         * Stop prepending content into a push section.
+         *
+         * @return string 
+         * @throws \InvalidArgumentException
+         * @static 
+         */ 
+        public static function stopPrepend()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->stopPrepend();
+        }
+                    /**
+         * Get the string contents of a push section.
+         *
+         * @param string $section
+         * @param string $default
+         * @return string 
+         * @static 
+         */ 
+        public static function yieldPushContent($section, $default = '')
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->yieldPushContent($section, $default);
+        }
+                    /**
+         * Flush all of the stacks.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushStacks()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->flushStacks();
+        }
+                    /**
+         * Start a translation block.
+         *
+         * @param array $replacements
+         * @return void 
+         * @static 
+         */ 
+        public static function startTranslation($replacements = [])
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        $instance->startTranslation($replacements);
+        }
+                    /**
+         * Render the current translation.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function renderTranslation()
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->renderTranslation();
+        }
+         
+    }
+     
