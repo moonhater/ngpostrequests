@@ -14325,3 +14325,137 @@ namespace  {
              * @return \Illuminate\Database\Eloquent\Builder|static 
              * @static 
              */ 
+            public static function withGlobalScope($identifier, $scope)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->withGlobalScope($identifier, $scope);
+            }
+             
+                /**
+             * Remove a registered global scope.
+             *
+             * @param \Illuminate\Database\Eloquent\Scope|string $scope
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function withoutGlobalScope($scope)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->withoutGlobalScope($scope);
+            }
+             
+                /**
+             * Remove all or passed registered global scopes.
+             *
+             * @param array|null $scopes
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function withoutGlobalScopes($scopes = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->withoutGlobalScopes($scopes);
+            }
+             
+                /**
+             * Get an array of global scopes that were removed from the query.
+             *
+             * @return array 
+             * @static 
+             */ 
+            public static function removedScopes()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->removedScopes();
+            }
+             
+                /**
+             * Add a where clause on the primary key to the query.
+             *
+             * @param mixed $id
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function whereKey($id)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->whereKey($id);
+            }
+             
+                /**
+             * Add a where clause on the primary key to the query.
+             *
+             * @param mixed $id
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function whereKeyNot($id)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->whereKeyNot($id);
+            }
+             
+                /**
+             * Add a basic where clause to the query.
+             *
+             * @param \Closure|string|array $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function where($column, $operator = null, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->where($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add a basic where clause to the query, and return the first result.
+             *
+             * @param \Closure|string|array $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstWhere($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add an "or where" clause to the query.
+             *
+             * @param \Closure|array|string $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function orWhere($column, $operator = null, $value = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->orWhere($column, $operator, $value);
+            }
+             
+                /**
+             * Add an "order by" clause for a timestamp to the query.
+             *
+             * @param string $column
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function latest($column = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->latest($column);
+            }
+             
+                /**
+             * Add an "order by" clause for a timestamp to the query.
+             *
+             * @param string $column
