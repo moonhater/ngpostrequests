@@ -14459,3 +14459,146 @@ namespace  {
              * Add an "order by" clause for a timestamp to the query.
              *
              * @param string $column
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function oldest($column = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->oldest($column);
+            }
+             
+                /**
+             * Create a collection of models from plain arrays.
+             *
+             * @param array $items
+             * @return \Illuminate\Database\Eloquent\Collection 
+             * @static 
+             */ 
+            public static function hydrate($items)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->hydrate($items);
+            }
+             
+                /**
+             * Create a collection of models from a raw query.
+             *
+             * @param string $query
+             * @param array $bindings
+             * @return \Illuminate\Database\Eloquent\Collection 
+             * @static 
+             */ 
+            public static function fromQuery($query, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->fromQuery($query, $bindings);
+            }
+             
+                /**
+             * Find a model by its primary key.
+             *
+             * @param mixed $id
+             * @param array $columns
+             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static[]|static|null 
+             * @static 
+             */ 
+            public static function find($id, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->find($id, $columns);
+            }
+             
+                /**
+             * Find multiple models by their primary keys.
+             *
+             * @param \Illuminate\Contracts\Support\Arrayable|array $ids
+             * @param array $columns
+             * @return \Illuminate\Database\Eloquent\Collection 
+             * @static 
+             */ 
+            public static function findMany($ids, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->findMany($ids, $columns);
+            }
+             
+                /**
+             * Find a model by its primary key or throw an exception.
+             *
+             * @param mixed $id
+             * @param array $columns
+             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static|static[] 
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+             * @static 
+             */ 
+            public static function findOrFail($id, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->findOrFail($id, $columns);
+            }
+             
+                /**
+             * Find a model by its primary key or return fresh model instance.
+             *
+             * @param mixed $id
+             * @param array $columns
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function findOrNew($id, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->findOrNew($id, $columns);
+            }
+             
+                /**
+             * Get the first record matching the attributes or instantiate it.
+             *
+             * @param array $attributes
+             * @param array $values
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function firstOrNew($attributes = [], $values = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstOrNew($attributes, $values);
+            }
+             
+                /**
+             * Get the first record matching the attributes or create it.
+             *
+             * @param array $attributes
+             * @param array $values
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function firstOrCreate($attributes, $values = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstOrCreate($attributes, $values);
+            }
+             
+                /**
+             * Create or update a record matching the attributes, and fill it with values.
+             *
+             * @param array $attributes
+             * @param array $values
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function updateOrCreate($attributes, $values = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->updateOrCreate($attributes, $values);
+            }
+             
+                /**
+             * Execute the query and get the first result or throw an exception.
+             *
+             * @param array $columns
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+             * @static 
+             */ 
