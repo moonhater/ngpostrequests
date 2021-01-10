@@ -14737,3 +14737,154 @@ namespace  {
              * Save a new model and return the instance.
              *
              * @param array $attributes
+             * @return \Illuminate\Database\Eloquent\Model|$this 
+             * @static 
+             */ 
+            public static function create($attributes = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->create($attributes);
+            }
+             
+                /**
+             * Save a new model and return the instance. Allow mass-assignment.
+             *
+             * @param array $attributes
+             * @return \Illuminate\Database\Eloquent\Model|$this 
+             * @static 
+             */ 
+            public static function forceCreate($attributes)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->forceCreate($attributes);
+            }
+             
+                /**
+             * Register a replacement for the default delete function.
+             *
+             * @param \Closure $callback
+             * @return void 
+             * @static 
+             */ 
+            public static function onDelete($callback)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                $instance->onDelete($callback);
+            }
+             
+                /**
+             * Call the given local model scopes.
+             *
+             * @param array|string $scopes
+             * @return static|mixed 
+             * @static 
+             */ 
+            public static function scopes($scopes)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->scopes($scopes);
+            }
+             
+                /**
+             * Apply the scopes to the Eloquent builder instance and return it.
+             *
+             * @return static 
+             * @static 
+             */ 
+            public static function applyScopes()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->applyScopes();
+            }
+             
+                /**
+             * Prevent the specified relations from being eager loaded.
+             *
+             * @param mixed $relations
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function without($relations)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->without($relations);
+            }
+             
+                /**
+             * Create a new instance of the model being queried.
+             *
+             * @param array $attributes
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function newModelInstance($attributes = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->newModelInstance($attributes);
+            }
+             
+                /**
+             * Apply query-time casts to the model instance.
+             *
+             * @param array $casts
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function withCasts($casts)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->withCasts($casts);
+            }
+             
+                /**
+             * Get the underlying query builder instance.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function getQuery()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->getQuery();
+            }
+             
+                /**
+             * Set the underlying query builder instance.
+             *
+             * @param \Illuminate\Database\Query\Builder $query
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function setQuery($query)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->setQuery($query);
+            }
+             
+                /**
+             * Get a base query builder instance.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function toBase()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->toBase();
+            }
+             
+                /**
+             * Get the relationships being eagerly loaded.
+             *
+             * @return array 
+             * @static 
+             */ 
+            public static function getEagerLoads()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->getEagerLoads();
+            }
+             
+                /**
+             * Set the relationships being eagerly loaded.
+             *
