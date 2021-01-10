@@ -14888,3 +14888,140 @@ namespace  {
                 /**
              * Set the relationships being eagerly loaded.
              *
+             * @param array $eagerLoad
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function setEagerLoads($eagerLoad)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->setEagerLoads($eagerLoad);
+            }
+             
+                /**
+             * Get the model instance being queried.
+             *
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function getModel()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->getModel();
+            }
+             
+                /**
+             * Set a model instance for the model being queried.
+             *
+             * @param \Illuminate\Database\Eloquent\Model $model
+             * @return \Illuminate\Database\Eloquent\Builder|static 
+             * @static 
+             */ 
+            public static function setModel($model)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->setModel($model);
+            }
+             
+                /**
+             * Get the given macro by name.
+             *
+             * @param string $name
+             * @return \Closure 
+             * @static 
+             */ 
+            public static function getMacro($name)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->getMacro($name);
+            }
+             
+                /**
+             * Checks if a macro is registered.
+             *
+             * @param string $name
+             * @return bool 
+             * @static 
+             */ 
+            public static function hasMacro($name)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->hasMacro($name);
+            }
+             
+                /**
+             * Get the given global macro by name.
+             *
+             * @param string $name
+             * @return \Closure 
+             * @static 
+             */ 
+            public static function getGlobalMacro($name)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::getGlobalMacro($name);
+            }
+             
+                /**
+             * Checks if a global macro is registered.
+             *
+             * @param string $name
+             * @return bool 
+             * @static 
+             */ 
+            public static function hasGlobalMacro($name)
+            {
+                                return \Illuminate\Database\Eloquent\Builder::hasGlobalMacro($name);
+            }
+             
+                /**
+             * Chunk the results of the query.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunk($count, $callback)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->chunk($count, $callback);
+            }
+             
+                /**
+             * Execute a callback over each item while chunking.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @return bool 
+             * @static 
+             */ 
+            public static function each($callback, $count = 1000)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->each($callback, $count);
+            }
+             
+                /**
+             * Chunk the results of a query by comparing IDs.
+             *
+             * @param int $count
+             * @param callable $callback
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
+             * @static 
+             */ 
+            public static function chunkById($count, $callback, $column = null, $alias = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->chunkById($count, $callback, $column, $alias);
+            }
+             
+                /**
+             * Execute a callback over each item while chunking by ID.
+             *
+             * @param callable $callback
+             * @param int $count
+             * @param string|null $column
+             * @param string|null $alias
+             * @return bool 
