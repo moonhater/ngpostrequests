@@ -14602,3 +14602,138 @@ namespace  {
              * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
              * @static 
              */ 
+            public static function firstOrFail($columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstOrFail($columns);
+            }
+             
+                /**
+             * Execute the query and get the first result or call a callback.
+             *
+             * @param \Closure|array $columns
+             * @param \Closure|null $callback
+             * @return \Illuminate\Database\Eloquent\Model|static|mixed 
+             * @static 
+             */ 
+            public static function firstOr($columns = [], $callback = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstOr($columns, $callback);
+            }
+             
+                /**
+             * Get a single column's value from the first result of a query.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function value($column)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->value($column);
+            }
+             
+                /**
+             * Execute the query as a "select" statement.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Database\Eloquent\Collection|static[] 
+             * @static 
+             */ 
+            public static function get($columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->get($columns);
+            }
+             
+                /**
+             * Get the hydrated models without eager loading.
+             *
+             * @param array|string $columns
+             * @return \Illuminate\Database\Eloquent\Model[]|static[] 
+             * @static 
+             */ 
+            public static function getModels($columns = [])
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->getModels($columns);
+            }
+             
+                /**
+             * Eager load the relationships for the models.
+             *
+             * @param array $models
+             * @return array 
+             * @static 
+             */ 
+            public static function eagerLoadRelations($models)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->eagerLoadRelations($models);
+            }
+             
+                /**
+             * Get a lazy collection for the given query.
+             *
+             * @return \Illuminate\Support\LazyCollection 
+             * @static 
+             */ 
+            public static function cursor()
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->cursor();
+            }
+             
+                /**
+             * Get an array with the values of a given column.
+             *
+             * @param string $column
+             * @param string|null $key
+             * @return \Illuminate\Support\Collection 
+             * @static 
+             */ 
+            public static function pluck($column, $key = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->pluck($column, $key);
+            }
+             
+                /**
+             * Paginate the given query.
+             *
+             * @param int|null $perPage
+             * @param array $columns
+             * @param string $pageName
+             * @param int|null $page
+             * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function paginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->paginate($perPage, $columns, $pageName, $page);
+            }
+             
+                /**
+             * Paginate the given query into a simple paginator.
+             *
+             * @param int|null $perPage
+             * @param array $columns
+             * @param string $pageName
+             * @param int|null $page
+             * @return \Illuminate\Contracts\Pagination\Paginator 
+             * @static 
+             */ 
+            public static function simplePaginate($perPage = null, $columns = [], $pageName = 'page', $page = null)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->simplePaginate($perPage, $columns, $pageName, $page);
+            }
+             
+                /**
+             * Save a new model and return the instance.
+             *
+             * @param array $attributes
