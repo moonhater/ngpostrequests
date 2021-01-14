@@ -15504,3 +15504,160 @@ namespace  {
              * @static 
              */ 
             public static function joinWhere($table, $first, $operator, $second, $type = 'inner')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->joinWhere($table, $first, $operator, $second, $type);
+            }
+             
+                /**
+             * Add a subquery join clause to the query.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
+             * @param string $as
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @param string $type
+             * @param bool $where
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function joinSub($query, $as, $first, $operator = null, $second = null, $type = 'inner', $where = false)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->joinSub($query, $as, $first, $operator, $second, $type, $where);
+            }
+             
+                /**
+             * Add a left join to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function leftJoin($table, $first, $operator = null, $second = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->leftJoin($table, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a "join where" clause to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string $operator
+             * @param string $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function leftJoinWhere($table, $first, $operator, $second)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->leftJoinWhere($table, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a subquery left join to the query.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
+             * @param string $as
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function leftJoinSub($query, $as, $first, $operator = null, $second = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->leftJoinSub($query, $as, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a right join to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function rightJoin($table, $first, $operator = null, $second = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->rightJoin($table, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a "right join where" clause to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string $operator
+             * @param string $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function rightJoinWhere($table, $first, $operator, $second)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->rightJoinWhere($table, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a subquery right join to the query.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
+             * @param string $as
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function rightJoinSub($query, $as, $first, $operator = null, $second = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->rightJoinSub($query, $as, $first, $operator, $second);
+            }
+             
+                /**
+             * Add a "cross join" clause to the query.
+             *
+             * @param string $table
+             * @param \Closure|string|null $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function crossJoin($table, $first = null, $operator = null, $second = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->crossJoin($table, $first, $operator, $second);
+            }
+             
+                /**
+             * Merge an array of where clauses and bindings.
+             *
+             * @param array $wheres
+             * @param array $bindings
+             * @return void 
+             * @static 
+             */ 
+            public static function mergeWheres($wheres, $bindings)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                $instance->mergeWheres($wheres, $bindings);
+            }
+             
+                /**
+             * Prepare the value and operator for a where clause.
+             *
+             * @param string $value
