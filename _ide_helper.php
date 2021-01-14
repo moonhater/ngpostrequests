@@ -15358,3 +15358,149 @@ namespace  {
              * @return \Illuminate\Database\Eloquent\Builder|static 
              * @static 
              */ 
+            public static function mergeConstraintsFrom($from)
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->mergeConstraintsFrom($from);
+            }
+             
+                /**
+             * Set the columns to be selected.
+             *
+             * @param array|mixed $columns
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function select($columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->select($columns);
+            }
+             
+                /**
+             * Add a subselect expression to the query.
+             *
+             * @param \Closure|$this|string $query
+             * @param string $as
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function selectSub($query, $as)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->selectSub($query, $as);
+            }
+             
+                /**
+             * Add a new "raw" select expression to the query.
+             *
+             * @param string $expression
+             * @param array $bindings
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function selectRaw($expression, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->selectRaw($expression, $bindings);
+            }
+             
+                /**
+             * Makes "from" fetch from a subquery.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
+             * @param string $as
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function fromSub($query, $as)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->fromSub($query, $as);
+            }
+             
+                /**
+             * Add a raw from clause to the query.
+             *
+             * @param string $expression
+             * @param mixed $bindings
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function fromRaw($expression, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->fromRaw($expression, $bindings);
+            }
+             
+                /**
+             * Add a new select column to the query.
+             *
+             * @param array|mixed $column
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function addSelect($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->addSelect($column);
+            }
+             
+                /**
+             * Force the query to only return distinct results.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function distinct()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->distinct();
+            }
+             
+                /**
+             * Set the table which the query is targeting.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $table
+             * @param string|null $as
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function from($table, $as = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->from($table, $as);
+            }
+             
+                /**
+             * Add a join clause to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string|null $operator
+             * @param string|null $second
+             * @param string $type
+             * @param bool $where
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function join($table, $first, $operator = null, $second = null, $type = 'inner', $where = false)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->join($table, $first, $operator, $second, $type, $where);
+            }
+             
+                /**
+             * Add a "join where" clause to the query.
+             *
+             * @param string $table
+             * @param \Closure|string $first
+             * @param string $operator
+             * @param string $second
+             * @param string $type
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function joinWhere($table, $first, $operator, $second, $type = 'inner')
