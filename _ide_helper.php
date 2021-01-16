@@ -15982,3 +15982,153 @@ namespace  {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->whereNotBetweenColumns($column, $values, $boolean);
             }
+             
+                /**
+             * Add an or where not between statement to the query.
+             *
+             * @param string $column
+             * @param array $values
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereNotBetween($column, $values)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereNotBetween($column, $values);
+            }
+             
+                /**
+             * Add an or where not between statement using columns to the query.
+             *
+             * @param string $column
+             * @param array $values
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereNotBetweenColumns($column, $values)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereNotBetweenColumns($column, $values);
+            }
+             
+                /**
+             * Add an "or where not null" clause to the query.
+             *
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereNotNull($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereNotNull($column);
+            }
+             
+                /**
+             * Add a "where date" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function whereDate($column, $operator, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->whereDate($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add an "or where date" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereDate($column, $operator, $value = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereDate($column, $operator, $value);
+            }
+             
+                /**
+             * Add a "where time" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function whereTime($column, $operator, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->whereTime($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add an "or where time" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereTime($column, $operator, $value = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereTime($column, $operator, $value);
+            }
+             
+                /**
+             * Add a "where day" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function whereDay($column, $operator, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->whereDay($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add an "or where day" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereDay($column, $operator, $value = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereDay($column, $operator, $value);
+            }
+             
+                /**
+             * Add a "where month" statement to the query.
+             *
+             * @param string $column
+             * @param string $operator
+             * @param \DateTimeInterface|string|null $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function whereMonth($column, $operator, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->whereMonth($column, $operator, $value, $boolean);
+            }
