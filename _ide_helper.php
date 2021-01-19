@@ -16433,3 +16433,145 @@ namespace  {
              * @return \Illuminate\Database\Query\Builder 
              * @static 
              */ 
+            public static function groupBy(...$groups)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->groupBy(...$groups);
+            }
+             
+                /**
+             * Add a raw groupBy clause to the query.
+             *
+             * @param string $sql
+             * @param array $bindings
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function groupByRaw($sql, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->groupByRaw($sql, $bindings);
+            }
+             
+                /**
+             * Add a "having" clause to the query.
+             *
+             * @param string $column
+             * @param string|null $operator
+             * @param string|null $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function having($column, $operator = null, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->having($column, $operator, $value, $boolean);
+            }
+             
+                /**
+             * Add a "or having" clause to the query.
+             *
+             * @param string $column
+             * @param string|null $operator
+             * @param string|null $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orHaving($column, $operator = null, $value = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orHaving($column, $operator, $value);
+            }
+             
+                /**
+             * Add a "having between " clause to the query.
+             *
+             * @param string $column
+             * @param array $values
+             * @param string $boolean
+             * @param bool $not
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function havingBetween($column, $values, $boolean = 'and', $not = false)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->havingBetween($column, $values, $boolean, $not);
+            }
+             
+                /**
+             * Add a raw having clause to the query.
+             *
+             * @param string $sql
+             * @param array $bindings
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function havingRaw($sql, $bindings = [], $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->havingRaw($sql, $bindings, $boolean);
+            }
+             
+                /**
+             * Add a raw or having clause to the query.
+             *
+             * @param string $sql
+             * @param array $bindings
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orHavingRaw($sql, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orHavingRaw($sql, $bindings);
+            }
+             
+                /**
+             * Add an "order by" clause to the query.
+             *
+             * @param \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Query\Expression|string $column
+             * @param string $direction
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function orderBy($column, $direction = 'asc')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orderBy($column, $direction);
+            }
+             
+                /**
+             * Add a descending "order by" clause to the query.
+             *
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orderByDesc($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orderByDesc($column);
+            }
+             
+                /**
+             * Put the query's results in random order.
+             *
+             * @param string $seed
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function inRandomOrder($seed = '')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->inRandomOrder($seed);
+            }
+             
+                /**
+             * Add a raw "order by" clause to the query.
+             *
+             * @param string $sql
+             * @param array $bindings
