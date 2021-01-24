@@ -16732,3 +16732,129 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->lock($value);
+            }
+             
+                /**
+             * Lock the selected rows in the table for updating.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function lockForUpdate()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->lockForUpdate();
+            }
+             
+                /**
+             * Share lock the selected rows in the table.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function sharedLock()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->sharedLock();
+            }
+             
+                /**
+             * Get the SQL representation of the query.
+             *
+             * @return string 
+             * @static 
+             */ 
+            public static function toSql()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->toSql();
+            }
+             
+                /**
+             * Get the count of the total records for the paginator.
+             *
+             * @param array $columns
+             * @return int 
+             * @static 
+             */ 
+            public static function getCountForPagination($columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->getCountForPagination($columns);
+            }
+             
+                /**
+             * Concatenate values of a given column as a string.
+             *
+             * @param string $column
+             * @param string $glue
+             * @return string 
+             * @static 
+             */ 
+            public static function implode($column, $glue = '')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->implode($column, $glue);
+            }
+             
+                /**
+             * Determine if any rows exist for the current query.
+             *
+             * @return bool 
+             * @static 
+             */ 
+            public static function exists()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->exists();
+            }
+             
+                /**
+             * Determine if no rows exist for the current query.
+             *
+             * @return bool 
+             * @static 
+             */ 
+            public static function doesntExist()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->doesntExist();
+            }
+             
+                /**
+             * Execute the given callback if no rows exist for the current query.
+             *
+             * @param \Closure $callback
+             * @return mixed 
+             * @static 
+             */ 
+            public static function existsOr($callback)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->existsOr($callback);
+            }
+             
+                /**
+             * Execute the given callback if rows exist for the current query.
+             *
+             * @param \Closure $callback
+             * @return mixed 
+             * @static 
+             */ 
+            public static function doesntExistOr($callback)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->doesntExistOr($callback);
+            }
+             
+                /**
+             * Retrieve the "count" result of the query.
+             *
+             * @param string $columns
+             * @return int 
+             * @static 
+             */ 
+            public static function count($columns = '*')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->count($columns);
