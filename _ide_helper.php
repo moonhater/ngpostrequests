@@ -16575,3 +16575,160 @@ namespace  {
              *
              * @param string $sql
              * @param array $bindings
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orderByRaw($sql, $bindings = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orderByRaw($sql, $bindings);
+            }
+             
+                /**
+             * Alias to set the "offset" value of the query.
+             *
+             * @param int $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function skip($value)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->skip($value);
+            }
+             
+                /**
+             * Set the "offset" value of the query.
+             *
+             * @param int $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function offset($value)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->offset($value);
+            }
+             
+                /**
+             * Alias to set the "limit" value of the query.
+             *
+             * @param int $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function take($value)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->take($value);
+            }
+             
+                /**
+             * Set the "limit" value of the query.
+             *
+             * @param int $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function limit($value)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->limit($value);
+            }
+             
+                /**
+             * Set the limit and offset for a given page.
+             *
+             * @param int $page
+             * @param int $perPage
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function forPage($page, $perPage = 15)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->forPage($page, $perPage);
+            }
+             
+                /**
+             * Constrain the query to the previous "page" of results before a given ID.
+             *
+             * @param int $perPage
+             * @param int|null $lastId
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function forPageBeforeId($perPage = 15, $lastId = 0, $column = 'id')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->forPageBeforeId($perPage, $lastId, $column);
+            }
+             
+                /**
+             * Constrain the query to the next "page" of results after a given ID.
+             *
+             * @param int $perPage
+             * @param int|null $lastId
+             * @param string $column
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function forPageAfterId($perPage = 15, $lastId = 0, $column = 'id')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->forPageAfterId($perPage, $lastId, $column);
+            }
+             
+                /**
+             * Remove all existing orders and optionally add a new order.
+             *
+             * @param string|null $column
+             * @param string $direction
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function reorder($column = null, $direction = 'asc')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->reorder($column, $direction);
+            }
+             
+                /**
+             * Add a union statement to the query.
+             *
+             * @param \Illuminate\Database\Query\Builder|\Closure $query
+             * @param bool $all
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function union($query, $all = false)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->union($query, $all);
+            }
+             
+                /**
+             * Add a union all statement to the query.
+             *
+             * @param \Illuminate\Database\Query\Builder|\Closure $query
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function unionAll($query)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->unionAll($query);
+            }
+             
+                /**
+             * Lock the selected rows in the table.
+             *
+             * @param string|bool $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function lock($value = true)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->lock($value);
