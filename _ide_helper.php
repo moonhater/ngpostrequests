@@ -16858,3 +16858,150 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->count($columns);
+            }
+             
+                /**
+             * Retrieve the minimum value of a given column.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function min($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->min($column);
+            }
+             
+                /**
+             * Retrieve the maximum value of a given column.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function max($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->max($column);
+            }
+             
+                /**
+             * Retrieve the sum of the values of a given column.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function sum($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->sum($column);
+            }
+             
+                /**
+             * Retrieve the average of the values of a given column.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function avg($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->avg($column);
+            }
+             
+                /**
+             * Alias for the "avg" method.
+             *
+             * @param string $column
+             * @return mixed 
+             * @static 
+             */ 
+            public static function average($column)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->average($column);
+            }
+             
+                /**
+             * Execute an aggregate function on the database.
+             *
+             * @param string $function
+             * @param array $columns
+             * @return mixed 
+             * @static 
+             */ 
+            public static function aggregate($function, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->aggregate($function, $columns);
+            }
+             
+                /**
+             * Execute a numeric aggregate function on the database.
+             *
+             * @param string $function
+             * @param array $columns
+             * @return float|int 
+             * @static 
+             */ 
+            public static function numericAggregate($function, $columns = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->numericAggregate($function, $columns);
+            }
+             
+                /**
+             * Insert a new record into the database.
+             *
+             * @param array $values
+             * @return bool 
+             * @static 
+             */ 
+            public static function insert($values)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->insert($values);
+            }
+             
+                /**
+             * Insert a new record into the database while ignoring errors.
+             *
+             * @param array $values
+             * @return int 
+             * @static 
+             */ 
+            public static function insertOrIgnore($values)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->insertOrIgnore($values);
+            }
+             
+                /**
+             * Insert a new record and get the value of the primary key.
+             *
+             * @param array $values
+             * @param string|null $sequence
+             * @return int 
+             * @static 
+             */ 
+            public static function insertGetId($values, $sequence = null)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->insertGetId($values, $sequence);
+            }
+             
+                /**
+             * Insert new records into the table using a subquery.
+             *
+             * @param array $columns
+             * @param \Closure|\Illuminate\Database\Query\Builder|string $query
+             * @return int 
+             * @static 
+             */ 
+            public static function insertUsing($columns, $query)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->insertUsing($columns, $query);
