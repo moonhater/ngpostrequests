@@ -17139,3 +17139,133 @@ namespace  {
              
                 /**
              * Use the write pdo for query.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function useWritePdo()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->useWritePdo();
+            }
+             
+                /**
+             * Clone the query without the given properties.
+             *
+             * @param array $properties
+             * @return static 
+             * @static 
+             */ 
+            public static function cloneWithout($properties)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->cloneWithout($properties);
+            }
+             
+                /**
+             * Clone the query without the given bindings.
+             *
+             * @param array $except
+             * @return static 
+             * @static 
+             */ 
+            public static function cloneWithoutBindings($except)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->cloneWithoutBindings($except);
+            }
+             
+                /**
+             * Dump the current SQL and bindings.
+             *
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function dump()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->dump();
+            }
+             
+                /**
+             * Die and dump the current SQL and bindings.
+             *
+             * @return void 
+             * @static 
+             */ 
+            public static function dd()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                $instance->dd();
+            }
+             
+                /**
+             * Register a custom macro.
+             *
+             * @param string $name
+             * @param object|callable $macro
+             * @return void 
+             * @static 
+             */ 
+            public static function macro($name, $macro)
+            {
+                                \Illuminate\Database\Query\Builder::macro($name, $macro);
+            }
+             
+                /**
+             * Mix another object into the class.
+             *
+             * @param object $mixin
+             * @param bool $replace
+             * @return void 
+             * @throws \ReflectionException
+             * @static 
+             */ 
+            public static function mixin($mixin, $replace = true)
+            {
+                                \Illuminate\Database\Query\Builder::mixin($mixin, $replace);
+            }
+             
+                /**
+             * Dynamically handle calls to the class.
+             *
+             * @param string $method
+             * @param array $parameters
+             * @return mixed 
+             * @throws \BadMethodCallException
+             * @static 
+             */ 
+            public static function macroCall($method, $parameters)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->macroCall($method, $parameters);
+            }
+                    }
+            class Event extends \Illuminate\Support\Facades\Event {}
+            class File extends \Illuminate\Support\Facades\File {}
+            class Gate extends \Illuminate\Support\Facades\Gate {}
+            class Hash extends \Illuminate\Support\Facades\Hash {}
+            class Http extends \Illuminate\Support\Facades\Http {}
+            class Lang extends \Illuminate\Support\Facades\Lang {}
+            class Log extends \Illuminate\Support\Facades\Log {}
+            class Mail extends \Illuminate\Support\Facades\Mail {}
+            class Notification extends \Illuminate\Support\Facades\Notification {}
+            class Password extends \Illuminate\Support\Facades\Password {}
+            class Queue extends \Illuminate\Support\Facades\Queue {}
+            class Redirect extends \Illuminate\Support\Facades\Redirect {}
+            class Request extends \Illuminate\Support\Facades\Request {}
+            class Response extends \Illuminate\Support\Facades\Response {}
+            class Route extends \Illuminate\Support\Facades\Route {}
+            class Schema extends \Illuminate\Support\Facades\Schema {}
+            class Session extends \Illuminate\Support\Facades\Session {}
+            class Storage extends \Illuminate\Support\Facades\Storage {}
+            class Str extends \Illuminate\Support\Str {}
+            class URL extends \Illuminate\Support\Facades\URL {}
+            class Validator extends \Illuminate\Support\Facades\Validator {}
+            class View extends \Illuminate\Support\Facades\View {}
+            class Flare extends \Facade\Ignition\Facades\Flare {}
+     
+}
+
+
+
