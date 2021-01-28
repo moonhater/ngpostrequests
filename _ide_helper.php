@@ -17005,3 +17005,137 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->insertUsing($columns, $query);
+            }
+             
+                /**
+             * Insert or update a record matching the attributes, and fill it with values.
+             *
+             * @param array $attributes
+             * @param array $values
+             * @return bool 
+             * @static 
+             */ 
+            public static function updateOrInsert($attributes, $values = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->updateOrInsert($attributes, $values);
+            }
+             
+                /**
+             * Run a truncate statement on the table.
+             *
+             * @return void 
+             * @static 
+             */ 
+            public static function truncate()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                $instance->truncate();
+            }
+             
+                /**
+             * Create a raw database expression.
+             *
+             * @param mixed $value
+             * @return \Illuminate\Database\Query\Expression 
+             * @static 
+             */ 
+            public static function raw($value)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->raw($value);
+            }
+             
+                /**
+             * Get the current query value bindings in a flattened array.
+             *
+             * @return array 
+             * @static 
+             */ 
+            public static function getBindings()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->getBindings();
+            }
+             
+                /**
+             * Get the raw array of bindings.
+             *
+             * @return array 
+             * @static 
+             */ 
+            public static function getRawBindings()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->getRawBindings();
+            }
+             
+                /**
+             * Set the bindings on the query builder.
+             *
+             * @param array $bindings
+             * @param string $type
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function setBindings($bindings, $type = 'where')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->setBindings($bindings, $type);
+            }
+             
+                /**
+             * Add a binding to the query.
+             *
+             * @param mixed $value
+             * @param string $type
+             * @return \Illuminate\Database\Query\Builder 
+             * @throws \InvalidArgumentException
+             * @static 
+             */ 
+            public static function addBinding($value, $type = 'where')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->addBinding($value, $type);
+            }
+             
+                /**
+             * Merge an array of bindings into our bindings.
+             *
+             * @param \Illuminate\Database\Query\Builder $query
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function mergeBindings($query)
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->mergeBindings($query);
+            }
+             
+                /**
+             * Get the database query processor instance.
+             *
+             * @return \Illuminate\Database\Query\Processors\Processor 
+             * @static 
+             */ 
+            public static function getProcessor()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->getProcessor();
+            }
+             
+                /**
+             * Get the query grammar instance.
+             *
+             * @return \Illuminate\Database\Query\Grammars\Grammar 
+             * @static 
+             */ 
+            public static function getGrammar()
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->getGrammar();
+            }
+             
+                /**
+             * Use the write pdo for query.
