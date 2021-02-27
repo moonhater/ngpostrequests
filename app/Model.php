@@ -7,4 +7,9 @@ use Eloquent;
 
 /**
  * Class Model
- * @mixin Eloquen
+ * @mixin Eloquent
+ */
+class Model extends \Illuminate\Database\Eloquent\Model
+{
+
+}
