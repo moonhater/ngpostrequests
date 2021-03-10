@@ -30,3 +30,15 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //
+
+        parent::boot();
+    }
+
+    /**
+     * Define the routes for the application.
+     *
+     * @return void
+     */
+    public function map()
+    {
