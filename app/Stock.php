@@ -13,4 +13,7 @@ class Stock extends Model
         'in_stock' => 'boolean'
     ];
 
-    pu
+    public function track()
+    {
+        if ($this->retailer->name === 'Best Buy') {
+            $results = Http::get('http://foo
