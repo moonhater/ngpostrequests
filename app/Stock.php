@@ -21,4 +21,14 @@ class Stock extends Model
             $this->update([
                 'in_stock' => $results['available'],
                 'price' => $results['price']
-    
+            ]);
+        }
+
+    }
+
+    public function retailer()
+    {
+        return $this->belongsTo(Retailer::class);
+    }
+}
+
