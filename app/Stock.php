@@ -16,4 +16,9 @@ class Stock extends Model
     public function track()
     {
         if ($this->retailer->name === 'Best Buy') {
-            $results = Http::get('http://foo
+            $results = Http::get('http://foo.test')->json();
+
+            $this->update([
+                'in_stock' => $results['available'],
+                'price' => $results['price']
+    
