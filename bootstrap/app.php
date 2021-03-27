@@ -32,4 +32,10 @@ $app->singleton(
 );
 
 $app->singleton(
-    Illuminate\Contracts\Console\K
+    Illuminate\Contracts\Console\Kernel::class,
+    App\Console\Kernel::class
+);
+
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exception
