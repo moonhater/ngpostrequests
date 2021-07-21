@@ -31,4 +31,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
-    
+    |--------------------------------------------------------------------------
+    |
+    | When your application is in debug mode, detailed error messages with
+    | 
