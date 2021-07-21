@@ -26,4 +26,9 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'pro
+    'env' => env('APP_ENV', 'production'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Debug Mode
+    
