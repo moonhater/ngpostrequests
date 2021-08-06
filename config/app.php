@@ -85,4 +85,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
-    |---------
+    |--------------------------------------------------------------------------
+    |
+    | The fallback locale determines the locale to use when the current one
+    | is n
