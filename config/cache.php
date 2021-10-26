@@ -39,4 +39,11 @@ return [
 
         'array' => [
             'driver' => 'array',
-            'serialize' =>
+            'serialize' => false,
+        ],
+
+        'database' => [
+            'driver' => 'database',
+            'table' => 'cache',
+            'connection' => null,
+      
