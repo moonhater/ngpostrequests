@@ -22,4 +22,5 @@ return [
     | Bcrypt Options
     |--------------------------------------------------------------------------
     |
-    | He
+    | Here you may specify the configuration options that should be used when
+    | passwords are hashed using the Bcrypt algorithm. This w
