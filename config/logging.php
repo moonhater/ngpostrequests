@@ -1,4 +1,11 @@
 <?php
 
 use Monolog\Handler\NullHandler;
-use Monolog\Handler\
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\SyslogUdpHandler;
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | 
