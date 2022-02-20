@@ -35,4 +35,10 @@ return [
     */
 
     'channels' => [
-        'stac
+        'stack' => [
+            'driver' => 'stack',
+            'channels' => ['single'],
+            'ignore_exceptions' => false,
+        ],
+
+        'singl
