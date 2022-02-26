@@ -47,3 +47,8 @@ return [
             'level' => 'debug',
         ],
 
+        'daily' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/laravel.log'),
+            'level' => 'debug',
+            'days' =>
