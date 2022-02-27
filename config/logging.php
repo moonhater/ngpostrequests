@@ -63,4 +63,8 @@ return [
         ],
 
         'papertrail' => [
-            'driver
+            'driver' => 'monolog',
+            'level' => 'debug',
+            'handler' => SyslogUdpHandler::class,
+            'handler_with' => [
+            
