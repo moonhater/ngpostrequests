@@ -67,4 +67,10 @@ return [
             'level' => 'debug',
             'handler' => SyslogUdpHandler::class,
             'handler_with' => [
-            
+                'host' => env('PAPERTRAIL_URL'),
+                'port' => env('PAPERTRAIL_PORT'),
+            ],
+        ],
+
+        'stderr' => [
+            'dri
