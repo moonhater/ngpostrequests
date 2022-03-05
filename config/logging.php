@@ -73,4 +73,8 @@ return [
         ],
 
         'stderr' => [
-            'dri
+            'driver' => 'monolog',
+            'handler' => StreamHandler::class,
+            'formatter' => env('LOG_STDERR_FORMATTER'),
+            'with' => [
+                'strea
