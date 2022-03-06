@@ -86,4 +86,11 @@ return [
             'level' => 'debug',
         ],
 
-        'errorl
+        'errorlog' => [
+            'driver' => 'errorlog',
+            'level' => 'debug',
+        ],
+
+        'null' => [
+            'driver' => 'monolog',
+            'h
