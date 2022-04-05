@@ -2,4 +2,12 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Suppo
+use Illuminate\Support\Facades\Schema;
+
+class CreatePasswordResetsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     *
