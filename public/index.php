@@ -15,4 +15,6 @@ define('LARAVEL_START', microtime(true));
 |--------------------------------------------------------------------------
 |
 | Composer provides a convenient, automatically generated class loader for
-| our applica
+| our application. We just need to utilize it! We'll simply require it
+| into the script here so that we don't have to worry about manual
+| loading any of our c
