@@ -17,4 +17,8 @@
             <directory suffix=".php">./app</directory>
         </whitelist>
     </filter>
-    <p
+    <php>
+        <server name="APP_ENV" value="testing"/>
+        <server name="BCRYPT_ROUNDS" value="4"/>
+        <server name="CACHE_DRIVER" value="array"/>
+      
