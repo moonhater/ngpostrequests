@@ -42,4 +42,6 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | Run The Application
 |--------------------------------------------------------------------------
 |
-| Once
+| Once we have the application, we can handle the incoming request
+| through the kernel, and send the associated response back to
+| the client's browser allow
