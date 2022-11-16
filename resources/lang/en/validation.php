@@ -52,4 +52,6 @@ return [
     ],
     'gte' => [
         'numeric' => 'The :attribute must be greater than or equal :value.',
-        'file' => 'The :attribute must be greater than 
+        'file' => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string' => 'The :attribute must be greater than or equal :value characters.',
+        'array' 
