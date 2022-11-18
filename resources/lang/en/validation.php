@@ -77,4 +77,5 @@ return [
         'array' => 'The :attribute must not have more than :value items.',
     ],
     'max' => [
- 
+        'numeric' => 'The :attribute may not be greater than :max.',
+        'file' => 'The :attribute may not be greater tha
