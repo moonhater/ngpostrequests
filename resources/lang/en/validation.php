@@ -98,4 +98,5 @@ return [
     'regex' => 'The :attribute format is invalid.',
     'required' => 'The :attribute field is required.',
     'required_if' => 'The :attribute field is required when :other is :value.',
-    'r
+    'required_unless' => 'The :attribute field is required unless :other is in :values.',
+    'required_with' => 'The :attribute field is requ
