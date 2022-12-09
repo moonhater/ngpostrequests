@@ -121,4 +121,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
-    |--------------------------------
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify custom validation messages for attributes using the
+    | conventi
