@@ -111,4 +111,7 @@ return [
         'array' => 'The :attribute must contain :size items.',
     ],
     'starts_with' => 'The :attribute must start with one of the following: :values.',
-    'string' => 'Th
+    'string' => 'The :attribute must be a string.',
+    'timezone' => 'The :attribute must be a valid zone.',
+    'unique' => 'The :attribute has already been taken.',
+ 
